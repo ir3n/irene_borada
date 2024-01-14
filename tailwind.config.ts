@@ -17,12 +17,11 @@ const config: Config = {
       dark: "#141521",
       accent: "#4A5CFF",
       white: "#ffffff",
-    },
-    fontSize: {
-      "intro-title": "10rem",
+      black: "#000000",
     },
     extend: {},
   },
   plugins: [],
+  // mode: "jit",
 };
 export default config;

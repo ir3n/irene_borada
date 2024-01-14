@@ -1,13 +1,23 @@
-import Image from "next/image";
+"use client";
+
+import { ReactLenis } from "@studio-freight/react-lenis";
+import IntroOutro from "@/components/IntroOutro";
 
 export default function Home() {
   return (
     <main>
-      <section>
-        <div>
-          <h1 className="hidden">Hello. My name is Irene.</h1>
-        </div>
-      </section>
+      <ReactLenis
+        root
+        options={{ lerp: 0.1, duration: 1.5, smoothTouch: true }}
+      >
+        <section>
+          <IntroOutro />
+          <IntroOutro />
+        </section>
+        <section id="outro">
+          <IntroOutro />
+        </section>
+      </ReactLenis>
     </main>
   );
 }

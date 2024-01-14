@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "../styles/globals.css";
+import { Scrollbar } from "@/components/Scrollbar";
 import Header from "@/components/Header";
 import Social from "@/components/Social";
 
@@ -30,7 +31,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${sans.className} bg-dark`}>
         <Header />
-        <div>{children}</div>
+        <Scrollbar />
+        <div className="px-4 lg:px-52">{children}</div>
         <div className="lg:w-14 fixed right-16 top-0 h-full flex flex-col">
           <Social />
         </div>
