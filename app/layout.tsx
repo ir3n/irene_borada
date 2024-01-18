@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-
 import Header from "@/components/Header";
 import Social from "@/components/Social";
 import SmoothScrolling from "@/components/SmoothScrolling";
@@ -34,7 +33,7 @@ export default function RootLayout({
       <body className={`${sans.className} bg-dark`}>
         <SmoothScrolling>
           <Header />
-          <div className="px-4 lg:px-52">{children}</div>
+          <div>{children}</div>
           <div className="lg:w-14 fixed right-16 top-0 h-full flex flex-col">
             <Social />
           </div>
