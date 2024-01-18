@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import "../styles/globals.css";
-import { Scrollbar } from "@/components/Scrollbar";
+
 import Header from "@/components/Header";
 import Social from "@/components/Social";
+import SmoothScrolling from "@/components/SmoothScrolling";
+
+import "../styles/globals.css";
 
 // import { Suranna } from "next/font/google";
 // const serif = Suranna({
@@ -30,12 +32,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${sans.className} bg-dark`}>
-        <Header />
-        <Scrollbar />
-        <div className="px-4 lg:px-52">{children}</div>
-        <div className="lg:w-14 fixed right-16 top-0 h-full flex flex-col">
-          <Social />
-        </div>
+        <SmoothScrolling>
+          <Header />
+          <div className="px-4 lg:px-52">{children}</div>
+          <div className="lg:w-14 fixed right-16 top-0 h-full flex flex-col">
+            <Social />
+          </div>
+        </SmoothScrolling>
       </body>
     </html>
   );
