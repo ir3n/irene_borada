@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import IntroOutro from "@/components/IntroOutro";
+import Intro from "@/components/Intro";
 import ProgressBar from "react-scroll-progress-bar";
 
 import { Cursor } from "react-creative-cursor";
@@ -19,19 +19,17 @@ export default function Home() {
   return (
     <>
       <main className="px-4 lg:px-52">
-        {isDesktop ? (
-          <Cursor isGelly={true} cursorBackgrounColor={"transparent"} />
-        ) : null}
+        <ProgressBar bgcolor="#4A5CFF" />
+        {isDesktop ? <Cursor isGelly={true} /> : null}
 
         <section>
-          <IntroOutro />
-          <IntroOutro />
+          <Intro />
+          {/* <IntroOutro /> */}
         </section>
-        <section id="outro">
+        {/* <section id="outro">
           <IntroOutro />
-        </section>
+        </section> */}
       </main>
-      <ProgressBar bgcolor="#4A5CFF" />
     </>
   );
 }

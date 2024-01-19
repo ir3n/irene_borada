@@ -10,11 +10,19 @@ section {
 }
 
 .intro-title {
-  @apply lg:text-[10rem] leading-[9rem];
+  @apply lg:text-[10rem] leading-[10rem];
 }
 
 .c-cursor {
   border: 2px solid #4a5cff;
-  opacity: 0.3 !important;
-  z-index: 5;
+  background-color: transparent !important;
+}
+
+.typewritter:after {
+  display: none;
+}
+
+.serif-font {
+  font-size: 130%;
+  line-height: inherit;
 }

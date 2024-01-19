@@ -3,12 +3,12 @@ import Burger from "./Burger";
 import MenuList from "./MenuList";
 
 const Menu = () => {
-  const [openMenu, setOpenMenu] = useState(true);
+  const [openMenu, setOpenMenu] = useState(false);
 
   return (
     <>
       <Burger open={openMenu} />
-      <MenuList />
+      {/* <MenuList /> */}
     </>
   );
 };
