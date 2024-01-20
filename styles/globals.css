@@ -12,17 +12,25 @@ section {
 .intro-title {
   @apply lg:text-[10rem] leading-[10rem];
 }
-
-.c-cursor {
-  border: 2px solid #4a5cff;
-  background-color: transparent !important;
-}
-
-.typewritter:after {
-  display: none;
+.sub {
+  @apply lg:text-[5.5rem] leading-[5.5rem];
 }
 
 .serif-font {
   font-size: 130%;
-  line-height: inherit;
+  line-height: 65%;
+}
+.accent-color {
+  color: #4a5cff;
+}
+
+.c-cursor {
+  mix-blend-mode: unset !important;
+  background-color: transparent !important;
+  border: 2px solid #4a5cff;
+}
+
+.c-cursor__inner {
+  -webkit-filter: none !important;
+  filter: none !important;
 }

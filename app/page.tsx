@@ -1,10 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Intro from "@/components/Intro";
 import ProgressBar from "react-scroll-progress-bar";
-
 import { Cursor } from "react-creative-cursor";
+import { Expo } from "gsap";
+
+import Intro from "@/components/Intro";
+import SmoothScrolling from "@/components/SmoothScrolling";
+
 import "react-creative-cursor/dist/styles.css";
 
 export default function Home() {
@@ -18,17 +21,24 @@ export default function Home() {
 
   return (
     <>
+      <ProgressBar bgcolor="#4A5CFF" />
+      {isDesktop ? (
+        <Cursor
+          isGelly={true}
+          cursorBackgrounColor={"none"}
+          backgroundImageAnimationEase={Expo.easeOut}
+          backgroundImageAnimationDuration={0.8}
+          sizeAnimationDuration={0.8}
+        />
+      ) : null}
       <main className="px-4 lg:px-52">
-        <ProgressBar bgcolor="#4A5CFF" />
-        {isDesktop ? <Cursor isGelly={true} /> : null}
-
-        <section>
+        <SmoothScrolling>
           <Intro />
-          {/* <IntroOutro /> */}
-        </section>
-        {/* <section id="outro">
+
+          {/* <section id="outro">
           <IntroOutro />
         </section> */}
+        </SmoothScrolling>
       </main>
     </>
   );
