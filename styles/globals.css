@@ -3,20 +3,14 @@
 @tailwind utilities;
 
 body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: --sans;
 }
 
-section {
-  @apply min-h-screen lg:py-28 flex flex-col justify-center;
-}
-
-.intro-title {
-  @apply lg:text-[10rem] leading-[10rem];
-}
-.sub {
-  @apply lg:text-[5.5rem] leading-[5.5rem];
-}
-
+/* General */
 .serif-font {
+  font-family: --serif;
   font-size: 130%;
   line-height: 65%;
 }
@@ -24,13 +18,50 @@ section {
   color: #4a5cff;
 }
 
+/* Each screen size */
+.section {
+  @apply min-h-screen lg:py-28 flex flex-col justify-center;
+}
+
+/* Typography */
+.intro-title {
+  @apply lg:text-[10rem] leading-[10rem];
+}
+.sub {
+  @apply lg:text-[5.5rem] leading-[5.5rem];
+}
+.large-title {
+  @apply lg:text-[13rem] leading-[13rem] opacity-40 lg:mb-12 serif-font;
+}
+.text {
+  @apply lg:text-2xl lg:leading-10;
+}
+
+.text p {
+  @apply lg:mb-8;
+}
+.text em {
+  font-family: --serif;
+  font-style: normal;
+  @apply lg:text-[2.75rem] lg:leading-10;
+}
+
+/* Cursor */
 .c-cursor {
   mix-blend-mode: unset !important;
   background-color: transparent !important;
   border: 2px solid #4a5cff;
 }
-
 .c-cursor__inner {
   -webkit-filter: none !important;
   filter: none !important;
+}
+
+/* Horizontal scrolling */
+.horizontal-container {
+  display: flex;
+}
+.panel {
+  width: 100vw;
+  flex: 1;
 }

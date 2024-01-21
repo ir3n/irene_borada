@@ -19,6 +19,10 @@ const config: Config = {
       white: "#ffffff",
       black: "#000000",
     },
+    fontFamily: {
+      sans: "var(--sans)",
+      serif: "var(--serif)",
+    },
     extend: {},
   },
   plugins: [],

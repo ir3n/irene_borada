@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/font": "^14.1.0",
     "@studio-freight/react-lenis": "^0.0.43",
     "gsap": "^3.12.4",
     "next": "14.0.4",
