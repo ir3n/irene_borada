@@ -22,10 +22,7 @@ const Intro = () => {
                   height={115}
                   style={{ display: "inline-block" }}
                 />
-                <span
-                  data-cursor-background-image="/images/irene.png"
-                  data-cursor-size="200px"
-                >
+                <span data-cursor-img="/images/irene.png">
                   <span className={`serif-font accent-color inline-block`}>
                     Irene.
                   </span>

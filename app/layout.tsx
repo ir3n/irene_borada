@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Social from "@/components/Social";
+import MouseFollowerComponent from "@/components/MouseFollower";
 
 import "../styles/globals.css";
 
@@ -32,11 +33,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${sans.className} bg-dark`}>
-        <Header />
-        {children}
-        <div className="lg:w-14 fixed right-16 top-0 h-full flex flex-col">
-          <Social />
-        </div>
+        <MouseFollowerComponent>
+          <Header />
+          {children}
+          <div className="lg:w-14 fixed right-16 top-0 h-full flex flex-col">
+            <Social />
+          </div>
+        </MouseFollowerComponent>
       </body>
     </html>
   );

@@ -21,7 +21,7 @@ const Outro = () => {
             with me!
           </div>
           <div className="mt-16 text">
-            <span data-cursor-background-image="/images/arrow-up.svg">
+            <span data-cursor-img="/images/arrow-up.svg" data-cursor="-sm">
               go back to the <em>start</em>
             </span>
           </div>
