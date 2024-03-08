@@ -32,7 +32,7 @@ body {
   @apply lg:text-[5.5rem] leading-[5.5rem];
 }
 .large-title {
-  @apply lg:text-[13rem] leading-[13rem] opacity-20 lg:mb-12 serif-font;
+  @apply lg:text-[13rem] leading-[13rem] lg:mb-12 serif-font;
 }
 .text {
   @apply lg:text-2xl lg:leading-10;
@@ -53,7 +53,6 @@ body {
   border: 2px solid #4a5cff;
   transform: scale(0.9);
 }
-
 .mf-cursor-media {
   width: 350px;
   height: 350px;

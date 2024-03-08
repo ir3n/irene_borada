@@ -1,11 +1,23 @@
 import Container from "../Container";
 
-const TitleWithText = ({ title, text }) => {
+interface Props {
+  title: string;
+  text?: string;
+}
+
+const TitleWithText = (props: Props) => {
+  const { title, text } = props;
+
   return (
     <div className="section">
       <Container>
         <h2 className={`large-title accent-color `}>{title}</h2>
-        <div className="text" dangerouslySetInnerHTML={{ __html: text }}></div>
+        {text && (
+          <div
+            className="text"
+            dangerouslySetInnerHTML={{ __html: text }}
+          ></div>
+        )}
       </Container>
     </div>
   );

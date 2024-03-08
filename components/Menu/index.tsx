@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import Burger from "./Burger";
 import MenuList from "./MenuList";

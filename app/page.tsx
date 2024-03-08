@@ -7,6 +7,7 @@ import SmoothScrolling from "@/components/SmoothScrolling";
 import Intro from "@/components/Intro";
 import TitleWithText from "@/components/TitleWithText";
 import HorizontalScroll from "@/components/HorizontalScroll";
+import Studies from "@/components/Studies";
 import Outro from "@/components/Outro";
 
 export default function Home() {
@@ -27,7 +28,10 @@ export default function Home() {
             />
           </section>
 
-          {/* TODO: Studies */}
+          <section id="studies">
+            <TitleWithText title={"Studies"} />
+            <Studies />
+          </section>
 
           <section id="work">
             <HorizontalScroll>

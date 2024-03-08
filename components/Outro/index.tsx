@@ -20,9 +20,16 @@ const Outro = () => {
             <br />
             with me!
           </div>
-          <div className="mt-16 text">
-            <span data-cursor-img="/images/arrow-up.svg" data-cursor="-sm">
-              go back to the <em>start</em>
+          <div className="mt-16 text flex items-end	leading-[1.1] gap-x-1.5 cursor-pointer">
+            go back to the <em>start</em>
+            <span className="">
+              <Image
+                src="/images/arrow-up.svg"
+                alt="Back to top"
+                width={50}
+                height={50}
+                style={{ display: "inline-block" }}
+              />
             </span>
           </div>
         </Container>
