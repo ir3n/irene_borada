@@ -20,8 +20,8 @@ const config: Config = {
       black: "#000000",
     },
     fontFamily: {
-      sans: "var(--sans)",
-      serif: "var(--serif)",
+      sans: ["var(--sans)"],
+      serif: ["var(--serif)"],
     },
     extend: {},
   },

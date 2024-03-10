@@ -5,13 +5,11 @@
 body {
   overflow-x: hidden;
   overflow-y: auto;
-  font-family: --sans;
   color: white;
 }
 
 /* General */
-.serif-font {
-  font-family: --serif;
+.font-serif {
   font-size: 130%;
   line-height: 65%;
 }
@@ -32,7 +30,7 @@ body {
   @apply lg:text-[5.5rem] leading-[5.5rem];
 }
 .large-title {
-  @apply lg:text-[13rem] leading-[13rem] lg:mb-12 serif-font;
+  @apply lg:text-[13rem] leading-[13rem] lg:mb-12 font-serif;
 }
 .text {
   @apply lg:text-2xl lg:leading-10;
@@ -42,9 +40,9 @@ body {
   @apply lg:mb-8;
 }
 .text em {
-  font-family: --serif;
+  @apply font-serif;
   font-style: normal;
-  @apply lg:text-[2.75rem] lg:leading-10;
+  font-size: 200%;
 }
 
 /* cursor */

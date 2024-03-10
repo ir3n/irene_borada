@@ -23,7 +23,7 @@ const Intro = () => {
                   style={{ display: "inline-block" }}
                 />
                 <span data-cursor-img="/images/irene.png">
-                  <span className={`serif-font accent-color inline-block`}>
+                  <span className={`font-serif accent-color inline-block`}>
                     Irene.
                   </span>
                 </span>
@@ -36,7 +36,7 @@ const Intro = () => {
             <div className="intro-title">A front-end developer</div>
             <div className="sub mt-24">
               trying to conquer the{" "}
-              <span className={`serif-font accent-color`}>Javascript </span>
+              <span className={`font-serif accent-color`}>Javascript </span>
               world.
             </div>
           </Container>
