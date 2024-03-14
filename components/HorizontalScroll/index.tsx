@@ -5,14 +5,14 @@ import { useLayoutEffect, useRef, Children } from "react";
 gsap.registerPlugin(ScrollTrigger);
 
 const HorizontalScroll = ({ children }: { children: React.ReactNode }) => {
-  const component = useRef();
-  const slider = useRef();
+  const component = useRef<HTMLDivElement>(null);
+  const slider = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       let panels = gsap.utils.toArray(".panel");
 
-      slider.current.width = `${panels.length * 100}vw`;
+      // slider.current.width = `${panels.length * 100}vw`;
       gsap.to(panels, {
         xPercent: -100 * (panels.length - 1),
         scrollTrigger: {
@@ -20,7 +20,7 @@ const HorizontalScroll = ({ children }: { children: React.ReactNode }) => {
           pin: true,
           scrub: 1,
           snap: 1 / (panels.length - 1),
-          end: () => "+=" + slider.current.offsetWidth,
+          end: () => "+=" + slider?.current?.offsetWidth,
         },
       });
     }, component);
