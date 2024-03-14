@@ -16,14 +16,16 @@ const config: Config = {
     colors: {
       dark: "#141521",
       accent: "#4A5CFF",
-      white: "#ffffff",
+      white: "#FFFFFF",
       black: "#000000",
+      light: "#ECEEFF",
     },
     fontFamily: {
       sans: ["var(--sans)"],
       serif: ["var(--serif)"],
     },
     extend: {},
+    darkMode: "class",
   },
   plugins: [],
   // mode: "jit",

@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import ProgressBar from "react-scroll-progress-bar";
 
 import SmoothScrolling from "@/components/SmoothScrolling";
@@ -9,11 +8,12 @@ import TitleWithText from "@/components/TitleWithText";
 import HorizontalScroll from "@/components/HorizontalScroll";
 import Studies from "@/components/Studies";
 import Outro from "@/components/Outro";
+import { accentColor } from "@/constants";
 
 export default function Home() {
   return (
     <>
-      <ProgressBar bgcolor="#4A5CFF" />
+      <ProgressBar bgcolor={accentColor} />
       <main className="px-4 lg:px-52">
         <SmoothScrolling>
           <section id="about">

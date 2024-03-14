@@ -14,7 +14,7 @@ const MouseFollowerComponent = ({
     MouseFollower.registerGSAP(gsap);
 
     const cursor = new MouseFollower({
-      skewing: 3,
+      skewing: 4,
     });
 
     return () => {

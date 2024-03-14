@@ -21,8 +21,10 @@ export default function RootLayout({
     <html lang="en" className={`${sans.variable} ${serif.variable}`}>
       <body className="font-sans">
         <MouseFollowerComponent>
-          <Header />
-          <ThemeProvider>{children}</ThemeProvider>
+          <ThemeProvider>
+            <Header />
+            {children}
+          </ThemeProvider>
           <div className="lg:w-14 fixed right-16 top-0 h-full flex flex-col">
             <Social />
           </div>

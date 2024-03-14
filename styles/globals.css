@@ -5,7 +5,6 @@
 body {
   overflow-x: hidden;
   overflow-y: auto;
-  color: white;
 }
 
 /* General */
@@ -14,7 +13,7 @@ body {
   line-height: 65%;
 }
 .accent-color {
-  color: #4a5cff;
+  @apply text-accent;
 }
 
 /* Each screen size */
