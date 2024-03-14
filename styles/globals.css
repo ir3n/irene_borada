@@ -7,6 +7,20 @@ body {
   overflow-y: auto;
 }
 
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  width: 8px;
+  @apply bg-light;
+}
+
+*::-webkit-scrollbar-thumb {
+  width: 8px;
+  @apply bg-accent;
+}
+
 /* General */
 .font-serif {
   font-size: 130%;
