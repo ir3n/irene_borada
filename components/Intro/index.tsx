@@ -18,7 +18,7 @@ const Intro = () => {
               <span className="ml-3 lg:ml-5 inline-flex items-baseline">
                 <RotatingFlower />
                 <span data-cursor-img="/images/irene.png">
-                  <span className="font-serif accent-color inline-block ml-2 ">
+                  <span className="font-serif accent-color larger-font inline-block ml-2">
                     Irene.
                   </span>
                 </span>
@@ -31,7 +31,9 @@ const Intro = () => {
             <div className="intro-title">A front-end developer</div>
             <div className="sub mt-8 lg:mt-14 xl:mt-24">
               trying to conquer the <br />
-              <span className={`font-serif accent-color`}>Javascript </span>
+              <span className="font-serif accent-color larger-font">
+                Javascript{" "}
+              </span>
               world.
             </div>
           </Container>

@@ -11,7 +11,7 @@ const TitleWithText = (props: Props) => {
   return (
     <div className="section">
       <Container>
-        <h2 className={`large-title accent-color `}>{title}</h2>
+        <h2 className={`large-title accent-color`}>{title}</h2>
         {text && (
           <div
             className="text"

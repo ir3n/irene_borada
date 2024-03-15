@@ -1,4 +1,4 @@
-import { Poppins, Suranna } from "next/font/google";
+import { Poppins, Corinthia } from "next/font/google";
 
 export const sans = Poppins({
   // TODO: delete anything I don't finally use
@@ -7,8 +7,8 @@ export const sans = Poppins({
   variable: "--sans",
 });
 
-export const serif = Suranna({
-  weight: ["400"],
+export const serif = Corinthia({
+  weight: ["400", "700"],
   subsets: ["latin"],
   variable: "--serif",
 });

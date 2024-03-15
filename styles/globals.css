@@ -27,8 +27,8 @@ svg {
   max-width: 100%;
 }
 /* General */
-.font-serif {
-  font-size: 130%;
+.larger-font {
+  font-size: 180%;
   line-height: 65%;
 }
 .accent-color {
@@ -48,17 +48,17 @@ svg {
   @apply text-[1.5rem] leading-[1.5rem] lg:text-[3.5rem] lg:leading-[3.5rem] xl:text-[5.5rem] xl:leading-[5.5rem];
 }
 .large-title {
-  @apply lg:text-[13rem] leading-[13rem] lg:mb-12 font-serif;
+  @apply font-serif text-[6rem] md:text-[9rem] lg:text-[14rem] xl:text-[16rem] lg:mb-4 leading-[1];
 }
 .text {
-  @apply lg:text-2xl lg:leading-10;
+  @apply text-base leading-loose md:text-lg md:leading-loose xl:text-2xl xl:leading-loose;
 }
 
 .text p {
   @apply lg:mb-8;
 }
 .text em {
-  @apply font-serif;
+  @apply font-serif larger-font;
   font-style: normal;
   font-size: 200%;
 }
