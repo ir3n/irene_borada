@@ -25,7 +25,7 @@ export default function RootLayout({
             <Header />
             {children}
           </ThemeProvider>
-          <div className="fixed left-0 md:left-auto bottom-0 md:bottom-auto right-0 md:right-3 lg:right-16 md:top-0 md:h-full lg:w-14 flex flex-col">
+          <div className="fixed left-0 md:left-auto bottom-8 md:bottom-auto right-0 md:right-3 lg:right-16 md:top-0 md:h-full lg:w-14 flex flex-col">
             <Social />
           </div>
         </MouseFollowerComponent>
