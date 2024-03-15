@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <ProgressBar bgcolor={accentColor} />
-      <main className="px-4 lg:px-52">
+      <main>
         <SmoothScrolling>
           <section id="about">
             <Intro />

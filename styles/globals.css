@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
 body {
   overflow-x: hidden;
   overflow-y: auto;
@@ -21,6 +22,10 @@ body {
   @apply bg-accent;
 }
 
+img,
+svg {
+  max-width: 100%;
+}
 /* General */
 .font-serif {
   font-size: 130%;
@@ -37,10 +42,10 @@ body {
 
 /* Typography */
 .intro-title {
-  @apply lg:text-[10rem] leading-[10rem];
+  @apply text-[3rem] leading-[3rem] lg:text-[8rem] lg:leading-[8rem] xl:text-[10rem] xl:leading-[10rem];
 }
 .sub {
-  @apply lg:text-[5.5rem] leading-[5.5rem];
+  @apply text-[1.5rem] leading-[1.5rem] lg:text-[3.5rem] lg:leading-[3.5rem] xl:text-[5.5rem] xl:leading-[5.5rem];
 }
 .large-title {
   @apply lg:text-[13rem] leading-[13rem] lg:mb-12 font-serif;
@@ -77,6 +82,6 @@ body {
   display: flex;
 }
 .panel {
-  width: 100vw;
+  /* width: 100vw; */
   flex: 1;
 }

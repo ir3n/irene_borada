@@ -10,14 +10,8 @@ const ThemeToggle = () => {
   const { lightTheme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <div className="cursor-pointer absolute right-[200px] top-[50px] z-20">
-      <div onClick={toggleTheme}>
-        {!lightTheme ? (
-          <Sun color={accentColor} />
-        ) : (
-          <Moon color={accentColor} />
-        )}
-      </div>
+    <div onClick={toggleTheme}>
+      {!lightTheme ? <Sun color={accentColor} /> : <Moon color={accentColor} />}
     </div>
   );
 };

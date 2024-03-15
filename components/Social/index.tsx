@@ -26,7 +26,7 @@ const socialIcons = [
 
 const Social = () => {
   return (
-    <ul className="h-full flex flex-col justify-center gap-y-10">
+    <ul className="flex w-full md:w-fit md:h-full md:flex-col justify-center gap-5 lg:gap-10">
       {socialIcons?.map((icon) => (
         <li key={`social-icon-${icon?.name}`} data-magnetic>
           <Link href={icon?.url}>

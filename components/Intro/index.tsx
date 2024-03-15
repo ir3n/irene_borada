@@ -1,6 +1,7 @@
 import Image from "next/image";
 import HorizontalScroll from "../HorizontalScroll";
 import Container from "../Container";
+import RotatingFlower from "../RotatingFlower";
 
 const Intro = () => {
   return (
@@ -14,16 +15,10 @@ const Intro = () => {
               My name
               <br />
               is
-              <span className="mx-5 inline-flex items-baseline">
-                <Image
-                  src="/images/flower.svg"
-                  alt="Flower"
-                  width={115}
-                  height={115}
-                  style={{ display: "inline-block" }}
-                />
+              <span className="ml-3 lg:ml-5 inline-flex items-baseline">
+                <RotatingFlower />
                 <span data-cursor-img="/images/irene.png">
-                  <span className={`font-serif accent-color inline-block`}>
+                  <span className="font-serif accent-color inline-block ml-2 ">
                     Irene.
                   </span>
                 </span>
@@ -34,8 +29,8 @@ const Intro = () => {
         <div className="section w-screen">
           <Container>
             <div className="intro-title">A front-end developer</div>
-            <div className="sub mt-24">
-              trying to conquer the{" "}
+            <div className="sub mt-8 lg:mt-14 xl:mt-24">
+              trying to conquer the <br />
               <span className={`font-serif accent-color`}>Javascript </span>
               world.
             </div>

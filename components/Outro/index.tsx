@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Container from "../Container";
+import RotatingFlower from "../RotatingFlower";
 
 const Outro = () => {
   return (
@@ -9,13 +10,7 @@ const Outro = () => {
           <div className="intro-title block">
             Thanks for meeting
             <span className="ml-5 inline-block">
-              <Image
-                src="/images/flower.svg"
-                alt="Flower"
-                width={115}
-                height={115}
-                style={{ display: "inline-block" }}
-              />
+              <RotatingFlower />
             </span>
             <br />
             with me!
