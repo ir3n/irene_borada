@@ -3,7 +3,7 @@ import Study from "./Study";
 
 const Studies = () => {
   return (
-    <HorizontalScroll>
+    <HorizontalScroll title={"Studies"}>
       <Study />
       <Study />
       <Study />

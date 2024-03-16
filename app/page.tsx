@@ -9,6 +9,7 @@ import HorizontalScroll from "@/components/HorizontalScroll";
 import Studies from "@/components/Studies";
 import Outro from "@/components/Outro";
 import { accentColor } from "@/constants";
+import LargeTitle from "@/components/LargeTitle";
 
 export default function Home() {
   return (
@@ -29,7 +30,6 @@ export default function Home() {
           </section>
 
           <section id="studies">
-            <TitleWithText title={"Studies"} />
             <Studies />
           </section>
 

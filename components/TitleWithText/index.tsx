@@ -1,8 +1,9 @@
 import Container from "../Container";
+import LargeTitle from "../LargeTitle";
 
 interface Props {
   title: string;
-  text?: string;
+  text: string;
 }
 
 const TitleWithText = (props: Props) => {
@@ -11,13 +12,8 @@ const TitleWithText = (props: Props) => {
   return (
     <div className="section">
       <Container>
-        <h2 className={`large-title accent-color`}>{title}</h2>
-        {text && (
-          <div
-            className="text"
-            dangerouslySetInnerHTML={{ __html: text }}
-          ></div>
-        )}
+        <LargeTitle title={title} />
+        <div className="text" dangerouslySetInnerHTML={{ __html: text }}></div>
       </Container>
     </div>
   );

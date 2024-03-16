@@ -37,7 +37,7 @@ svg {
 
 /* Each screen size */
 .section {
-  @apply min-h-screen lg:py-28 flex flex-col justify-center;
+  @apply min-h-screen py-10 lg:py-28 flex flex-col justify-center;
 }
 
 /* Typography */
@@ -48,10 +48,13 @@ svg {
   @apply text-[1.5rem] leading-[1.5rem] lg:text-[3.5rem] lg:leading-[3.5rem] xl:text-[5.5rem] xl:leading-[5.5rem];
 }
 .large-title {
-  @apply font-serif text-[6rem] md:text-[9rem] lg:text-[14rem] xl:text-[16rem] lg:mb-4 leading-[1];
+  @apply font-serif text-[5rem] md:text-[9rem] lg:text-[14rem] xl:text-[16rem] lg:mb-4 leading-[1];
+}
+.small-title {
+  @apply font-serif text-[2.5rem] md:text-[3rem] lg:text-[4rem] xl:text-[4.5rem] leading-[0.7];
 }
 .text {
-  @apply text-base leading-loose md:text-lg md:leading-loose xl:text-2xl xl:leading-loose;
+  @apply text-[0.875rem] md:text-[1.2rem] xl:text-[1.5rem] leading-relaxed;
 }
 
 .text p {
