@@ -11,6 +11,7 @@ import Outro from "@/components/Outro";
 import { accentColor } from "@/constants";
 import LargeTitle from "@/components/LargeTitle";
 import { Work } from "@/components/Work";
+import FreeTime from "@/components/FreeTime";
 
 export default function Home() {
   return (
@@ -38,7 +39,9 @@ export default function Home() {
             <Work />
           </section>
 
-          {/* <section id="free-time"></section> */}
+          <section id="free-time">
+            <FreeTime />
+          </section>
 
           <section id="outro">
             <Outro />
