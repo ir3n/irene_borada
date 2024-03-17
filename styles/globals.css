@@ -78,6 +78,13 @@ svg {
   margin: -150px 0 0 -150px;
 }
 .mf-cursor-text {
+  @apply text-white p-2;
+}
+.mf-cursor.-text:before {
+  @apply bg-dark;
+  border-color: #141521;
+  transform: scale(2);
+  opacity: 1;
 }
 
 /* Horizontal scrolling */
