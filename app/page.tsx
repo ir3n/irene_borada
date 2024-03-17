@@ -10,6 +10,7 @@ import Studies from "@/components/Studies";
 import Outro from "@/components/Outro";
 import { accentColor } from "@/constants";
 import LargeTitle from "@/components/LargeTitle";
+import { Work } from "@/components/Work";
 
 export default function Home() {
   return (
@@ -34,24 +35,7 @@ export default function Home() {
           </section>
 
           <section id="work">
-            <HorizontalScroll>
-              <div className="section w-screen">
-                <TitleWithText
-                  title={"Work"}
-                  text={
-                    "<p>Since July 2019 I working at my first company , <em>Rocket Path PC.</em>some words about the company and my role. imply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard Messor at Hampden-Sydney College in Virginia, looked up one of the more obscure  Lorem Ipsum, consectetur, from a </p><p>Since July 2019 I working at my first company , <em>Rocket Path PC</em> some words about the company and my role. imply random text. It has roots</p><p>Since there is not much time for projects of my own, but here are some examples where either my help was big or made it almost on my own. Of course everything belongs to Rocket Path.</p>"
-                  }
-                />
-              </div>
-              <div className="section w-screen">
-                <TitleWithText
-                  title={"Work"}
-                  text={
-                    "<p>Since July 2019 I working at my first company , <em>Rocket Path PC.</em>some words about the company and my role. imply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard Messor at Hampden-Sydney College in Virginia, looked up one of the more obscure  Lorem Ipsum, consectetur, from a </p><p>Since July 2019 I working at my first company , <em>Rocket Path PC</em> some words about the company and my role. imply random text. It has roots</p><p>Since there is not much time for projects of my own, but here are some examples where either my help was big or made it almost on my own. Of course everything belongs to Rocket Path.</p>"
-                  }
-                />
-              </div>
-            </HorizontalScroll>
+            <Work />
           </section>
 
           {/* <section id="free-time"></section> */}

@@ -19,7 +19,7 @@ const Outro = () => {
             go back to the <em>start</em>
             <span className="">
               <Image
-                src="/images/arrow-up.svg"
+                src="/images/icons/arrow-up.svg"
                 alt="Back to top"
                 width={50}
                 height={50}

@@ -1,4 +1,3 @@
-import Container from "../Container";
 import Image from "next/image";
 
 const Study = () => {
@@ -7,7 +6,7 @@ const Study = () => {
       <div className="relative">
         <div className="opacity-5 w-fit mx-auto max-w-[150px] md:max-w-[200px] lg:max-w-[400px] xl:max-w-full absolute lg:relative md:left-0 right-0 m-auto">
           <Image
-            src={"/images/certificate.svg"}
+            src={"/images/studies/certificate.svg"}
             alt={"Certificate"}
             width={545}
             height={454}

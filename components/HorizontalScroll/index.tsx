@@ -28,7 +28,7 @@ const HorizontalScroll = ({
           pin: component.current,
           scrub: 1,
           snap: 1 / (panels.length - 1),
-          start: `${title ? "center 60%" : "center center"}`,
+          start: `${title ? "center 60%" : "top top"}`,
           end: () => "+=" + slider?.current?.offsetWidth,
         },
       });
