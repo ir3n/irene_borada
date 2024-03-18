@@ -18,7 +18,7 @@ const config: Config = {
       accent: "#4A5CFF", //#ed2856
       white: "#FFFFFF",
       black: "#000000",
-      light: "#E0E0E0",
+      light: "#F8F9FA",
     },
     fontFamily: {
       sans: ["var(--sans)"],

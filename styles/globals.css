@@ -57,13 +57,17 @@ svg {
   @apply text-[0.875rem] md:text-[1.2rem] xl:text-[1.5rem] leading-relaxed;
 }
 
+.note {
+  @apply text-xs;
+}
+
 .text p {
   @apply lg:mb-8;
 }
 .text em {
   @apply font-serif larger-font;
   font-style: normal;
-  font-size: 200%;
+  font-size: 225%;
 }
 
 /* cursor */
