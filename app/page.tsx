@@ -13,6 +13,11 @@ import LargeTitle from "@/components/LargeTitle";
 import { Work } from "@/components/Work";
 import FreeTime from "@/components/FreeTime";
 
+import aboutData from "@/data/about.json";
+import studiesData from "@/data/studies.json";
+import workData from "@/data/work.json";
+import freeTimeData from "@/data/free-time.json";
+
 export default function Home() {
   return (
     <>
@@ -22,25 +27,21 @@ export default function Home() {
           <section id="intro">
             <Intro />
           </section>
+
           <section id="about">
-            <TitleWithText
-              title={"About"}
-              text={
-                '<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. <em>Richard McClintock</em>, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure  Lorem Ipsum, consectetur, from a </p><p>The Extremes  Lorem Ipsum of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the <em>Renaissance</em>. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>'
-              }
-            />
+            <TitleWithText data={aboutData} />
           </section>
 
           <section id="studies">
-            <Studies />
+            <Studies data={studiesData} />
           </section>
 
           <section id="work">
-            <Work />
+            <Work data={workData} />
           </section>
 
           <section id="free-time">
-            <FreeTime />
+            <FreeTime data={freeTimeData} />
           </section>
 
           <section id="outro">

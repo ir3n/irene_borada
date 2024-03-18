@@ -1,0 +1,41 @@
+{
+  "title": "Free Time",
+  "items": [
+    {
+      "title": "I enjoy spending time with <em>Rukia</em>.",
+      "image": "/images/free-time/rukia.jpg",
+      "imageHover": "/images/free-time/rukia-hover.jpg",
+      "alt": "My dog, Rukia"
+    },
+    {
+      "title": "I practice <em>Shito-Ryu Karate</em>.",
+      "image": "/images/free-time/karate.jpg",
+      "imageHover": "/images/free-time/karate-hover.jpg",
+      "alt": "Karate"
+    },
+    {
+      "title": "Walking in <em>nature</em> refills my batteries.",
+      "image": "/images/free-time/nature.jpg",
+      "imageHover": "/images/free-time/nature-hover.jpg",
+      "alt": "Nature"
+    },
+    {
+      "title": "Listening to <em>metal</em> energizes me. Sometimes I also sing.",
+      "image": "/images/free-time/sing.jpg",
+      "imageHover": "/images/free-time/sing-hover.jpg",
+      "alt": "Music"
+    },
+    {
+      "title": "I like watching <em>anime</em>.",
+      "image": "/images/free-time/anime.jpg",
+      "imageHover": "/images/free-time/anime-hover.jpg",
+      "alt": "Anime"
+    },
+    {
+      "title": "I enjoy reading <em>books</em>.",
+      "image": "/images/free-time/books.jpg",
+      "imageHover": "/images/free-time/books-hover.jpg",
+      "alt": "Books"
+    }
+  ]
+}

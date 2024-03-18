@@ -1,6 +1,13 @@
 import Image from "next/image";
+import { FreeTimeType } from ".";
 
-const FreeTimeItem = ({ reverse = false }: { reverse?: boolean }) => {
+const FreeTimeItem = ({
+  reverse,
+  title,
+  image,
+  imageHover,
+  alt,
+}: FreeTimeType) => {
   return (
     <div className="px-4 lg:pl-52">
       <div
@@ -9,16 +16,9 @@ const FreeTimeItem = ({ reverse = false }: { reverse?: boolean }) => {
         } flex gap-5 w-[250px] md:w-[400px]`}
       >
         <div className="">
-          <Image
-            src={"/images/free-time/satoru.jpg"}
-            alt={"Rukia"}
-            width={400}
-            height={400}
-          />
+          <Image src={image} alt={alt} width={400} height={400} />
         </div>
-        <div className="text">
-          Walking in <em>nature</em> refills my batteries.
-        </div>
+        <div className="text" dangerouslySetInnerHTML={{ __html: title }}></div>
       </div>
     </div>
   );

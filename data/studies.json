@@ -1,0 +1,35 @@
+{
+  "title": "Studies",
+  "items": [
+    {
+      "date": "2018 - Today",
+      "title": "Online Courses & Certifications",
+      "text": "Some include:<ul><li><a target='_blank' href='#'>Mosh Hamedani test write about 5 links</a></li><li><a target='_blank' href='#'>Mosh Hamedani test write about 5 links</a></li><li><a target='_blank' href='#'>Mosh Hamedani test write about 5 links</a></li><li><a target='_blank' href='#'>Mosh Hamedani test write about 5 links</a></li><li><a target='_blank' href='#'>Mosh Hamedani test write about 5 links</a></li></ul>",
+      "image": "/images/studies/certificate.svg"
+    },
+    {
+      "date": "2018 - Today",
+      "title": "Books about Programming",
+      "text": "Most important:<ul><li><a target='_blank' href='#'>Everything you need to ace computer science and coding in one big fat notebook</a></li><li><a target='_blank' href='#'>Everything you need to ace computer science and coding in one big fat notebook</a></li><li><a target='_blank' href='#'>Everything you need to ace computer science and coding in one big fat notebook</a></li></ul>",
+      "image": "/images/studies/book.svg"
+    },
+    {
+      "date": "2018 - Today",
+      "title": "Physical & Virtual Conferences",
+      "text": "For example:<ul><li>Voxxed Days - Thessaloniki</li><li>DevIt - Thessaloniki</li><li>An online conference</li></ul>",
+      "image": "/images/studies/conference.svg"
+    },
+    {
+      "date": "2015 - 2016",
+      "title": "Graphic Design",
+      "text": "Vocational Institute of Thessaloniki, Greece",
+      "image": "/images/studies/design.svg"
+    },
+    {
+      "date": "2008-2013",
+      "title": "Bachelor’s Degree",
+      "text": "Music Science and Arts<br/>University of Macedonia<br/>Thessaloniki, Greece",
+      "image": "/images/studies/graduation.svg"
+    }
+  ]
+}
