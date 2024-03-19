@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Linkedin",
+    "icon": "images/social/linkedin.svg",
+    "url": "https://www.linkedin.com/in/irene-borada"
+  },
+  {
+    "name": "Mail",
+    "icon": "images/social/email.svg",
+    "url": "mailto:iren.borada@gmail.com"
+  },
+  {
+    "name": "Github",
+    "icon": "images/social/github.svg",
+    "url": "https://github.com/ir3n?tab=repositories"
+  },
+  {
+    "name": "Shutterstock",
+    "icon": "images/social/shutterstock.svg",
+    "url": "https://www.shutterstock.com/g/Ir3n?_gl=1*1xwdj7w*_ga*Njk0MDY2NzIuMTcwMDk0NDQ2OQ..*_ga_5JRYE4Y8J9*MTcwNjk3ODEwMS40OC4xLjE3MDY5NzgxNjQuNTcuMC4w*_fplc*c1A1S3ZVUXQlMkZ5ZGZwSTJvQUs1eE9ia3ZZTzZaVHFBZ1NPOUxYUWxXYmclMkZhaWRUdXNpWDFEd3BNRkZ5UzlDb2FMYndrWFU4ckIyUkclMkZSR0d0SXVGWmdSSGVzVTM2endQaUZqOWlqZ2UlMkZKMFZNaUloVGpibjdJR1RpdklNZlElM0QlM0Q.&rid=329947358"
+  }
+]

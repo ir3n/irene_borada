@@ -16,7 +16,6 @@ const SmoothScrolling = ({
         duration: 1.5,
         smoothTouch: true,
         orientation: direction || "vertical",
-        gestureOrientataion: "both",
       }}
     >
       {children}

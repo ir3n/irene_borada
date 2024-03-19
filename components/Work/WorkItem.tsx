@@ -10,6 +10,7 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
       <div
         className="relative min-[1025px]:w-3/5 lg:h-auto min-h-[200px] sm:min-h-[250px] md:min-h-[620px]"
         data-cursor-text={cursorText}
+        data-cursor="dark"
       >
         {link ? (
           <Link href={link} target="_blank">

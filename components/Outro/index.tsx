@@ -32,9 +32,9 @@ const Outro = () => {
             </span>
           </div>
         </Container>
-        <div className="note text-right absolute right-4 lg:right-[50px] bottom-4 lg:bottom-[50px]">
+        <div className="note text-center md:text-right absolute left-0 md:left-auto right-0 md:right-4 lg:right-[50px] bottom-4 lg:bottom-[50px]">
           designed & developed by Irene Borada
-          <br />©{new Date().getFullYear()}
+          <br /> ©{new Date().getFullYear()}
         </div>
       </div>
     </>

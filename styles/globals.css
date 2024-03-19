@@ -58,7 +58,7 @@ svg {
 }
 
 .note {
-  @apply text-xs;
+  @apply text-[0.625rem] md:text-[0.75rem];
 }
 
 .text p {
@@ -71,11 +71,22 @@ svg {
 }
 
 /* cursor */
+.mf-cursor {
+  @apply opacity-90;
+}
 .mf-cursor:before {
   background-color: transparent;
-  border: 2px solid #4a5cff;
-  transform: scale(0.9);
+  @apply border-2 border-accent scale-90;
 }
+
+.mf-cursor.-text:before {
+  transform: scale(2);
+  @apply opacity-100 bg-dark border-dark;
+}
+.mf-cursor.-hidden:before {
+  @apply opacity-50 scale-0;
+}
+
 .mf-cursor-media {
   width: 350px;
   height: 350px;
@@ -83,12 +94,6 @@ svg {
 }
 .mf-cursor-text {
   @apply text-white p-2;
-}
-.mf-cursor.-text:before {
-  @apply bg-dark;
-  border-color: #141521;
-  transform: scale(2);
-  opacity: 1;
 }
 
 /* Horizontal scrolling */

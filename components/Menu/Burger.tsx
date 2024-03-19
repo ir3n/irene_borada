@@ -1,17 +1,32 @@
-// import { useState } from "react";
+import { useContext, useState } from "react";
+import { MenuContext } from "@/providers/menu-provider";
 
-const Burger: React.FC<{ open: boolean }> = ({ open }) => {
-  //   const [hover, setHover] = useState(false);
+const Burger = () => {
+  const { open, setOpen } = useContext(MenuContext);
+
+  const [hover, setHover] = useState(false);
 
   return (
-    <>
-      <div className={`${open ? "bg-dark" : "bg-accent"} h-0.5 w-10/12`}></div>
+    <div
+      id="burger"
+      onClick={() => {
+        setOpen(!open);
+      }}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      className="z-20 relative cursor-pointer"
+    >
       <div
         className={`${
-          open ? "bg-dark" : "bg-accent"
-        } h-0.5 w-10/12 mt-3 lg:mt-5 ml-auto`}
+          open ? "bg-dark ml-auto" : "bg-accent"
+        }  h-0.5 w-10/12 transition duration-500`}
       ></div>
-    </>
+      <div
+        className={`${
+          open ? "bg-dark " : "bg-accent ml-auto"
+        } h-0.5 w-10/12 mt-3 lg:mt-5 transition duration-500`}
+      ></div>
+    </div>
   );
 };
 

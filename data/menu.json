@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Intro",
+    "url": "#intro"
+  },
+  {
+    "title": "About",
+    "url": "#about"
+  },
+
+  {
+    "title": "Studies",
+    "url": "#studies"
+  },
+  {
+    "title": "Work",
+    "url": "#work"
+  },
+  {
+    "title": "Free Time",
+    "url": "#free-time"
+  }
+]
