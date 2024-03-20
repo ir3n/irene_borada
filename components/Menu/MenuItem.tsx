@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import Link from "next/link";
 import { MenuContext } from "@/providers/menu-provider";
+import { useCurrentSection } from "@/hooks/useCurrentSection";
 
 interface MenuItemData {
   title: string;
@@ -16,6 +17,9 @@ const MenuItem = ({ title, url }: MenuItemData) => {
     // setOpen(false);
     setOpen(!open);
   };
+
+  const currentSection = useCurrentSection();
+  console.log(currentSection);
 
   return (
     <div
