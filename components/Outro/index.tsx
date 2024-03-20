@@ -16,7 +16,7 @@ const Outro = () => {
         <Container>
           <div className="intro-title block">
             Thanks for meeting
-            <span className="ml-5 inline-block">
+            <span className="ml-3 lg:ml-5 inline-block translate-y-1">
               <RotatingFlower />
             </span>
             <br />
