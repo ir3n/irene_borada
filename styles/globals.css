@@ -36,6 +36,15 @@ svg {
   @apply text-accent;
 }
 
+.text ul li {
+  display: flex;
+}
+.text ul li::before {
+  @apply block shrink-0 w-3.5 md:w-5 mr-1 mt-1 lg:mt-2.5 bg-no-repeat bg-contain;
+  content: "";
+  background-image: url("/images/icons/arrow-right.svg");
+}
+
 /* Each screen size */
 .section {
   @apply min-h-screen py-10 lg:py-28 flex flex-col justify-center;
@@ -80,6 +89,9 @@ svg {
 .mf-cursor.-text:before {
   transform: scale(2);
   @apply opacity-100 bg-dark border-dark;
+}
+.mf-cursor.-pointer:before {
+  @apply opacity-50 scale-0;
 }
 .mf-cursor.-hidden:before {
   @apply opacity-50 scale-0;

@@ -14,7 +14,7 @@ const Study = ({ date, title, text, image }: StudyItem) => {
             style={{ maxHeight: "300px", width: "auto", margin: "0 auto" }}
           />
         </div>
-        <div className="mx-auto lg:flex gap-14 items-center h-full">
+        <div className="mx-auto lg:flex gap-14 items-center h-full relative z-[1]">
           <div className="mb-4 lg:mb-0 lg:max-w-80">
             <div className="text mb-2">{date}</div>
             <h4 className="small-title">{title}</h4>
