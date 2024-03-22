@@ -17,7 +17,10 @@ export default function ThemeProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [lightTheme, setLightTheme] = useState(false);
+  const storedItem = localStorage.getItem("lightTheme");
+  const initialLocalStorage = storedItem ? JSON.parse(storedItem) : false;
+
+  const [lightTheme, setLightTheme] = useState(initialLocalStorage);
 
   useEffect(() => {
     localStorage.setItem("lightTheme", JSON.stringify(lightTheme));
@@ -25,6 +28,7 @@ export default function ThemeProvider({
 
   const toggleTheme = () => {
     setLightTheme(!lightTheme);
+    localStorage.setItem("lightTheme", JSON.stringify(lightTheme));
   };
 
   return (
