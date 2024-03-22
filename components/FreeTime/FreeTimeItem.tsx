@@ -13,7 +13,7 @@ const FreeTimeItem = ({
       <div
         className={`${
           reverse ? "flex-col-reverse" : "flex-col"
-        } flex gap-5 w-[250px] md:w-[400px]`}
+        } flex gap-5 w-[15.625rem] md:w-[25rem]`}
       >
         <div className="">
           <Image src={image} alt={alt} width={400} height={400} />

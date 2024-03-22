@@ -12,6 +12,7 @@ const MenuItem = ({ title, url }: MenuItemData) => {
   const { open, setOpen } = useContext(MenuContext);
 
   const [hover, setHover] = useState(false);
+  const [active, setActive] = useState(false);
 
   const handleLinkClick = (): void => {
     // setOpen(false);
@@ -25,23 +26,35 @@ const MenuItem = ({ title, url }: MenuItemData) => {
     <div
       onMouseOver={() => setHover(true)}
       onMouseOut={() => setHover(false)}
-      className="relative sub"
+      className="sub"
     >
-      <Link href={url} onClick={handleLinkClick}>
-        <span
-          className={`${
-            hover ? "opacity-0" : "opacity-100"
-          } transition duration-500 text-dark`}
+      <Link
+        href={url}
+        onClick={handleLinkClick}
+        className={active ? "pointer-events-none" : ""}
+        aria-disabled={active}
+        tabIndex={active ? -1 : undefined}
+      >
+        <div
+          className={`transition duration-500 text-dark relative lg:pl-10 xl:pl-12 lg:pr-16 xl:pr-20`}
         >
-          {title}
-        </span>
-        <span
-          className={`${
-            hover ? "opacity-100" : "opacity-0"
-          } absolute font-serif text-dark left-0 right-0 mx-auto text-center text-[160%] transition duration-500`}
-        >
-          {title}
-        </span>
+          <span
+            className={`hidden lg:inline-block absolute left-0 text-[90%] ${
+              hover && !active ? "opacity-100" : "opacity-0"
+            } transition duration-500`}
+          >
+            {"<"}
+          </span>
+          {active ? `#${title}` : title}
+
+          <span
+            className={`hidden lg:inline-block absolute right-0 text-[90%] ${
+              hover && !active ? "opacity-100" : "opacity-0"
+            } transition duration-500`}
+          >
+            {"/>"}
+          </span>
+        </div>
       </Link>
     </div>
   );

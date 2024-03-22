@@ -14,17 +14,29 @@ const Burger = () => {
       }}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      className="z-20 relative cursor-pointer"
+      className="z-20 relative cursor-pointer flex items-center justify-center w-8 lg:w-24 h-10 lg:h-24"
     >
+      <span className="hidden">{open ? "close menu" : "menu"}</span>
       <div
-        className={`${
-          open ? "bg-dark ml-auto" : "bg-accent"
-        }  h-0.5 w-10/12 transition duration-500`}
+        className={`absolute hidden lg:block bg-${
+          open ? "dark" : "accent"
+        } rounded-full w-full h-full ${
+          hover ? "scale-100 opacity-100" : "scale-0 opacity-0"
+        } transition duration-500`}
       ></div>
       <div
-        className={`${
-          open ? "bg-dark " : "bg-accent ml-auto"
-        } h-0.5 w-10/12 mt-3 lg:mt-5 transition duration-500`}
+        className={`h-0.5 w-8 lg:w-16 transition duration-500 absolute top-[50%]  ${
+          open
+            ? "translate-y-[-0.125rem] rotate-[45deg] bg-dark"
+            : "translate-y-[-0.46rem] lg:translate-y-[-0.75rem] bg-accent"
+        } ${hover && "lg:bg-white"}`}
+      ></div>
+      <div
+        className={`h-0.5 w-8 lg:w-16 transition duration-500 absolute bottom-[50%] bg-accent ${
+          open
+            ? "translate-y-0 rotate-[-45deg] bg-dark"
+            : "translate-y-[0.46rem] lg:translate-y-[0.75rem] bg-accent"
+        } ${hover && "lg:bg-white"}`}
       ></div>
     </div>
   );
