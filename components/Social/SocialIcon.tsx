@@ -22,9 +22,11 @@ function SocialIcon({ name, icon, url }: SocialIcon) {
     >
       <Link href={url} target="_blank">
         <div
-          className={`opacity-${hover ? "none" : "0"} scale-${
-            hover ? "100" : "50"
-          } transition duration-500 hidden lg:block`}
+          className={`opacity-${
+            hover ? "none" : "0"
+          } transition-all duration-500 hidden lg:block scale-${
+            hover ? "0" : "50"
+          }`}
         >
           <RotatingText title={name} />
         </div>
