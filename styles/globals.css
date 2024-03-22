@@ -83,7 +83,7 @@ svg {
 /* cursor */
 .mf-cursor:before {
   background-color: transparent;
-  @apply border-2 border-accent scale-90;
+  @apply border-2 border-accent scale-100;
 }
 .mf-cursor.-pointer:before {
   @apply opacity-50 scale-0;

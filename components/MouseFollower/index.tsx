@@ -15,6 +15,7 @@ const MouseFollowerComponent = ({
 
     const cursor = new MouseFollower({
       skewing: 4,
+      speed: 0.8,
     });
 
     return () => {

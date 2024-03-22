@@ -13,7 +13,10 @@ const ThemeToggle = () => {
   let color = open ? darkColor : accentColor;
 
   return (
-    <div onClick={toggleTheme}>
+    <div
+      onClick={toggleTheme}
+      className="hover:lg:scale-125 transition duration-500"
+    >
       {!lightTheme ? <Sun color={color} /> : <Moon color={color} />}
     </div>
   );
