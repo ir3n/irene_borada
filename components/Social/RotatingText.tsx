@@ -8,9 +8,8 @@ function RotatingText({ title }: { title: string }) {
   const rotatingRef = useRef(null);
 
   useEffect(() => {
-    const elementToAnimate = rotatingRef?.current;
-
     const tl = gsap.timeline();
+    const elementToAnimate = rotatingRef?.current;
 
     tl.fromTo(
       elementToAnimate,
