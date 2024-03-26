@@ -40,7 +40,7 @@ svg {
   display: flex;
 }
 .text ul li::before {
-  @apply block shrink-0 w-3.5 md:w-5 mr-1 mt-1 lg:mt-2.5 bg-no-repeat bg-contain;
+  @apply block shrink-0 w-3.5 md:w-5 mr-1 mt-1 md:mt-[0.3125rem] xl:mt-2.5 bg-no-repeat bg-contain;
   content: "";
   background-image: url("/images/icons/arrow-right.svg");
 }
