@@ -7,7 +7,6 @@ export const useAnimatedTitle = (
   useEffect(() => {
     const elementToAnimate = elementRef?.current;
 
-    // Initialize GSAP timeline
     const tl = gsap.timeline({ paused: true });
 
     // Animation to hide the title initially

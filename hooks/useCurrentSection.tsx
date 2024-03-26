@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 
 export const useCurrentSection = () => {
-  const [activeSection, setActiveSection] = useState("");
+  const [activeSection, setActiveSection] = useState(null);
   const observer = useRef(null);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ export const useCurrentSection = () => {
         }
       },
       {
-        threshold: 1.0,
+        threshold: 0.5,
       }
     );
 

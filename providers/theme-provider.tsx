@@ -17,7 +17,8 @@ export default function ThemeProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const storedItem = localStorage.getItem("lightTheme");
+  const storedItem =
+    typeof window !== "undefined" ? localStorage.getItem("lightTheme") : null;
   const initialLocalStorage = storedItem ? JSON.parse(storedItem) : false;
 
   const [lightTheme, setLightTheme] = useState(initialLocalStorage);

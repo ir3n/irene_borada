@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import Link from "next/link";
 import { MenuContext } from "@/providers/menu-provider";
 import { useCurrentSection } from "@/hooks/useCurrentSection";
@@ -14,13 +14,17 @@ const MenuItem = ({ title, url }: MenuItemData) => {
   const [hover, setHover] = useState(false);
   const [active, setActive] = useState(false);
 
+  const currentSection = useCurrentSection();
+
+  useEffect(() => {
+    console.log(currentSection);
+    setActive(currentSection === title.split(" ").join("-").toLowerCase());
+  }, [currentSection, title]);
+
   const handleLinkClick = (): void => {
     // setOpen(false);
     setOpen(!open);
   };
-
-  const currentSection = useCurrentSection();
-  console.log(currentSection);
 
   return (
     <div
