@@ -9,7 +9,9 @@ interface Props {
 }
 
 const CustomSection = ({ id, children }: Props) => {
-  const { setCurrentSection } = useContext(CurrentSectionContext);
+  const { setCurrentSection, setTop, setBottom } = useContext(
+    CurrentSectionContext
+  );
 
   const sectionRef = useRef(null);
 
@@ -25,17 +27,34 @@ const CustomSection = ({ id, children }: Props) => {
     }
   };
 
+  const detectTopAndBottom = () => {
+    if (typeof window !== "undefined") {
+      setTop(window.scrollY === 0);
+      setBottom(
+        window.scrollY >=
+          window.document.body.offsetHeight - window.innerHeight - 50
+      );
+    }
+  };
+
   useEffect(() => {
     checkInView();
+    detectTopAndBottom();
   }, []);
 
   useEffect(() => {
     typeof window !== "undefined" &&
-      window.addEventListener("scroll", checkInView);
+      window.addEventListener("scroll", () => {
+        detectTopAndBottom();
+        checkInView();
+      });
 
     return () => {
       typeof window !== "undefined" &&
-        window.removeEventListener("scroll", checkInView);
+        window.removeEventListener("scroll", () => {
+          detectTopAndBottom();
+          checkInView();
+        });
     };
   }, []);
 
