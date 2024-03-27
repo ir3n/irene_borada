@@ -1,7 +1,7 @@
 import { useState, useContext, useEffect } from "react";
 import Link from "next/link";
 import { MenuContext } from "@/providers/menu-provider";
-import { useCurrentSection } from "@/hooks/useCurrentSection";
+import { CurrentSectionContext } from "@/providers/currentSection-provider";
 
 interface MenuItemData {
   title: string;
@@ -10,19 +10,16 @@ interface MenuItemData {
 
 const MenuItem = ({ title, url }: MenuItemData) => {
   const { open, setOpen } = useContext(MenuContext);
+  const { currentSection } = useContext(CurrentSectionContext);
 
   const [hover, setHover] = useState(false);
   const [active, setActive] = useState(false);
 
-  const currentSection = useCurrentSection();
-
   useEffect(() => {
-    console.log(currentSection);
-    setActive(currentSection === title.split(" ").join("-").toLowerCase());
-  }, [currentSection, title]);
+    setActive(title.split(" ").join("-").toLowerCase() === currentSection);
+  }, [title, currentSection]);
 
   const handleLinkClick = (): void => {
-    // setOpen(false);
     setOpen(!open);
   };
 

@@ -1,39 +1,32 @@
-import { useState, useRef, useEffect } from "react";
+// this should not be needed anymore
 
-export const useCurrentSection = () => {
-  const [activeSection, setActiveSection] = useState(null);
-  const observer = useRef(null);
+import { useEffect, useState } from "react";
+
+export const useCurrentSection = (elementRef) => {
+  const [currentSection, setCurrentSection] = useState("intro");
 
   useEffect(() => {
-    //create new instance and pass a callback function
-    observer.current = new IntersectionObserver(
+    const section = elementRef.current;
+
+    // Intersection Observer to trigger animation when element comes into view
+    const observer = new IntersectionObserver(
       (entries) => {
-        const visibleSection = entries.find(
-          (entry) => entry.isIntersecting
-        )?.target;
-        //Update state with the visible section ID
-        if (visibleSection) {
-          setActiveSection(visibleSection.id);
-        }
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setCurrentSection(entry.target.id);
+          }
+        });
       },
-      {
-        threshold: 0.5,
-      }
+      { threshold: 0.75 }
     );
 
-    //Get custom attribute data-section from all sections
-    const sections = document.getElementsByTagName("section");
+    observer.observe(section);
 
-    Array.from(sections).forEach((section) => {
-      observer.current.observe(section);
-    });
-    //Cleanup function to remove observer
+    // Clean up the observer when component unmounts
     return () => {
-      Array.from(sections).forEach((section) => {
-        observer.current.unobserve(section);
-      });
+      observer.unobserve(section);
     };
   }, []);
 
-  return activeSection;
+  return currentSection;
 };

@@ -4,6 +4,8 @@ import Social from "@/components/Social";
 import MouseFollowerComponent from "@/components/MouseFollower";
 import ThemeProvider from "../providers/theme-provider";
 import MenuProvider from "../providers/menu-provider";
+import CurrentSectionProvider from "@/providers/currentSection-provider";
+
 import { sans, serif } from "./fonts";
 
 import "../styles/globals.css";
@@ -26,9 +28,11 @@ export default function RootLayout({
           <MouseFollowerComponent>
             <ThemeProvider>
               <MenuProvider>
-                <Header />
-                {children}
-                <Social />
+                <CurrentSectionProvider>
+                  <Header />
+                  {children}
+                  <Social />
+                </CurrentSectionProvider>
               </MenuProvider>
             </ThemeProvider>
           </MouseFollowerComponent>

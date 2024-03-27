@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import ProgressBar from "react-scroll-progress-bar";
 
+import CustomSection from "@/components/CustomSection";
 import Intro from "@/components/Intro";
 import TitleWithText from "@/components/TitleWithText";
 import Studies from "@/components/Studies";
@@ -43,24 +44,24 @@ export default function Home() {
     <>
       <ProgressBar bgcolor={accentColor} />
       <main>
-        <section id="intro">
+        <CustomSection id="intro">
           <Intro />
-        </section>
-        <section id="about">
+        </CustomSection>
+        <CustomSection id="about">
           <TitleWithText data={aboutData} />
-        </section>
-        <section id="studies">
+        </CustomSection>
+        <CustomSection id="studies">
           <Studies data={studiesData} />
-        </section>
-        <section id="work">
+        </CustomSection>
+        <CustomSection id="work">
           <Work data={workData} />
-        </section>
-        <section id="free-time">
+        </CustomSection>
+        <CustomSection id="free-time">
           <FreeTime data={freeTimeData} />
-        </section>
-        <section id="outro">
+        </CustomSection>
+        <CustomSection id="outro">
           <Outro />
-        </section>
+        </CustomSection>
       </main>
     </>
   );

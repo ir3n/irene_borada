@@ -24,12 +24,14 @@ export default function ThemeProvider({
   const [lightTheme, setLightTheme] = useState(initialLocalStorage);
 
   useEffect(() => {
-    localStorage.setItem("lightTheme", JSON.stringify(lightTheme));
+    typeof window !== "undefined" &&
+      localStorage.setItem("lightTheme", JSON.stringify(lightTheme));
   }, [lightTheme]);
 
   const toggleTheme = () => {
     setLightTheme(!lightTheme);
-    localStorage.setItem("lightTheme", JSON.stringify(lightTheme));
+    typeof window !== "undefined" &&
+      localStorage.setItem("lightTheme", JSON.stringify(lightTheme));
   };
 
   return (
