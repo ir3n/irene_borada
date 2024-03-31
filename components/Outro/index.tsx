@@ -1,10 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import Container from "../Container";
-import RotatingFlower from "../RotatingFlower";
 import { ArrowUp } from "lucide-react";
+
 import { accentColor } from "@/constants";
+
+import SlideFromBelow from "../SlideFromBelow";
+import RotatingFlower from "../RotatingFlower";
+import Container from "../Container";
 
 const Outro = () => {
   const [hover, setHover] = useState(false);
@@ -17,13 +20,15 @@ const Outro = () => {
     <>
       <div className="section relative">
         <Container>
-          <div className="intro-title block">
-            Thanks for meeting
-            <span className="ml-3 lg:ml-5 inline-block translate-y-1">
-              <RotatingFlower />
-            </span>
-            <br />
-            with me!
+          <div className="intro-title remove-gap">
+            <SlideFromBelow>Thanks for</SlideFromBelow>
+            <SlideFromBelow order={1}>
+              meeting
+              <span className="ml-3 lg:ml-5 inline-block translate-y-1">
+                <RotatingFlower />
+              </span>
+            </SlideFromBelow>
+            <SlideFromBelow order={2}>with me!</SlideFromBelow>
           </div>
           <div
             onMouseEnter={() => setHover(true)}

@@ -1,52 +1,44 @@
-import { useRef } from "react";
 import HorizontalScroll from "../HorizontalScroll";
 import Container from "../Container";
 import RotatingFlower from "../RotatingFlower";
-import { useAnimatedTitle } from "@/hooks/useAnimatedTitle";
+import SlideFromBelow from "../SlideFromBelow";
 
 const Intro = () => {
-  const nameRef = useRef<HTMLSpanElement>(null);
-  const jsRef = useRef<HTMLSpanElement>(null);
-
-  useAnimatedTitle(nameRef);
-  useAnimatedTitle(jsRef);
-
   return (
     <HorizontalScroll>
-      <div className="section w-screen">
+      <div className="section w-screen lg:mt-16">
         <Container>
-          <div className="intro-title block ">
-            Hello.
-            <br />
-            My name
-            <br />
-            is
-            <span
-              ref={nameRef}
-              className="ml-3 lg:ml-5 inline-flex items-baseline"
-            >
-              <RotatingFlower />
-              <span data-cursor-img="/images/irene.png">
-                <span className="font-serif accent-color larger-font inline-block ml-2">
-                  Irene.
+          <div className="intro-title remove-gap">
+            <SlideFromBelow>Hello.</SlideFromBelow>
+            <SlideFromBelow order={1}>My name</SlideFromBelow>
+            <SlideFromBelow order={2}>
+              is
+              <span className="ml-3 lg:ml-5 inline-flex items-baseline mt-[-1rem] xl:mt-[-2rem]">
+                <RotatingFlower />
+                <span data-cursor-img="/images/irene.png">
+                  <span className="font-serif accent-color larger-font inline-block ml-2">
+                    Irene.
+                  </span>
                 </span>
               </span>
-            </span>
+            </SlideFromBelow>
           </div>
         </Container>
       </div>
       <div className="section w-screen">
         <Container>
-          <div className="intro-title">A front-end developer</div>
-          <div className="sub mt-8 lg:mt-14 xl:mt-24">
-            trying to conquer the <br />
-            <span
-              ref={jsRef}
-              className="font-serif accent-color larger-font inline-block mr-3 lg:mr-5"
-            >
-              Javascript
-            </span>
-            world.
+          <div className="intro-title remove-gap">
+            <SlideFromBelow>A front-end</SlideFromBelow>
+            <SlideFromBelow order={1}>developer</SlideFromBelow>
+          </div>
+          <div className="sub mt-8 lg:mt-14 xl:mt-16">
+            <SlideFromBelow order={2}>trying to conquer the</SlideFromBelow>
+            <SlideFromBelow order={3}>
+              <span className="font-serif accent-color larger-font inline-block mx-3 lg:mx-5 mt-[-0.3rem] xl:mt-[-1.5rem]">
+                Javascript
+              </span>
+              world.
+            </SlideFromBelow>
           </div>
         </Container>
       </div>
