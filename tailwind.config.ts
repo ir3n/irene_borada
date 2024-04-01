@@ -15,10 +15,10 @@ const config: Config = {
     },
     colors: {
       dark: "#141521",
-      accent: "#4A5CFF",
+      accent: "#6366f1",
       white: "#FFFFFF",
       black: "#000000",
-      light: "#F2F4FF",
+      light: "#d5d5d5",
     },
     fontFamily: {
       sans: ["var(--sans)"],

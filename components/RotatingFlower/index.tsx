@@ -1,14 +1,24 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { accentColor } from "@/constants";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const RotatingFlower = () => {
+  const rotatingRef = useRef(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline();
+    const elementToAnimate = rotatingRef?.current;
+
+    tl.fromTo(
+      elementToAnimate,
+      { rotation: "0", ease: "none", repeat: -1 },
+      { rotation: "360", ease: "none", duration: 15, repeat: -1 }
+    );
+  }, []);
+
   return (
     <div
-      id="rotate-container"
+      ref={rotatingRef}
       className="max-w-11 lg:max-w-24 xl:max-w-max inline-block"
     >
       <div id="rotating-flower">

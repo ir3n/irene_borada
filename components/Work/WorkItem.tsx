@@ -6,9 +6,9 @@ import { Project } from ".";
 const WorkItem = ({ title, intro, text, image, link }: Project) => {
   const cursorText = link ? "visit website" : "current website";
   return (
-    <div className="min-[1025px]:flex min-h-screen w-full">
+    <div className="lg:flex min-h-screen w-full">
       <div
-        className="relative min-[1025px]:w-3/5 lg:h-auto min-h-[200px] sm:min-h-[250px] md:min-h-[620px]"
+        className="relative lg:w-3/5 lg:h-auto min-h-[200px] sm:min-h-[250px] md:min-h-[620px]"
         data-cursor-text={cursorText}
         data-cursor="dark"
       >
@@ -40,8 +40,8 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
           )}
         </div>
       </div>
-      <div className="min-[1025px]:w-2/5 lg:pl-20 lg:pr-40 flex items-center">
-        <div className="px-4 md:px-24 py-6 sm:py-16 min-[1025px]:p-0">
+      <div className="lg:w-2/5 lg:pl-20 lg:pr-40 flex items-center">
+        <div className="px-4 md:px-24 py-6 sm:py-16 lg:p-0">
           <h3 className="small-title pb-2">{title}</h3>
           <p className="text pb-4">{intro}</p>
           <hr />
