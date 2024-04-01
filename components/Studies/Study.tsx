@@ -3,7 +3,7 @@ import { StudyItem } from ".";
 
 const Study = ({ date, title, text, image }: StudyItem) => {
   return (
-    <div className="px-4 lg:pl-52 w-[310px] md:w-[600px] lg:w-[1000px] xl:w-[1100px] h-full">
+    <div className="px-4 md:pl-20 min-[1025px]:pl-52 w-[310px] md:w-[600px] lg:w-[1000px] xl:w-[1100px] h-full">
       <div className="relative h-full">
         <div className="opacity-5 absolute top-0 lg:top-[50%] md:left-0 right-0 m-auto lg:translate-y-[-50%] max-w-[150px] md:max-w-[200px] lg:max-w-full">
           <Image

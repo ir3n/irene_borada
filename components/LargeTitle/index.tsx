@@ -2,9 +2,9 @@ import SlideFromBelow from "../SlideFromBelow";
 
 function LargeTitle({ title }: { title: string }) {
   return (
-    <h2 className={`intro-title mb-3`}>
+    <h2 className={`mb-3`}>
       <SlideFromBelow>
-        <span className="font-serif larger-font accent-color">{title}</span>
+        <span className="font-serif large-title accent-color">{title}</span>
       </SlideFromBelow>
     </h2>
   );

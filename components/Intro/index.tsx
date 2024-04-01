@@ -34,7 +34,7 @@ const Intro = () => {
           <div className="sub mt-8 lg:mt-14 xl:mt-16">
             <SlideFromBelow order={2}>trying to conquer the</SlideFromBelow>
             <SlideFromBelow order={3}>
-              <span className="font-serif accent-color larger-font inline-block mx-3 lg:mx-5 mt-[-0.3rem] xl:mt-[-1.5rem]">
+              <span className="font-serif accent-color larger-font inline-block mx-3 lg:mx-5 mt-[-0.3rem] xl:mt-[-1.8rem]">
                 Javascript
               </span>
               world.
