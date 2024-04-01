@@ -44,6 +44,7 @@ export default function Home() {
     <>
       <ProgressBar bgcolor={accentColor} />
       <main>
+        <h1 className="hidden">Irene Borada - Front-end Developer</h1>
         <CustomSection id="intro">
           <Intro />
         </CustomSection>
