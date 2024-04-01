@@ -27,7 +27,7 @@ const MenuItem = ({ title, url }: MenuItemData) => {
     <div
       onMouseOver={() => setHover(true)}
       onMouseOut={() => setHover(false)}
-      className="sub"
+      className="text-[3rem] lg:text-[3rem] xl:text-[5rem] leading-none"
     >
       <Link
         href={url}
