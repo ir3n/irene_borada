@@ -41,7 +41,7 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
         </div>
       </div>
       <div className="min-[1025px]:w-2/5 lg:pl-20 lg:pr-40 flex items-center">
-        <div className="px-4 py-6 sm:py-16 min-[1025px]:p-0">
+        <div className="px-4 md:px-24 py-6 sm:py-16 min-[1025px]:p-0">
           <h3 className="small-title pb-2">{title}</h3>
           <p className="text pb-4">{intro}</p>
           <hr />

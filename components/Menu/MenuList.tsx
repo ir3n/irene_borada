@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from "react";
+import { useContext } from "react";
 import { MenuContext } from "@/providers/menu-provider";
 
 import MenuItem from "./MenuItem";
@@ -21,7 +21,7 @@ const MenuList = () => {
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <ul className="flex flex-col gap-10 xl:gap-12 items-center">
+        <ul className="flex flex-col gap-7 md:gap-10 xl:gap-12 items-center">
           {menuData?.map((item, i) => {
             return (
               <li key={`menu-item-${i}`}>

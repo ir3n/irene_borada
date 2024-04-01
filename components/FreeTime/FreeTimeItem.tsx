@@ -9,7 +9,7 @@ const FreeTimeItem = ({
   alt,
 }: FreeTimeType) => {
   return (
-    <div className="px-4 lg:pl-52">
+    <div className="px-4 md:pl-24 lg:pl-52">
       <div
         className={`${
           reverse ? "flex-col-reverse" : "flex-col"
