@@ -39,7 +39,7 @@ export default function ThemeProvider({
       <div
         className={`${
           !lightTheme ? "bg-dark text-white" : "bg-light text-dark"
-        } transition duration-500`}
+        } relative transition duration-500`}
       >
         {children}
       </div>

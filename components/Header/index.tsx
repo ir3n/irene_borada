@@ -1,17 +1,53 @@
+"use client";
+
+import { useContext, useState, useEffect } from "react";
+
 import Logo from "./Logo";
 import Menu from "../Menu";
 import ThemeToggle from "./ThemeToggle";
 
+import { CurrentSectionContext } from "@/providers/currentSection-provider";
+
+import { windowWidth } from "@/hooks/helpers";
+import { MenuContext } from "@/providers/menu-provider";
+
 const Header = () => {
+  const [hide, setHide] = useState(false);
+
+  const { top, bottom, scrollDir, currentSection } = useContext(
+    CurrentSectionContext
+  );
+
+  const isMobile = windowWidth() < 768;
+
+  const { open } = useContext(MenuContext);
+
+  useEffect(() => {
+    if (!isMobile) {
+      return;
+    }
+    if (!top && !bottom) {
+      setHide(true);
+    } else {
+      setHide(false);
+    }
+  }, [top, bottom, isMobile]);
+
   return (
     <header>
       <div
-        className="cursor-pointer fixed left-2.5 lg:left-12 top-[10px] lg:top-[50px] z-20 max-w-20 lg:max-w-max"
+        className={`cursor-pointer fixed left-2.5 lg:left-12 top-[10px] lg:top-[50px] z-20 max-w-20 lg:max-w-max transition duration-500 ${
+          hide && !open && "translate-y-[-130%]"
+        }`}
         data-cursor="-hidden"
       >
         <Logo />
       </div>
-      <div className="cursor-pointer fixed right-[80px] lg:right-48 xl:right-52 top-[16px] lg:top-[50px] z-20 max-w-5 lg:max-w-max">
+      <div
+        className={`cursor-pointer fixed right-[80px] lg:right-48 xl:right-52 top-[16px] lg:top-[50px] z-20 max-w-5 lg:max-w-max transition duration-500 ${
+          hide && !open && "translate-y-[-180%]"
+        }`}
+      >
         <ThemeToggle />
       </div>
       <div

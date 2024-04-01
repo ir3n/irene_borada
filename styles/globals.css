@@ -35,7 +35,6 @@ svg {
 .accent-color {
   @apply text-accent;
 }
-
 .text ul li {
   display: flex;
 }
