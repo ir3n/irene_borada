@@ -2,8 +2,6 @@
 
 import { createContext, useState, Dispatch, SetStateAction } from "react";
 
-type Dir = "up" | "down";
-
 export interface Props {
   currentSection: string;
   setCurrentSection: Dispatch<SetStateAction<string>>;
@@ -11,8 +9,6 @@ export interface Props {
   setTop: Dispatch<SetStateAction<boolean>>;
   bottom: boolean;
   setBottom: Dispatch<SetStateAction<boolean>>;
-  scrollDir: Dir;
-  setScrollDir: Dispatch<SetStateAction<Dir>>;
 }
 
 export const CurrentSectionContext = createContext<Props>({
@@ -22,8 +18,6 @@ export const CurrentSectionContext = createContext<Props>({
   setTop: () => true,
   bottom: false,
   setBottom: () => false,
-  scrollDir: "down",
-  setScrollDir: () => "down",
 });
 
 export default function CurrentSectionProvider({
@@ -34,7 +28,6 @@ export default function CurrentSectionProvider({
   const [currentSection, setCurrentSection] = useState("intro");
   const [top, setTop] = useState(true);
   const [bottom, setBottom] = useState(false);
-  const [scrollDir, setScrollDir] = useState<"up" | "down">("down");
 
   return (
     <CurrentSectionContext.Provider
@@ -45,8 +38,6 @@ export default function CurrentSectionProvider({
         setTop,
         bottom,
         setBottom,
-        scrollDir,
-        setScrollDir,
       }}
     >
       {children}

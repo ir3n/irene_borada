@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useContext, useEffect, useState } from "react";
+import { useRef, useContext, useEffect } from "react";
 import { CurrentSectionContext } from "@/providers/currentSection-provider";
 
 interface Props {
@@ -9,8 +9,9 @@ interface Props {
 }
 
 const CustomSection = ({ id, children }: Props) => {
-  const { setCurrentSection, setTop, setBottom, scrollDir, setScrollDir } =
-    useContext(CurrentSectionContext);
+  const { setCurrentSection, setTop, setBottom } = useContext(
+    CurrentSectionContext
+  );
 
   const sectionRef = useRef(null);
 
@@ -36,45 +37,24 @@ const CustomSection = ({ id, children }: Props) => {
     }
   };
 
-  useEffect(() => {
-    checkInView();
+  const onScroll = () => {
     detectTopAndBottom();
+    checkInView();
+  };
+
+  useEffect(() => {
+    onScroll();
   }, []);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const threshold = 0;
-      let lastScrollY = window.scrollY;
-      let ticking = false;
-
-      const updateScrollDir = () => {
-        const scrollY = window.scrollY;
-
-        if (Math.abs(scrollY - lastScrollY) < threshold) {
-          ticking = false;
-          return;
-        }
-        setScrollDir(scrollY > lastScrollY ? "down" : "up");
-        lastScrollY = scrollY > 0 ? scrollY : 0;
-        ticking = false;
-      };
-
-      const onScroll = () => {
-        if (!ticking) {
-          window.requestAnimationFrame(updateScrollDir);
-          detectTopAndBottom();
-          checkInView();
-          ticking = true;
-        }
-      };
-
       window.addEventListener("scroll", onScroll);
 
       return () => {
         window.removeEventListener("scroll", onScroll);
       };
     }
-  }, [scrollDir]);
+  }, []);
 
   return (
     <section id={id} ref={sectionRef}>
