@@ -3,8 +3,6 @@
 import { useContext, useState, useEffect } from "react";
 import { CurrentSectionContext } from "@/providers/currentSection-provider";
 
-import { windowWidth } from "@/hooks/helpers";
-
 import SocialIcon from "./SocialIcon";
 
 import socialIcons from "@/data/social.json";
@@ -12,17 +10,11 @@ import socialIcons from "@/data/social.json";
 const Social = () => {
   const [hidden, setHidden] = useState(false);
 
-  const { currentSection, top, bottom } = useContext(CurrentSectionContext);
-
-  const isDesktop = windowWidth() > 768;
+  const { top, bottom } = useContext(CurrentSectionContext);
 
   useEffect(() => {
-    if (isDesktop) {
-      setHidden(!(currentSection === "intro" || currentSection === "outro"));
-    } else {
-      setHidden(!(top || bottom));
-    }
-  }, [currentSection, top, bottom, isDesktop]);
+    setHidden(!(top || bottom));
+  }, [top, bottom]);
 
   return (
     <div

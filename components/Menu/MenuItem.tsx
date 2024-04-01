@@ -47,7 +47,6 @@ const MenuItem = ({ title, url }: MenuItemData) => {
             {"<"}
           </span>
           {active ? `#${title}` : title}
-
           <span
             className={`hidden lg:inline-block absolute right-0 text-[90%] ${
               hover && !active ? "opacity-100" : "opacity-0"
