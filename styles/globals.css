@@ -83,6 +83,7 @@ svg {
   @apply font-serif larger-font;
   font-style: normal;
   font-size: 225%;
+  line-height: 0.6;
 }
 
 /* cursor */
