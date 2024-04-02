@@ -5,7 +5,6 @@ export interface FreeTimeType {
   reverse?: boolean;
   title: string;
   image: string;
-  imageHover: string;
   alt: string;
 }
 
@@ -23,7 +22,6 @@ const FreeTime = ({ data }: { data: Props }) => {
           reverse={i % 2 === 0}
           title={item?.title}
           image={item?.image}
-          imageHover={item?.imageHover}
           alt={item?.alt}
         />
       ))}

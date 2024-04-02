@@ -96,7 +96,7 @@ svg {
 }
 .mf-cursor.-text:before {
   transform: scale(2);
-  @apply opacity-100 bg-dark border-dark;
+  @apply opacity-100 bg-accent;
 }
 .mf-cursor.-hidden:before {
   @apply opacity-50 scale-0;
