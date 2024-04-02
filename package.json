@@ -18,6 +18,7 @@
     "react-dom": "^18",
     "react-scroll-progress-bar": "^1.1.13",
     "react-use": "^17.4.3",
+    "use-scramble": "^2.2.15",
     "zustand": "^4.4.7"
   },
   "devDependencies": {

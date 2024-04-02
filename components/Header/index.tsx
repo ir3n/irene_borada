@@ -35,14 +35,14 @@ const Header = () => {
     <header>
       <div
         className={`cursor-pointer fixed left-2.5 lg:left-12 top-[15px] lg:top-[50px] z-20 max-w-20 lg:max-w-max transition duration-500 ${
-          hide && !open && "translate-y-[-145%]"
+          hide && !open && "translate-y-[-155%]"
         }`}
         data-cursor="-hidden"
       >
         <Logo />
       </div>
       <div
-        className={`cursor-pointer fixed right-[80px] lg:right-48 xl:right-52 top-[20px] lg:top-[50px] z-20 max-w-5 lg:max-w-max transition duration-500 ${
+        className={`cursor-pointer fixed right-[80px] lg:right-48 xl:right-52 top-[20px] lg:top-[50px] z-20 transition duration-500 ${
           hide && !open && "translate-y-[-195%]"
         }`}
       >
