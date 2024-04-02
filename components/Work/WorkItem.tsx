@@ -16,17 +16,17 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
           <Link href={link} target="_blank">
             <Image
               src={image}
-              alt="Test"
+              alt={title}
               fill
-              style={{ objectFit: "cover", objectPosition: "top" }}
+              style={{ objectFit: "cover", objectPosition: "center" }}
             />
           </Link>
         ) : (
           <Image
             src={image}
-            alt="Test"
+            alt={title}
             fill
-            style={{ objectFit: "cover", objectPosition: "top" }}
+            style={{ objectFit: "cover", objectPosition: "center" }}
           />
         )}
 
