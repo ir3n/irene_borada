@@ -17,7 +17,7 @@ const MenuList = () => {
         }`}
       ></div>
       <nav
-        className={`fixed top-0 right-0 w-full md:w-1/2 lg:w-2/5 h-screen z-10 flex items-center justify-center duration-500 ${
+        className={`fixed top-0 right-0 w-full md:w-1/2 lg:w-2/5 h-screen z-20 flex items-center justify-center duration-500 ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >

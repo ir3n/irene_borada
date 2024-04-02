@@ -42,10 +42,10 @@ export default function ThemeProvider({
           !lightTheme ? "bg-dark text-white" : "bg-light text-dark"
         } relative transition duration-500`}
       >
-        <div className="fixed right-0 bottom-0 w-screen h-screen">
+        <div className="fixed right-0 bottom-0 w-screen h-screen z-[1]">
           <Image src="/images/blur.png" fill alt="Color shine" />
         </div>
-        {children}
+        <div className="relative z-10">{children}</div>
       </div>
     </ThemeContext.Provider>
   );

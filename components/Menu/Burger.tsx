@@ -28,7 +28,7 @@ const Burger = () => {
       }}
       onMouseEnter={() => !isMobile && setHover(true)}
       onMouseLeave={() => !isMobile && setHover(false)}
-      className="z-20 relative cursor-pointer flex items-center justify-center w-8 lg:w-24 h-10 lg:h-24"
+      className="z-30 relative cursor-pointer flex items-center justify-center w-8 lg:w-24 h-10 lg:h-24"
     >
       <span className="hidden">{open ? "close menu" : "menu"}</span>
       <div

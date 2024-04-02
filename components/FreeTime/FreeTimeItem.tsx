@@ -9,7 +9,7 @@ const FreeTimeItem = ({ reverse, title, image, alt }: FreeTimeType) => {
           reverse ? "flex-col-reverse" : "flex-col"
         } flex gap-5 w-[15.625rem] md:w-[25rem] `}
       >
-        <div className="overflow-hidden">
+        <div className="overflow-hidden rounded">
           <div
             data-cursor-text={alt.toLowerCase()}
             className="block scale-110 rotate-3 transition duration-500 hover:scale-100 hover:rotate-0"
