@@ -15,7 +15,6 @@ import { accentColor } from "@/constants";
 
 import aboutData from "@/data/about.json";
 import studiesData from "@/data/studies.json";
-import workData from "@/data/work.json";
 import freeTimeData from "@/data/free-time.json";
 
 export default function Home() {
@@ -49,13 +48,13 @@ export default function Home() {
           <Intro />
         </CustomSection>
         <CustomSection id="about">
-          <TitleWithText data={aboutData} />
+          <TitleWithText title={aboutData?.title} text={aboutData?.text} />
         </CustomSection>
         <CustomSection id="studies">
           <Studies data={studiesData} />
         </CustomSection>
         <CustomSection id="work">
-          <Work data={workData} />
+          <Work />
         </CustomSection>
         <CustomSection id="free-time">
           <FreeTime data={freeTimeData} />

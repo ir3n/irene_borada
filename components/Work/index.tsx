@@ -1,28 +1,19 @@
-import React from "react";
 import HorizontalScroll from "../HorizontalScroll";
 import TitleWithText from "../TitleWithText";
 import WorkItem from "./WorkItem";
+import Stack from "../Stack";
 
-export interface Project {
-  title: string;
-  intro: string;
-  text: string;
-  image: string;
-  link: string | null;
-}
+import workData from "@/data/work.json";
 
-interface Props {
-  title: string;
-  text: string;
-  items: Project[];
-}
+export const Work = () => {
+  const { title, text, items: workItems } = workData;
 
-export const Work = ({ data }: { data: Props }) => {
   return (
     <>
-      <TitleWithText data={{ title: data?.title, text: data?.text }} />
+      <TitleWithText title={title} text={text} />
+      <Stack />
       <HorizontalScroll>
-        {data?.items?.map((project, i) => (
+        {workItems?.map((project, i) => (
           <div key={`project-${i}`} className="w-screen">
             <WorkItem
               title={project?.title}

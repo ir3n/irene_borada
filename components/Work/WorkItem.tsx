@@ -1,9 +1,16 @@
 import { useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Project } from ".";
 import { useIsVisible } from "@/hooks/useIsVisible";
 import gsap from "gsap";
+
+interface Project {
+  title: string;
+  intro: string;
+  text: string;
+  image: string;
+  link: string | null;
+}
 
 const WorkItem = ({ title, intro, text, image, link }: Project) => {
   const showRef = useRef(null);

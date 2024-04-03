@@ -6,15 +6,12 @@ interface Props {
   text: string;
 }
 
-const TitleWithText = ({ data }: { data: Props }) => {
+const TitleWithText = ({ title, text }: Props) => {
   return (
     <div className="section">
       <Container>
-        <LargeTitle title={data?.title} />
-        <div
-          className="text"
-          dangerouslySetInnerHTML={{ __html: data?.text }}
-        ></div>
+        <LargeTitle title={title} />
+        <div className="text" dangerouslySetInnerHTML={{ __html: text }}></div>
       </Container>
     </div>
   );
