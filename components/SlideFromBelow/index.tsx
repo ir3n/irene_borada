@@ -1,4 +1,5 @@
-import { useRef, useEffect, useState } from "react";
+import { useIsVisible } from "@/hooks/useIsVisible";
+import { useRef } from "react";
 
 const SlideFromBelow = ({
   order = 0,
@@ -7,7 +8,6 @@ const SlideFromBelow = ({
   order?: number;
   children: React.ReactNode;
 }) => {
-  const [show, setShow] = useState(false);
   const animateRef = useRef(null);
 
   const delayClasses = [
@@ -19,25 +19,7 @@ const SlideFromBelow = ({
     "delay-[500ms]",
   ];
 
-  useEffect(() => {
-    const elementToAnimate = animateRef?.current;
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setShow(true);
-        } else {
-          setShow(false);
-        }
-      });
-    });
-
-    elementToAnimate && observer.observe(elementToAnimate);
-
-    return () => {
-      elementToAnimate && observer.unobserve(elementToAnimate);
-    };
-  }, [order]);
+  const show = useIsVisible(animateRef);
 
   return (
     <span ref={animateRef} className="block relative overflow-hidden">
