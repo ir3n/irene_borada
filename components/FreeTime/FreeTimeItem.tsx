@@ -1,24 +1,31 @@
+import { useRef } from "react";
 import Image from "next/image";
 import { FreeTimeType } from ".";
+import { useIsVisible } from "@/hooks/useIsVisible";
 
-const FreeTimeItem = ({ reverse, title, image, alt }: FreeTimeType) => {
+const FreeTimeItem = ({ title, image, alt }: FreeTimeType) => {
+  const itemRef = useRef(null);
+
+  const show = useIsVisible(itemRef);
+
   return (
-    <div className="px-4 md:pl-24 lg:pl-52">
-      <div
-        className={`${
-          reverse ? "flex-col-reverse" : "flex-col"
-        } flex gap-5 w-[15.625rem] md:w-[25rem] `}
-      >
-        <div className="overflow-hidden rounded">
-          <div
-            data-cursor-text={alt.toLowerCase()}
-            className="block scale-110 rotate-3 transition duration-500 hover:scale-100 hover:rotate-0"
-          >
-            <Image src={image} alt={alt} width={400} height={400} />
-          </div>
+    <div
+      ref={itemRef}
+      className={`pb-10 lg:pb-20 xl:pb-32 max-w-[600px] transition duration-[2000ms] delay-100 ${
+        show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1/3"
+      }`}
+    >
+      <div className="overflow-hidden rounded-3xl lg:rounded-[40px] mb-3 lg:mb-5">
+        <div
+          data-cursor-text={alt.toLowerCase()}
+          className={`block transition duration-1000 hover:scale-100 ${
+            show ? "scale-110" : "scale-125"
+          }`}
+        >
+          <Image src={image} alt={alt} width={600} height={800} />
         </div>
-        <div className="text" dangerouslySetInnerHTML={{ __html: title }}></div>
       </div>
+      <div className="text" dangerouslySetInnerHTML={{ __html: title }}></div>
     </div>
   );
 };
