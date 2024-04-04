@@ -101,7 +101,6 @@ svg {
 .mf-cursor.-hidden:before {
   @apply opacity-50 scale-0;
 }
-
 .mf-cursor-media {
   width: 350px;
   height: 350px;
@@ -118,4 +117,17 @@ svg {
 .panel {
   /* width: 100vw; */
   flex: 1;
+}
+
+/* swiper */
+.logos-swiper .swiper-wrapper {
+  transition-timing-function: linear;
+}
+.logos-swiper .swiper-slide {
+  @apply max-w-28 md:max-w-40 lg:max-w-56 min-[1950px]:max-w-80;
+}
+.logos-swiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
 }

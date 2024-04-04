@@ -11,7 +11,6 @@ export const Work = () => {
   return (
     <>
       <TitleWithText title={title} text={text} />
-      <Stack />
       <HorizontalScroll>
         {workItems?.map((project, i) => (
           <div key={`project-${i}`} className="w-screen">
@@ -25,6 +24,7 @@ export const Work = () => {
           </div>
         ))}
       </HorizontalScroll>
+      <Stack />
     </>
   );
 };

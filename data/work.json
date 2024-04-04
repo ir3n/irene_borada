@@ -16,19 +16,5 @@
       "image": "/images/work/thanassis.jpg",
       "link": null
     }
-  ],
-  "stack": [
-    {
-      "name": "React",
-      "image": "/images/stack/react.svg"
-    },
-    {
-      "name": "React",
-      "image": "/images/stack/react.svg"
-    },
-    {
-      "name": "React",
-      "image": "/images/stack/react.svg"
-    }
   ]
 }

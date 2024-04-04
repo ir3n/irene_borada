@@ -1,0 +1,76 @@
+[
+  {
+    "items": [
+      {
+        "name": "JavaScript",
+        "image": "/images/stack/js.svg",
+        "lightImage": "/images/stack/js-light.svg"
+      },
+      {
+        "name": "React",
+        "image": "/images/stack/react.svg",
+        "lightImage": "/images/stack/react-light.svg"
+      },
+      {
+        "name": "Next.js",
+        "image": "/images/stack/nextjs.svg",
+        "lightImage": "/images/stack/nextjs-light.svg"
+      },
+      {
+        "name": "TypeScript",
+        "image": "/images/stack/typescript.svg"
+      },
+      {
+        "name": "jQuery",
+        "image": "/images/stack/jquery.svg",
+        "lightImage": "/images/stack/jquery-light.svg"
+      },
+      {
+        "name": "Git",
+        "image": "/images/stack/git.svg",
+        "lightImage": "/images/stack/git-light.svg"
+      },
+      {
+        "name": "Chakra UI",
+        "image": "/images/stack/chakra.svg",
+        "lightImage": "/images/stack/chakra-light.svg"
+      }
+    ]
+  },
+  {
+    "items": [
+      {
+        "name": "HTML5",
+        "image": "/images/stack/html.svg",
+        "lightImage": "/images/stack/html-light.svg"
+      },
+      {
+        "name": "CSS3",
+        "image": "/images/stack/css.svg",
+        "lightImage": "/images/stack/css-light.svg"
+      },
+      {
+        "name": "Sass",
+        "image": "/images/stack/sass.svg"
+      },
+      {
+        "name": "Tailwind CSS",
+        "image": "/images/stack/tailwind.svg",
+        "lightImage": "/images/stack/tailwind-light.svg"
+      },
+      {
+        "name": "Drupal",
+        "image": "/images/stack/drupal.svg"
+      },
+      {
+        "name": "PHP",
+        "image": "/images/stack/php.svg"
+      },
+      {
+        "name": "Figma",
+        "image": "/images/stack/figma.svg",
+        "lightImage": "/images/stack/figma-light.svg"
+      }
+    ]
+  }
+]

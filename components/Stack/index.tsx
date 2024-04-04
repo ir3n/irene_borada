@@ -1,16 +1,16 @@
-import StackItem from "./StackItem";
-import workData from "@/data/work.json";
+import StackRow from "./StackRow";
+import stackData from "@/data/stack.json";
 
 const Stack = () => {
-  const stackItems = workData.stack;
+  const stackRows = stackData;
 
   return (
-    <div className="h-screen">
-      {stackItems.map((item, i) => (
-        <StackItem
-          key={`stack-item-${i}`}
-          name={item?.name}
-          image={item?.image}
+    <div className="py-20 lg:py-32">
+      {stackRows.map((row, i) => (
+        <StackRow
+          key={`stack-row-${i}`}
+          logos={row?.items}
+          dir={i % 2 === 0 ? "rtl" : "ltr"}
         />
       ))}
     </div>

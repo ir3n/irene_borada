@@ -1,14 +1,10 @@
 import Image from "next/image";
+import { StackLogo } from "./StackRow";
 
-interface Props {
-  name: string;
-  image: string;
-}
-
-const StackItem = ({ name, image }: Props) => {
+const StackItem = ({ name, image, lightImage }: StackLogo) => {
   return (
-    <div data-cursor-text={name} className=" relative">
-      <Image src={image} width={200} height={200} alt={name} />
+    <div className="relative">
+      <Image src={image} width={250} height={200} alt={name} />
     </div>
   );
 };
