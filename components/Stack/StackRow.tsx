@@ -39,7 +39,7 @@ const StackRow = ({ logos, dir = Direction.toRight }: Row) => {
         },
         1450: {
           spaceBetween: 150,
-          speed: 5500,
+          speed: 6000,
         },
       }}
       className="logos-swiper"

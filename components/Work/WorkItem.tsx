@@ -20,17 +20,17 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
 
   const show = useIsVisible(showRef);
 
-  useEffect(() => {
-    const tl = gsap.timeline();
-    const elementToAnimate = animateRef?.current;
+  // useEffect(() => {
+  //   const tl = gsap.timeline();
+  //   const elementToAnimate = animateRef?.current;
 
-    show &&
-      tl.fromTo(
-        elementToAnimate,
-        { width: "0" },
-        { width: "100%", duration: 2, delay: 0.5 }
-      );
-  }, [show]);
+  //   show &&
+  //     tl.fromTo(
+  //       elementToAnimate,
+  //       { width: "0" },
+  //       { width: "100%", duration: 2, delay: 0.5 }
+  //     );
+  // }, [show]);
 
   return (
     <div className="lg:flex h-screen w-full">
@@ -39,7 +39,12 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
         className="relative lg:w-3/5 h-[50vh] lg:h-auto"
         data-cursor-text={cursorText}
       >
-        <div ref={animateRef} className={`overflow-hidden w-full h-full`}>
+        <div
+          ref={animateRef}
+          className={`overflow-hidden w-full h-full transition duration-1000 delay-500 ${
+            show ? "opacity-100" : "opacity-0"
+          }`}
+        >
           <div className="relative w-full h-full">
             {link ? (
               <Link href={link} target="_blank">
