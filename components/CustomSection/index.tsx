@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useContext, useEffect } from "react";
+import { useRef, useContext, useEffect, useState } from "react";
 import { CurrentSectionContext } from "@/providers/currentSection-provider";
 
 interface Props {
@@ -37,21 +37,23 @@ const CustomSection = ({ id, children }: Props) => {
     }
   };
 
-  const onScroll = () => {
+  useEffect(() => {
     detectTopAndBottom();
     checkInView();
-  };
-
-  useEffect(() => {
-    onScroll();
   }, []);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      window.addEventListener("scroll", onScroll);
+      window.addEventListener("scroll", () => {
+        detectTopAndBottom();
+        checkInView();
+      });
 
       return () => {
-        window.removeEventListener("scroll", onScroll);
+        window.removeEventListener("scroll", () => {
+          detectTopAndBottom();
+          checkInView();
+        });
       };
     }
   }, []);

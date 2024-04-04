@@ -94,8 +94,9 @@ svg {
 .mf-cursor.-pointer:before {
   @apply opacity-50 scale-0;
 }
-.mf-cursor.-text:before {
-  transform: scale(2);
+.mf-cursor.-text:before,
+.mf-cursor.-text.-active:before {
+  transform: scale(2.1);
   @apply opacity-100 bg-accent;
 }
 .mf-cursor.-hidden:before {

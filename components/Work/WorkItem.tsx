@@ -38,7 +38,6 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
         ref={showRef}
         className="relative lg:w-3/5 h-[50vh] lg:h-auto"
         data-cursor-text={cursorText}
-        data-cursor="dark"
       >
         <div ref={animateRef} className={`overflow-hidden w-full h-full`}>
           <div className="relative w-full h-full">

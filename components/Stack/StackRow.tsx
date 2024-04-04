@@ -2,6 +2,7 @@ import StackItem from "./StackItem";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
+import { Direction } from ".";
 
 export interface StackLogo {
   name: string;
@@ -11,10 +12,10 @@ export interface StackLogo {
 
 interface Row {
   logos: StackLogo[];
-  dir: "rtl" | "ltr";
+  dir: Direction;
 }
 
-const StackRow = ({ logos, dir = "ltr" }: Row) => {
+const StackRow = ({ logos, dir = Direction.toRight }: Row) => {
   return (
     <Swiper
       slidesPerView={"auto"}
@@ -26,8 +27,6 @@ const StackRow = ({ logos, dir = "ltr" }: Row) => {
       spaceBetween={20}
       speed={3500}
       loop={true}
-      //   loopAdditionalSlides={3}
-      //   reverseDirection={true}
       modules={[Autoplay]}
       breakpoints={{
         768: {
@@ -43,8 +42,6 @@ const StackRow = ({ logos, dir = "ltr" }: Row) => {
         },
       }}
       className="logos-swiper"
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
     >
       {logos.map((item, i) => (
         <SwiperSlide key={`stack-item-${i}`}>

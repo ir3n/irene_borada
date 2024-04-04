@@ -1,6 +1,8 @@
 "use client";
 
 import { createContext, useState, Dispatch, SetStateAction } from "react";
+import { useScrollDirection } from "@/hooks/useScrollDirection";
+import { ScrollDirection } from "@/hooks/useScrollDirection";
 
 export interface Props {
   currentSection: string;
@@ -9,6 +11,7 @@ export interface Props {
   setTop: Dispatch<SetStateAction<boolean>>;
   bottom: boolean;
   setBottom: Dispatch<SetStateAction<boolean>>;
+  scrollDir: ScrollDirection;
 }
 
 export const CurrentSectionContext = createContext<Props>({
@@ -18,6 +21,7 @@ export const CurrentSectionContext = createContext<Props>({
   setTop: () => true,
   bottom: false,
   setBottom: () => false,
+  scrollDir: ScrollDirection.down,
 });
 
 export default function CurrentSectionProvider({
@@ -29,6 +33,8 @@ export default function CurrentSectionProvider({
   const [top, setTop] = useState(true);
   const [bottom, setBottom] = useState(false);
 
+  const scrollDir = useScrollDirection();
+
   return (
     <CurrentSectionContext.Provider
       value={{
@@ -38,6 +44,7 @@ export default function CurrentSectionProvider({
         setTop,
         bottom,
         setBottom,
+        scrollDir,
       }}
     >
       {children}
