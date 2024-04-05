@@ -1,7 +1,6 @@
 import HorizontalScroll from "../HorizontalScroll";
 import TitleWithText from "../TitleWithText";
 import WorkItem from "./WorkItem";
-import Stack from "../Stack";
 
 import workData from "@/data/work.json";
 
@@ -11,7 +10,6 @@ export const Work = () => {
   return (
     <>
       <TitleWithText title={title} text={text} />
-      <Stack />
       <HorizontalScroll>
         {workItems?.map((project, i) => (
           <div key={`project-${i}`} className="w-screen">

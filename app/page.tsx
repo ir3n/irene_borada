@@ -6,6 +6,7 @@ import ProgressBar from "react-scroll-progress-bar";
 import CustomSection from "@/components/CustomSection";
 import Intro from "@/components/Intro";
 import TitleWithText from "@/components/TitleWithText";
+import Stack from "@/components/Stack";
 import Studies from "@/components/Studies";
 import { Work } from "@/components/Work";
 import FreeTime from "@/components/FreeTime";
@@ -53,6 +54,7 @@ export default function Home() {
         <CustomSection id="studies">
           <Studies data={studiesData} />
         </CustomSection>
+        <Stack />
         <CustomSection id="work">
           <Work />
         </CustomSection>
