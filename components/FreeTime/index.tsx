@@ -1,19 +1,11 @@
 import HorizontalScroll from "../HorizontalScroll";
 import FreeTimeItem from "./FreeTimeItem";
 
-export interface FreeTimeType {
-  reverse?: boolean;
-  title: string;
-  image: string;
-  alt: string;
-}
+import freeTimeData from "@/data/free-time.json";
 
-interface Props {
-  title: string;
-  items: FreeTimeType[];
-}
+const FreeTime = () => {
+  const data = freeTimeData;
 
-const FreeTime = ({ data }: { data: Props }) => {
   return (
     <HorizontalScroll title={data?.title}>
       {data?.items?.map((item, i) => (

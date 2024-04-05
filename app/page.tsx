@@ -15,8 +15,6 @@ import Outro from "@/components/Outro";
 import { accentColor } from "@/constants";
 
 import aboutData from "@/data/about.json";
-import studiesData from "@/data/studies.json";
-import freeTimeData from "@/data/free-time.json";
 
 export default function Home() {
   useEffect(() => {
@@ -52,14 +50,14 @@ export default function Home() {
           <TitleWithText title={aboutData?.title} text={aboutData?.text} />
         </CustomSection>
         <CustomSection id="studies">
-          <Studies data={studiesData} />
+          <Studies />
         </CustomSection>
         <Stack />
         <CustomSection id="work">
           <Work />
         </CustomSection>
         <CustomSection id="free-time">
-          <FreeTime data={freeTimeData} />
+          <FreeTime />
         </CustomSection>
         <CustomSection id="outro">
           <Outro />

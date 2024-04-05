@@ -20,7 +20,6 @@ const HorizontalScroll = ({
     let ctx = gsap.context(() => {
       let panels = gsap.utils.toArray(".panel");
 
-      // slider.current.width = `${panels.length * 100}vw`;
       gsap.to(panels, {
         xPercent: -100 * (panels.length - 1),
         scrollTrigger: {

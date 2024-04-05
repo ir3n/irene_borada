@@ -2,8 +2,15 @@
 
 import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
-import { StudyItem } from ".";
 import { useIsVisible } from "@/hooks/useIsVisible";
+
+interface StudyItem {
+  date: string;
+  title: string;
+  text: string;
+  image: string;
+  even?: boolean;
+}
 
 enum TranslateX {
   forOdd = "translate-x-[-50px] min-[1300px]:translate-x-0",

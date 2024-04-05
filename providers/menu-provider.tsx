@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  createContext,
-  useState,
-  useEffect,
-  Dispatch,
-  SetStateAction,
-} from "react";
+import { createContext, useState, Dispatch, SetStateAction } from "react";
 
 export interface MenuProps {
   open: boolean;

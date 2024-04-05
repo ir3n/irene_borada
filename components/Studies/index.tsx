@@ -5,22 +5,13 @@ import LargeTitle from "../LargeTitle";
 import Study from "./Study";
 import { useWindowWidth } from "@/hooks/useWindowWidth";
 
-export interface StudyItem {
-  date: string;
-  title: string;
-  text: string;
-  image: string;
-  even?: boolean;
-}
+import studiesData from "@/data/studies.json";
 
-interface Props {
-  title: string;
-  items: StudyItem[];
-}
-
-const Studies = ({ data }: { data: Props }) => {
+const Studies = () => {
   const [oneColumn, setOneColumn] = useState(false);
   const oneCol = useWindowWidth() <= 1300;
+
+  const data = studiesData;
 
   useEffect(() => {
     setOneColumn(oneCol);

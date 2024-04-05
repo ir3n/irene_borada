@@ -1,5 +1,11 @@
 import Image from "next/image";
-import { FreeTimeType } from ".";
+
+interface FreeTimeType {
+  reverse?: boolean;
+  title: string;
+  image: string;
+  alt: string;
+}
 
 const FreeTimeItem = ({ reverse, title, image, alt }: FreeTimeType) => {
   return (
