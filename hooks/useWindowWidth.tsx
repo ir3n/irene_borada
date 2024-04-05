@@ -1,9 +1,21 @@
-export const useWindowWidth = (): number => {
-  let width = 0;
+import { useEffect, useState } from "react";
 
-  if (typeof window !== "undefined") {
-    width = window.innerWidth;
-  }
+export const useWindowWidth = (): number => {
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    calculateWidth();
+
+    window.addEventListener("resize", calculateWidth);
+
+    return () => window.removeEventListener("resize", calculateWidth);
+  }, []);
+
+  const calculateWidth = () => {
+    if (typeof window !== "undefined") {
+      setWidth(window.innerWidth);
+    }
+  };
 
   return width;
 };
