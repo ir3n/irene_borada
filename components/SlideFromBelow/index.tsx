@@ -24,9 +24,9 @@ const SlideFromBelow = ({
   return (
     <span ref={animateRef} className="block relative overflow-hidden">
       <span
-        className={`block transition duration-1000 ${delayClasses[order]} ${
-          show ? "translate-y-0" : "translate-y-[100%]"
-        } `}
+        className={`block [transition:transform_1000ms] ${
+          delayClasses[order]
+        } ${show ? "translate-y-0" : "translate-y-[100%]"} `}
       >
         {children}
       </span>
