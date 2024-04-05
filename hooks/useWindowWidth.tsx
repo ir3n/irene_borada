@@ -1,4 +1,4 @@
-export const windowWidth = (): number => {
+export const useWindowWidth = (): number => {
   let width = 0;
 
   if (typeof window !== "undefined") {

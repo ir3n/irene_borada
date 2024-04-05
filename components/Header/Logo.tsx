@@ -5,7 +5,7 @@ import { MenuContext } from "@/providers/menu-provider";
 
 import { useScramble } from "use-scramble";
 
-import { windowWidth } from "@/hooks/helpers";
+import { useWindowWidth } from "@/hooks/useWindowWidth";
 
 const Logo = () => {
   const { ref, replay } = useScramble({
@@ -21,7 +21,7 @@ const Logo = () => {
 
   const { open } = useContext(MenuContext);
 
-  const mobile = windowWidth() < 768;
+  const mobile = useWindowWidth() < 768;
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
     typeof window !== "undefined" && window?.scrollTo(0, 0);

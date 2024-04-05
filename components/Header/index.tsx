@@ -8,7 +8,7 @@ import ThemeToggle from "./ThemeToggle";
 
 import { CurrentSectionContext } from "@/providers/currentSection-provider";
 
-import { windowWidth } from "@/hooks/helpers";
+import { useWindowWidth } from "@/hooks/useWindowWidth";
 import { MenuContext } from "@/providers/menu-provider";
 
 const Header = () => {
@@ -16,7 +16,7 @@ const Header = () => {
 
   const { top, bottom } = useContext(CurrentSectionContext);
 
-  const isMobile = windowWidth() < 768;
+  const isMobile = useWindowWidth() < 768;
 
   const { open } = useContext(MenuContext);
 

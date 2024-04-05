@@ -1,7 +1,7 @@
 import { useContext, useState, useEffect } from "react";
 import { MenuContext } from "@/providers/menu-provider";
 
-import { windowWidth } from "@/hooks/helpers";
+import { useWindowWidth } from "@/hooks/useWindowWidth";
 
 import { CurrentSectionContext } from "@/providers/currentSection-provider";
 
@@ -11,7 +11,7 @@ const Burger = () => {
 
   const [hover, setHover] = useState(false);
 
-  const isMobile = windowWidth() < 1025;
+  const isMobile = useWindowWidth() < 1025;
 
   useEffect(() => {
     if (!isMobile) {
