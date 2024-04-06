@@ -28,6 +28,9 @@ const ThemeToggle = () => {
       className="hover:lg:scale-125 transition duration-500"
     >
       {theme === "light" ? <Moon color={color} /> : <Sun color={color} />}
+      <div className="hidden">{`Set to ${
+        theme === "light" ? "dark" : "light"
+      } mode`}</div>
     </div>
   );
 };

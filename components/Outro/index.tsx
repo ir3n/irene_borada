@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { ArrowUp } from "lucide-react";
 
 import { accentColor } from "@/constants";
@@ -20,32 +21,37 @@ const Outro = () => {
     <>
       <div className="section relative">
         <Container>
-          <div className="intro-title remove-gap">
-            <SlideFromBelow>Thanks for</SlideFromBelow>
-            <SlideFromBelow order={1}>
-              meeting
-              <span className="ml-3 lg:ml-5 inline-block translate-y-1">
-                <RotatingFlower />
-              </span>
-            </SlideFromBelow>
-            <SlideFromBelow order={2}>with me!</SlideFromBelow>
-          </div>
-          <div
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
-            onClick={goBackToTop}
-            className="md:mt-16 text flex items-center leading-[1.1] gap-x-1.5 cursor-pointer w-fit"
-            data-cursor="-hidden"
+          <Link
+            href="mailto:iren.borada@gmail.com"
+            data-cursor-text="contact me"
           >
-            go back to the <em>start</em>
-            <span
-              className={`max-w-[40px] md:max-w-full mb-2  ${
-                hover ? "lg:translate-y-[-0.5rem]" : "lg:translate-y-1"
-              } transition duration-500`}
+            <div className="intro-title remove-gap">
+              <SlideFromBelow>Thanks for</SlideFromBelow>
+              <SlideFromBelow order={1}>
+                meeting
+                <span className="ml-3 lg:ml-5 inline-block translate-y-1">
+                  <RotatingFlower />
+                </span>
+              </SlideFromBelow>
+              <SlideFromBelow order={2}>with me!</SlideFromBelow>
+            </div>
+            <div
+              onMouseEnter={() => setHover(true)}
+              onMouseLeave={() => setHover(false)}
+              onClick={goBackToTop}
+              className="md:mt-16 text flex items-center leading-[1.1] gap-x-1.5 cursor-pointer w-fit"
+              data-cursor="-hidden"
             >
-              <ArrowUp color={accentColor} size={60} />
-            </span>
-          </div>
+              go back to the <em>start</em>
+              <span
+                className={`max-w-[40px] md:max-w-full mb-2  ${
+                  hover ? "lg:translate-y-[-0.5rem]" : "lg:translate-y-1"
+                } transition duration-500`}
+              >
+                <ArrowUp color={accentColor} size={60} />
+              </span>
+            </div>
+          </Link>
         </Container>
         <div className="note text-center md:text-right absolute left-0 md:left-auto right-0 md:right-4 lg:right-[50px] bottom-4 lg:bottom-[50px]">
           designed & developed by Irene Borada
