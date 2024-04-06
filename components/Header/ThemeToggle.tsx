@@ -17,7 +17,6 @@ const ThemeToggle = () => {
       onClick={toggleTheme}
       className="hover:lg:scale-125 transition duration-500"
     >
-      {/* {"toggle"} */}
       {theme === "dark" ? <Sun color={color} /> : <Moon color={color} />}
     </div>
   );

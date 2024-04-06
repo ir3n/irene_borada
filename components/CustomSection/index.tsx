@@ -13,15 +13,15 @@ const CustomSection = ({ id, children }: Props) => {
     CurrentSectionContext
   );
 
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLElement>(null);
 
   const checkInView = () => {
-    const section = sectionRef.current;
+    const section = sectionRef?.current;
     if (!section) {
       return;
     }
     const top = section.getBoundingClientRect().top;
-    const bottom = section.getBoundingClientRect().bottom;
+    const bottom = section?.getBoundingClientRect().bottom;
     if (typeof window !== "undefined") {
       top <= 300 && bottom + 300 >= window.innerHeight && setCurrentSection(id);
     }

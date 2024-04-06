@@ -6,7 +6,7 @@ import Image from "next/image";
 type Theme = "dark" | "light";
 
 export interface ThemeProps {
-  theme: Theme;
+  theme: Theme | null;
   toggleTheme: () => void;
 }
 
@@ -20,23 +20,21 @@ export default function ThemeProvider({
 }: {
   children: React.ReactNode;
 }) {
-  // const storedItem =
-  //   typeof window !== "undefined" ? localStorage.getItem("theme") : null;
-  // const initialLocalStorage = storedItem ? storedItem : "dark";
-
-  const [theme, setTheme] = useState<Theme>(
-    (localStorage.getItem("theme") ?? "dark") as Theme
-  );
+  const [theme, setTheme] = useState<Theme | null>(null);
 
   useEffect(() => {
-    typeof window !== "undefined" && localStorage.setItem("theme", theme);
+    typeof window !== "undefined" &&
+      setTheme((localStorage.getItem("theme") ?? "dark") as Theme);
+  }, []);
 
-    return () => localStorage.setItem("theme", "dark");
+  useEffect(() => {
+    typeof window !== "undefined" &&
+      theme &&
+      localStorage.setItem("theme", theme);
   }, [theme]);
 
   const toggleTheme = () => {
     setTheme((current) => (current === "light" ? "dark" : "light"));
-    // typeof window !== "undefined" && localStorage.setItem("theme", theme);
   };
 
   return (

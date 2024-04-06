@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react";
+import { RefObject, useEffect, useState } from "react";
 
-export const useIsVisible = (elementRef) => {
+export const useIsVisible = (
+  elementRef: RefObject<HTMLDivElement>
+): boolean => {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    const elementToAnimate = elementRef?.current;
+    const elementToAnimate = elementRef.current;
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {

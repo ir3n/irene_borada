@@ -19,7 +19,7 @@ enum TranslateX {
 
 const Study = ({ date, title, text, image, even }: StudyItem) => {
   const [translateX, setTranslateX] = useState(TranslateX.forOdd);
-  const itemRef = useRef(null);
+  const itemRef = useRef<HTMLDivElement>(null);
 
   const show = useIsVisible(itemRef);
 

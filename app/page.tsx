@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+
 import ProgressBar from "react-scroll-progress-bar";
 
 import CustomSection from "@/components/CustomSection";

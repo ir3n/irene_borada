@@ -13,7 +13,7 @@ interface Project {
 }
 
 const WorkItem = ({ title, intro, text, image, link }: Project) => {
-  const showRef = useRef(null);
+  const showRef = useRef<HTMLDivElement>(null);
   const animateRef = useRef(null);
 
   const cursorText = link ? "visit website" : "current website";

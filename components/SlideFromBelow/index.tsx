@@ -8,7 +8,7 @@ const SlideFromBelow = ({
   order?: number;
   children: React.ReactNode;
 }) => {
-  const animateRef = useRef(null);
+  const animateRef = useRef<HTMLDivElement>(null);
 
   const delayClasses = [
     "delay-0",
@@ -22,7 +22,7 @@ const SlideFromBelow = ({
   const show = useIsVisible(animateRef);
 
   return (
-    <span ref={animateRef} className="block relative overflow-hidden">
+    <div ref={animateRef} className="block relative overflow-hidden">
       <span
         className={`block [transition:transform_1000ms] ${
           delayClasses[order]
@@ -30,7 +30,7 @@ const SlideFromBelow = ({
       >
         {children}
       </span>
-    </span>
+    </div>
   );
 };
 
