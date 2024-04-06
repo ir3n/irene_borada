@@ -3,13 +3,15 @@
 import { createContext, useState, useEffect } from "react";
 import Image from "next/image";
 
+type Theme = "dark" | "light";
+
 export interface ThemeProps {
-  lightTheme: boolean;
+  theme: Theme;
   toggleTheme: () => void;
 }
 
 export const ThemeContext = createContext<ThemeProps>({
-  lightTheme: false,
+  theme: "dark" as Theme,
   toggleTheme: () => {},
 });
 
@@ -18,28 +20,30 @@ export default function ThemeProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const storedItem =
-    typeof window !== "undefined" ? localStorage.getItem("lightTheme") : null;
-  const initialLocalStorage = storedItem ? JSON.parse(storedItem) : false;
+  // const storedItem =
+  //   typeof window !== "undefined" ? localStorage.getItem("theme") : null;
+  // const initialLocalStorage = storedItem ? storedItem : "dark";
 
-  const [lightTheme, setLightTheme] = useState(initialLocalStorage);
+  const [theme, setTheme] = useState<Theme>(
+    (localStorage.getItem("theme") ?? "dark") as Theme
+  );
 
   useEffect(() => {
-    typeof window !== "undefined" &&
-      localStorage.setItem("lightTheme", JSON.stringify(lightTheme));
-  }, [lightTheme]);
+    typeof window !== "undefined" && localStorage.setItem("theme", theme);
+
+    return () => localStorage.setItem("theme", "dark");
+  }, [theme]);
 
   const toggleTheme = () => {
-    setLightTheme(!lightTheme);
-    typeof window !== "undefined" &&
-      localStorage.setItem("lightTheme", JSON.stringify(lightTheme));
+    setTheme((current) => (current === "light" ? "dark" : "light"));
+    // typeof window !== "undefined" && localStorage.setItem("theme", theme);
   };
 
   return (
-    <ThemeContext.Provider value={{ lightTheme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div
         className={`${
-          !lightTheme ? "bg-dark text-white" : "bg-light text-dark"
+          theme === "dark" ? "bg-dark text-white" : "bg-light text-dark"
         } relative transition duration-500`}
       >
         <div className="fixed right-0 bottom-0 w-screen h-screen z-[-1]">

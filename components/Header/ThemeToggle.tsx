@@ -7,7 +7,7 @@ import { Sun, Moon } from "lucide-react";
 import { accentColor, darkColor } from "@/constants";
 
 const ThemeToggle = () => {
-  const { lightTheme, toggleTheme } = useContext(ThemeContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
   const { open } = useContext(MenuContext);
 
   let color = open ? darkColor : accentColor;
@@ -17,7 +17,8 @@ const ThemeToggle = () => {
       onClick={toggleTheme}
       className="hover:lg:scale-125 transition duration-500"
     >
-      {!lightTheme ? <Sun color={color} /> : <Moon color={color} />}
+      {/* {"toggle"} */}
+      {theme === "dark" ? <Sun color={color} /> : <Moon color={color} />}
     </div>
   );
 };
