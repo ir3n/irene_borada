@@ -23,6 +23,8 @@ export default function ThemeProvider({
   const [theme, setTheme] = useState<Theme | null>(null);
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
+    }
     typeof window !== "undefined" &&
       setTheme((localStorage.getItem("theme") ?? "dark") as Theme);
   }, []);
@@ -41,7 +43,9 @@ export default function ThemeProvider({
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div
         className={`${
-          theme === "dark" ? "bg-dark text-white" : "bg-light text-dark"
+          theme && theme === "light"
+            ? "bg-light text-dark"
+            : "bg-dark text-white"
         } relative transition duration-500`}
       >
         <div className="fixed right-0 bottom-0 w-screen h-screen z-[-1]">
