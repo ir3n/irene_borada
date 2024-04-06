@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Social from "@/components/Social";
 import MouseFollowerComponent from "@/components/MouseFollower";
-import ThemeProvider from "../providers/theme-provider";
+import { ThemeProvider } from "next-themes";
 import MenuProvider from "../providers/menu-provider";
 import CurrentSectionProvider from "@/providers/currentSection-provider";
 
@@ -22,11 +22,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${sans.variable} ${serif.variable}`}>
+    <html
+      lang="en"
+      className={`${sans.variable} ${serif.variable}`}
+      suppressHydrationWarning
+    >
       <body className="font-sans">
         <SmoothScrolling>
           <MouseFollowerComponent>
-            <ThemeProvider>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="dark"
+              enableSystem={false}
+            >
               <MenuProvider>
                 <CurrentSectionProvider>
                   <Header />

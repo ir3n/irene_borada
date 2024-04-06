@@ -7,7 +7,34 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
+html {
+  transition: background-color 0.5s ease;
+}
 
+/* Theme colors */
+.dark {
+  @apply bg-dark text-white;
+}
+.light {
+  @apply bg-light text-dark;
+}
+
+/* Glare */
+body:after {
+  display: block;
+  content: "";
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background-image: url("/images/blur.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Scrollbar */
 *::-webkit-scrollbar {
   width: 8px;
 }
@@ -22,18 +49,15 @@ body {
   @apply bg-accent;
 }
 
+/* General */
 img,
 svg {
   max-width: 100%;
   height: auto;
 }
-/* General */
 .larger-font {
   font-size: 200%;
   line-height: 1.1;
-}
-.accent-color {
-  @apply text-accent;
 }
 .text ul li {
   display: flex;
@@ -71,11 +95,9 @@ svg {
 .text {
   @apply text-[0.875rem] md:text-[1.2rem] xl:text-[1.5rem] leading-relaxed;
 }
-
 .note {
   @apply text-[0.625rem] md:text-[0.75rem];
 }
-
 .text p {
   @apply lg:mb-8;
 }

@@ -29,6 +29,8 @@ const config: Config = {
     darkMode: "class",
   },
   plugins: [],
+  darkMode: "class",
   // mode: "jit",
 };
+
 export default config;
