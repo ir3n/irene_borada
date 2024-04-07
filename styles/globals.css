@@ -122,12 +122,15 @@ svg {
   @apply opacity-50 scale-0;
 }
 .mf-cursor-media {
-  width: 350px;
-  height: 350px;
-  margin: -150px 0 0 -150px;
+  width: 330px;
+  height: 330px;
+  margin: -170px 0 0 -170px;
 }
 .mf-cursor-text {
   @apply text-white p-2;
+}
+span[data-cursor-img] {
+  cursor: none;
 }
 
 /* Horizontal scrolling */

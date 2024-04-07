@@ -5,10 +5,10 @@ import MenuList from "./MenuList";
 
 const Menu = () => {
   return (
-    <>
+    <div data-cursor="-hidden">
       <Burger />
       <MenuList />
-    </>
+    </div>
   );
 };
 

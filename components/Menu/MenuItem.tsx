@@ -2,6 +2,7 @@ import { useState, useContext, useEffect } from "react";
 import Link from "next/link";
 import { MenuContext } from "@/providers/menu-provider";
 import { CurrentSectionContext } from "@/providers/currentSection-provider";
+import { useTheme } from "next-themes";
 
 interface MenuItemData {
   title: string;
@@ -40,7 +41,7 @@ const MenuItem = ({ title, url }: MenuItemData) => {
           className={`transition duration-500 text-dark relative lg:pl-10 xl:pl-12 lg:pr-16 xl:pr-20`}
         >
           <span
-            className={`hidden lg:inline-block absolute left-0 text-[90%] ${
+            className={`hidden lg:inline-block absolute left-0 text-[90%] top-2 ${
               hover && !active ? "opacity-100" : "opacity-0"
             } transition duration-500`}
           >
@@ -48,7 +49,7 @@ const MenuItem = ({ title, url }: MenuItemData) => {
           </span>
           {active ? `#${title}` : title}
           <span
-            className={`hidden lg:inline-block absolute right-0 text-[90%] ${
+            className={`hidden lg:inline-block absolute right-0 text-[90%] top-2  ${
               hover && !active ? "opacity-100" : "opacity-0"
             } transition duration-500`}
           >
