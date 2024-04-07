@@ -90,7 +90,7 @@ svg {
   @apply font-serif text-[2.5rem] md:text-[3rem] lg:text-[4rem] xl:text-[4.5rem] leading-[0.7];
 }
 .text {
-  @apply text-[0.875rem] md:text-[1.2rem] xl:text-[1.5rem] leading-relaxed;
+  @apply text-[1rem] md:text-[1.2rem] xl:text-[1.5rem] leading-relaxed;
 }
 .note {
   @apply text-[0.625rem] md:text-[0.75rem];

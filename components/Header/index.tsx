@@ -34,7 +34,7 @@ const Header = () => {
   return (
     <header>
       <div
-        className={`cursor-pointer fixed left-2.5 lg:left-12 top-[15px] lg:top-[50px] z-30 max-w-20 lg:max-w-max transition-[translate] duration-500 ${
+        className={`cursor-pointer fixed left-2.5 lg:left-12 top-[15px] lg:top-[50px] z-30 max-w-20 lg:max-w-max transition-[transform] duration-500 ${
           hide && !open && "translate-y-[-155%]"
         }`}
         data-cursor="-hidden"

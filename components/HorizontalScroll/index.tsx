@@ -27,7 +27,7 @@ const HorizontalScroll = ({
           pin: component.current,
           scrub: 1,
           snap: 1 / (panels.length - 1),
-          start: `${title ? "center 60%" : "top top"}`,
+          start: `${title ? "center 67%" : "top top"}`,
           end: () => "+=" + slider?.current?.offsetWidth,
         },
       });
@@ -39,7 +39,9 @@ const HorizontalScroll = ({
     <div ref={component}>
       {title && (
         <Container>
-          <LargeTitle title={title} />
+          <div className="mb-10">
+            <LargeTitle title={title} />
+          </div>
         </Container>
       )}
       <div ref={slider} className="horizontal-container">
