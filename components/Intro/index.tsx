@@ -6,9 +6,9 @@ import SlideFromBelow from "../SlideFromBelow";
 const Intro = () => {
   return (
     <HorizontalScroll>
-      <div className="section w-screen lg:mt-16">
+      <div className="full-h-section w-screen">
         <Container>
-          <div className="intro-title remove-gap">
+          <div className="intro-title lg:mt-24">
             <SlideFromBelow>Hello.</SlideFromBelow>
             <SlideFromBelow order={1}>My name</SlideFromBelow>
             <SlideFromBelow order={2}>
@@ -25,9 +25,9 @@ const Intro = () => {
           </div>
         </Container>
       </div>
-      <div className="section w-screen">
+      <div className="full-h-section w-screen">
         <Container>
-          <div className="intro-title remove-gap">
+          <div className="intro-title">
             <SlideFromBelow>A front-end</SlideFromBelow>
             <SlideFromBelow order={1}>developer</SlideFromBelow>
           </div>

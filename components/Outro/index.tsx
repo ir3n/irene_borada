@@ -19,13 +19,13 @@ const Outro = () => {
   };
   return (
     <>
-      <div className="section relative">
+      <div className="full-h-section relative">
         <Container>
           <Link
             href="mailto:iren.borada@gmail.com"
             data-cursor-text="contact me"
           >
-            <div className="intro-title remove-gap">
+            <div className="intro-title md:mt-10">
               <SlideFromBelow>Thanks for</SlideFromBelow>
               <SlideFromBelow order={1}>
                 meeting
@@ -40,7 +40,7 @@ const Outro = () => {
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
             onClick={goBackToTop}
-            className="md:mt-16 text flex items-center leading-[1.1] gap-x-1.5 cursor-pointer w-fit"
+            className="lg:absolute lg:bottom-10 mt-5 md:mt-10 text flex items-center leading-[1.1] gap-x-1.5 cursor-pointer w-fit"
             data-cursor="-hidden"
           >
             go back to the <em>start</em>
