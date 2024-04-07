@@ -71,17 +71,17 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
 
         {link ? (
           <Link href={link} target="_blank">
-            <div className="lg:hidden bg-accent text-white text-sm leading-[1] w-20 h-20 rounded-full absolute left-4 bottom-4 text-center flex items-center">
+            <div className="lg:hidden bg-accent text-white text-sm leading-[1] w-20 h-20 rounded-full absolute bottom-4 left-4 md:left-auto md:right-32 text-center flex items-center">
               {cursorText}
             </div>
           </Link>
         ) : (
-          <div className="lg:hidden bg-accent text-white text-sm leading-[1] w-20 h-20 rounded-full absolute left-4 bottom-4 text-center flex items-center">
+          <div className="lg:hidden bg-accent text-white text-sm leading-[1] w-20 h-20 rounded-full absolute bottom-4 left-4 md:left-auto md:right-32 text-center flex items-center">
             {cursorText}
           </div>
         )}
       </div>
-      <div className="lg:w-2/5 lg:pl-20 lg:pr-40 flex items-center">
+      <div className="lg:w-2/5 lg:pl-10 xl:pl-32 lg:pr-52 xl:pr-60 flex items-center">
         <div className="px-4 md:px-24 py-8 lg:p-0">
           <h3 className="small-title pb-2">{title}</h3>
           <p className="text pb-4">{intro}</p>

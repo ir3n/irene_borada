@@ -18,7 +18,7 @@ const Studies = () => {
   }, [oneCol]);
 
   return (
-    <div className="section px-4 md:px-24 lg:px-52">
+    <div className="section px-4 md:px-28 lg:px-52 xl:px-64">
       <LargeTitle title={data.title} />
       {oneColumn ? (
         <>
@@ -36,7 +36,7 @@ const Studies = () => {
           })}
         </>
       ) : (
-        <div className="grid grid-cols-2 gap-x-[10%]">
+        <div className="grid grid-cols-2 gap-x-[7%] xl:gap-x-[10%]">
           <div className="flex flex-col gap-5 lg:gap-20 xl:gap-40">
             {data?.items?.map((study, i) => {
               if (i % 2 === 0) {

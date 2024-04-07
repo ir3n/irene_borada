@@ -42,7 +42,7 @@ const Header = () => {
         <Logo />
       </div>
       <div
-        className={`cursor-pointer fixed right-[80px] lg:right-48 xl:right-52 top-[20px] lg:top-[50px] z-30 transition duration-500 ${
+        className={`cursor-pointer fixed right-[80px] lg:right-[11rem] xl:right-52 top-[20px] lg:top-[50px] z-30 transition duration-500 ${
           hide && !open && "translate-y-[-195%]"
         }`}
       >
