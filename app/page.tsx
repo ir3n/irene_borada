@@ -53,7 +53,9 @@ export default function Home() {
         <CustomSection id="studies">
           <Studies />
         </CustomSection>
-        <Stack />
+        <CustomSection id="stack">
+          <Stack />
+        </CustomSection>
         <CustomSection id="work">
           <Work />
         </CustomSection>

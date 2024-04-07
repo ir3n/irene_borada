@@ -30,7 +30,7 @@ const Study = ({ date, title, text, image, even }: StudyItem) => {
   return (
     <div
       ref={itemRef}
-      className={`border-2 border-accent border-opacity-50 rounded-[20px] lg:rounded-[30px] overflow-hidden p-5 lg:p-8 xl:p-12 mb-5 lg:mb-20 xl:mb-40 md:w-[90%] min-[1300px]:w-full transition-[opacity,transform] duration-[2000ms] delay-100 ${
+      className={`border-2 border-accent border-opacity-50 rounded-[20px] lg:rounded-[30px] overflow-hidden p-5 lg:p-8 xl:p-12 md:w-[90%] min-[1300px]:w-full transition-[opacity,transform] duration-[2000ms] delay-100 mb-5 min-[1300px]:mb-0 ${
         !even && "md:ml-auto"
       } ${
         show

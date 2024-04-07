@@ -39,9 +39,7 @@ const HorizontalScroll = ({
     <div ref={component}>
       {title && (
         <Container>
-          <div className="lg:pt-8">
-            <LargeTitle title={title} />
-          </div>
+          <LargeTitle title={title} />
         </Container>
       )}
       <div ref={slider} className="horizontal-container">

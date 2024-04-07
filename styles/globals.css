@@ -68,9 +68,12 @@ svg {
   background-image: url("/images/icons/arrow-right.svg");
 }
 
-/* Each screen size */
+/* Sections */
 .full-h-section {
   @apply h-screen flex flex-col justify-center;
+}
+.section {
+  @apply py-14 lg:py-20;
 }
 
 /* Typography */
@@ -93,7 +96,7 @@ svg {
   @apply text-[0.625rem] md:text-[0.75rem];
 }
 .text p {
-  @apply lg:mb-8;
+  @apply mb-5 lg:mb-8;
 }
 .text em {
   @apply font-serif larger-font;

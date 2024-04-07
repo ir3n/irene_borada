@@ -9,7 +9,7 @@ const Stack = () => {
   const stackRows = stackData;
 
   return (
-    <div className="py-20 lg:py-32 cursor-grab" data-cursor-text="drag">
+    <div className="cursor-grab lg:my-20" data-cursor-text="drag">
       {stackRows.map((row, i) => (
         <StackRow
           key={`stack-row-${i}`}

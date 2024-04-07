@@ -4,7 +4,7 @@ function LargeTitle({ title }: { title: string }) {
   return (
     <h2 className={`mb-3`}>
       <SlideFromBelow>
-        <span className="font-serif large-title text-accent">{title}</span>
+        <span className="large-title text-accent">{title}</span>
       </SlideFromBelow>
     </h2>
   );
