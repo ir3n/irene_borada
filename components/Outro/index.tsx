@@ -40,7 +40,7 @@ const Outro = () => {
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
             onClick={goBackToTop}
-            className="lg:absolute lg:bottom-10 mt-5 md:mt-10 text flex items-center leading-[1.1] gap-x-1.5 cursor-pointer w-fit"
+            className="mt-5 md:mt-10 text flex items-center leading-[1.1] gap-x-1.5 cursor-pointer w-fit"
             data-cursor="-hidden"
           >
             go back to the <em>top</em>
