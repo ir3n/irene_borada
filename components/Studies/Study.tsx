@@ -45,7 +45,7 @@ const Study = ({ date, title, text, image, even }: StudyItem) => {
             alt={title}
             width={300}
             height={300}
-            style={{ maxHeight: "300px", width: "auto", margin: "0 auto" }}
+            style={{ maxHeight: "200px", width: "auto", margin: "0 auto" }}
           />
         </div>
         <div className="relative z-[1]">
