@@ -135,8 +135,9 @@ svg {
 .mf-cursor-text {
   @apply text-white p-2;
 }
-span[data-cursor-img] {
-  cursor: none;
+*[data-cursor-img],
+*[data-cursor-text] {
+  cursor: none !important;
 }
 
 /* Horizontal scrolling */
