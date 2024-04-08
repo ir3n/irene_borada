@@ -14,8 +14,6 @@ const SmoothScrolling = ({
       root
       options={{
         duration: 1.5,
-        smoothTouch: true,
-        orientation: direction || "vertical",
       }}
     >
       {children}
