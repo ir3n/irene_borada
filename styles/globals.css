@@ -68,7 +68,7 @@ svg {
   background-image: url("/images/icons/arrow-right.svg");
 }
 .text a {
-  cursor: url("/images/icons/link.svg"), auto;
+  @apply hover:text-accent transition duration-500;
 }
 
 /* Sections */
