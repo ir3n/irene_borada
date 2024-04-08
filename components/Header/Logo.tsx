@@ -29,7 +29,7 @@ const Logo = () => {
 
   return (
     <div onClick={handleClick} onMouseOver={replay}>
-      <div className="relative text-base lg:text-xl leading-none lg:leading-none pl-2 lg:pl-3 pr-4 lg:pr-5 pb-[0.1rem] w-[5.25rem] lg:w-[108px]">
+      <div className="relative text-base lg:text-xl leading-none lg:leading-none pl-2 lg:pl-3 pr-4 lg:pr-5 pb-[0.1rem] w-[5.25rem] lg:w-[6.75rem]">
         <div className="absolute font-light left-0">{"<"}</div>
         <div className="font-light">Irene</div>
         <div

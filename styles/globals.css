@@ -73,7 +73,7 @@ svg {
 
 /* Sections */
 .full-h-section {
-  @apply h-screen flex flex-col justify-center;
+  @apply min-h-screen flex flex-col justify-center;
 }
 .section {
   @apply py-14 lg:py-20;
