@@ -11,12 +11,12 @@ const SlideFromBelow = ({
   const animateRef = useRef<HTMLDivElement>(null);
 
   const delayClasses = [
-    "delay-0",
     "delay-[100ms]",
     "delay-[200ms]",
     "delay-[300ms]",
     "delay-[400ms]",
     "delay-[500ms]",
+    "delay-[600ms]",
   ];
 
   const show = useIsVisible(animateRef);
