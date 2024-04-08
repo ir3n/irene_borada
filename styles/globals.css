@@ -67,6 +67,9 @@ svg {
   content: "";
   background-image: url("/images/icons/arrow-right.svg");
 }
+.text a {
+  cursor: url("/images/icons/link.svg"), auto;
+}
 
 /* Sections */
 .full-h-section {
