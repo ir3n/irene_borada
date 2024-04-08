@@ -18,7 +18,7 @@ export const Work = () => {
               intro={project?.intro}
               text={project?.text}
               image={project?.image}
-              link={project?.link}
+              link={project?.link || null}
             />
           </div>
         ))}
