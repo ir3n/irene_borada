@@ -122,9 +122,12 @@ svg {
   @apply opacity-50 scale-0;
 }
 .mf-cursor-media {
-  width: 330px;
-  height: 330px;
-  margin: -170px 0 0 -170px;
+  width: 350px;
+  height: 350px;
+  margin: (-350px * 0.5) 0 0 (-350px * 0.5);
+}
+.mf-cursor-media img {
+  transform: none;
 }
 .mf-cursor-text {
   @apply text-white p-2;
