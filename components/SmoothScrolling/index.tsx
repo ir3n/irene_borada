@@ -2,13 +2,7 @@
 
 import { ReactLenis } from "@studio-freight/react-lenis";
 
-const SmoothScrolling = ({
-  direction,
-  children,
-}: {
-  direction?: "horizontal";
-  children: React.ReactNode;
-}) => {
+const SmoothScrolling = ({ children }: { children: React.ReactNode }) => {
   return (
     <ReactLenis
       root
