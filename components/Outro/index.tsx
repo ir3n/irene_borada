@@ -43,7 +43,7 @@ const Outro = () => {
             className="lg:absolute lg:bottom-10 mt-5 md:mt-10 text flex items-center leading-[1.1] gap-x-1.5 cursor-pointer w-fit"
             data-cursor="-hidden"
           >
-            go back to the <em>start</em>
+            go back to <em>top</em>
             <span
               className={`max-w-[40px] md:max-w-full mb-2  ${
                 hover ? "lg:translate-y-[-0.5rem]" : "lg:translate-y-1"

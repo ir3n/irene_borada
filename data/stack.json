@@ -2,6 +2,11 @@
   {
     "items": [
       {
+        "name": "HTML5",
+        "image": "/images/stack/html.svg",
+        "lightImage": "/images/stack/html-light.svg"
+      },
+      {
         "name": "JavaScript",
         "image": "/images/stack/js.svg",
         "lightImage": "/images/stack/js-light.svg"
@@ -26,32 +31,27 @@
         "lightImage": "/images/stack/jquery-light.svg"
       },
       {
-        "name": "Git",
-        "image": "/images/stack/git.svg",
-        "lightImage": "/images/stack/git-light.svg"
-      },
-      {
         "name": "Chakra UI",
         "image": "/images/stack/chakra.svg",
         "lightImage": "/images/stack/chakra-light.svg"
+      },
+      {
+        "name": "Git",
+        "image": "/images/stack/git.svg",
+        "lightImage": "/images/stack/git-light.svg"
       }
     ]
   },
   {
     "items": [
       {
-        "name": "HTML5",
-        "image": "/images/stack/html.svg",
-        "lightImage": "/images/stack/html-light.svg"
+        "name": "AdobeXd",
+        "image": "/images/stack/adobexd.svg"
       },
       {
-        "name": "CSS3",
-        "image": "/images/stack/css.svg",
-        "lightImage": "/images/stack/css-light.svg"
-      },
-      {
-        "name": "Sass",
-        "image": "/images/stack/sass.svg"
+        "name": "Figma",
+        "image": "/images/stack/figma.svg",
+        "lightImage": "/images/stack/figma-light.svg"
       },
       {
         "name": "Tailwind CSS",
@@ -59,17 +59,27 @@
         "lightImage": "/images/stack/tailwind-light.svg"
       },
       {
-        "name": "Drupal",
-        "image": "/images/stack/drupal.svg"
+        "name": "Sass",
+        "image": "/images/stack/sass.svg"
+      },
+      {
+        "name": "CSS3",
+        "image": "/images/stack/css.svg",
+        "lightImage": "/images/stack/css-light.svg"
+      },
+      {
+        "name": "Twig",
+        "image": "/images/stack/twig.svg",
+        "lightImage": "/images/stack/twig-light.svg"
       },
       {
         "name": "PHP",
-        "image": "/images/stack/php.svg"
+        "image": "/images/stack/php.svg",
+        "lightImage": "/images/stack/php-light.svg"
       },
       {
-        "name": "Figma",
-        "image": "/images/stack/figma.svg",
-        "lightImage": "/images/stack/figma-light.svg"
+        "name": "Drupal",
+        "image": "/images/stack/drupal.svg"
       }
     ]
   }

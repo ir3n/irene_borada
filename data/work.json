@@ -1,20 +1,19 @@
 {
   "title": "Work",
-  "text": "<p>Since July 2019 I working at my first company , <em>Rocket Path PC.</em>some words about the company and my role. imply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard Messor at Hampden-Sydney College in Virginia, looked up one of the more obscure  Lorem Ipsum, consectetur, from a </p><p>Since July 2019 I working at my first company , <em>Rocket Path PC</em> some words about the company and my role. imply random text. It has roots</p><p>Since there is not much time for projects of my own, but here are some examples where either my help was big or made it almost on my own. Of course everything belongs to Rocket Path.</p>",
+  "text": "<p>I have worked at my first company, <em>Rocket Path PC</em>, for almost 5 years.</p><p>Despite my React background, the first years I learnt Drupal & PHP on the job and contributed to some E-shops, while soon I <em>independently</em> handled a great amount of entire presentational websites solidifying my styling skills with SCSS and jQuery. Eventually I established the styling and helped with the initial structure for our Drupal template, <em>automating tasks</em> to avoid starting from scratch with each new project.</p><p>Taking charge of the HTML <em>landing pages</em> delivery, I optimized the process saving significant time. The positive client feedback led to more projects, resulting in the successful and punctual delivery of numerous pages.</p><p>For the last 2,5 years I joined the React team and we worked on various <em>decoupled</em> E-shops with Next.js and Drupal. The transition happened quickly as I grasped the  concepts with little guidance and I also suggested improvements for <em>better workflow</em>, cleaner, reusable code and helped with improvements for the site performance.</p><p>Since my schedule these years was packed, there was little room for <em>personal projects</em>. However I am currently studying TypeScript, TailwindCSS and more and creating projects, some of which are detailed below:</p>",
   "items": [
     {
       "title": "Thanassis Mavrakis",
       "intro": "Portfolio for a designer",
-      "text": "Main technologies used: <br />NextJs | TypeScript | Tailwind CSS | Lenis Scroll",
-      "image": "/images/work/thanassis.jpg",
+      "text": "Launched: 2022<br/>#next12 #react #javascript  #scss #swiper",
+      "image": "/images/work/thanassis.svg",
       "link": "https://thanassis-mavrakis.com/"
     },
     {
       "title": "Irene Borada",
       "intro": "The current portfolio website",
-      "text": "Main technologies used: <br />NextJs | TypeScript | Tailwind CSS | Lenis Scroll",
-      "image": "/images/work/thanassis.jpg",
-      "link": null
+      "text": "Launched: 2024<br/>#next14 #typescript #tailwindcss #react-lenis #gsap #mouse-follower #next-themes #react-scroll-progress-bar #lucide-react #swiper",
+      "image": "/images/work/current.svg"
     }
   ]
 }
