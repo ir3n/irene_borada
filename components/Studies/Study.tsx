@@ -51,7 +51,7 @@ const Study = ({ date, title, text, image, even }: StudyItem) => {
         <div className="relative z-[1]">
           <div className="mb-6 max-w-[25rem]">
             <div className="text mb-2">{date}</div>
-            <h4 className="small-title">{title}</h4>
+            <h3 className="small-title">{title}</h3>
           </div>
           <div
             className="text"
