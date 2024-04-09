@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "Irene Borada | Front-end Developer",
   description: "Trying to conquer the JavaScript world.",
   openGraph: {
-    images: "/opengraph-image.jpg",
+    images: "/og-image.png",
   },
 };
 
