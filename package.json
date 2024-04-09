@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@studio-freight/react-lenis": "^0.0.43",
+    "@vercel/speed-insights": "^1.0.10",
     "gsap": "^3.12.4",
     "lucide-react": "^0.358.0",
     "mouse-follower": "^1.1.2",
