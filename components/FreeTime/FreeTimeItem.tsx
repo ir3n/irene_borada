@@ -15,11 +15,11 @@ const FreeTimeItem = ({ reverse, title, image, alt }: FreeTimeType) => {
   const show = useIsVisible(itemRef);
 
   return (
-    <div className="px-4 md:pl-24 lg:pl-52">
+    <div className="">
       <div
         className={`${
           reverse ? "flex-col-reverse" : "flex-col"
-        } flex gap-5 w-[15rem] md:w-[22rem] xl:w-[25rem] `}
+        } flex gap-5 w-[18rem] md:w-[26rem] xl:w-[30rem]`}
       >
         <div
           ref={itemRef}

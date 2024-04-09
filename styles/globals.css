@@ -142,19 +142,20 @@ svg {
 
 /* Horizontal scrolling */
 .horizontal-container {
-  display: flex;
+  @apply flex;
+}
+.horizontal-container.with-title {
+  @apply block lg:flex;
 }
 .panel {
-  /* width: 100vw; */
   flex: 1;
 }
 
 /* swiper */
-.logos-swiper .swiper-wrapper {
+.logos-swiper .swiper-wrapper,
+.free-time-slider .swiper-wrapper {
   transition-timing-function: linear;
 }
-
-.logos-swiper .swiper-slide img {
-  display: block;
-  margin: 0 auto;
+.mobile-swiper .swiper-slide {
+  @apply w-fit p-4 md:pl-28 md:pr-4;
 }

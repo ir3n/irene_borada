@@ -28,7 +28,6 @@ const StackRow = ({ logos, dir = Direction.toRight }: Row) => {
       speed={3500}
       loop={true}
       modules={[Autoplay]}
-      touchStartPreventDefault={false}
       allowTouchMove={true}
       breakpoints={{
         768: {
