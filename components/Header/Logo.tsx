@@ -32,7 +32,7 @@ const Logo = () => {
       <div
         className={`${
           mobile && open ? "text-white" : "text-inherit"
-        } relative text-2xl lg:text-xl leading-none lg:leading-none pl-3 pr-4 lg:pr-5 pb-[0.1rem] w-[8rem] lg:w-[6.75rem]`}
+        } relative text-[1.3rem] lg:text-xl leading-none lg:leading-none pl-3 pr-4 lg:pr-5 pb-[0.1rem] w-[7.1rem] lg:w-[6.75rem]`}
       >
         <div className="absolute font-light left-0">{"<"}</div>
         <div className={`font-light `}>Irene</div>
