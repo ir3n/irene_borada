@@ -15,27 +15,25 @@ const FreeTimeItem = ({ reverse, title, image, alt }: FreeTimeType) => {
   const show = useIsVisible(itemRef);
 
   return (
-    <div className="">
+    <div
+      className={`${
+        reverse ? "flex-col-reverse" : "flex-col"
+      } flex gap-5 w-[18rem] md:w-[26rem] xl:w-[30rem]`}
+    >
       <div
-        className={`${
-          reverse ? "flex-col-reverse" : "flex-col"
-        } flex gap-5 w-[18rem] md:w-[26rem] xl:w-[30rem]`}
+        ref={itemRef}
+        className="overflow-hidden rounded-[20px] border-opacity-50 lg:rounded-[30px]"
       >
         <div
-          ref={itemRef}
-          className="overflow-hidden rounded-[20px] border-opacity-50 lg:rounded-[30px]"
+          data-cursor-text={alt.toLowerCase()}
+          className={`block transition duration-1000 delay-100 ${
+            show ? "scale-100 rotate-0" : "scale-110 rotate-3"
+          }`}
         >
-          <div
-            data-cursor-text={alt.toLowerCase()}
-            className={`block transition duration-1000 delay-100 ${
-              show ? "scale-100 rotate-0" : "scale-110 rotate-3"
-            }`}
-          >
-            <Image src={image} alt={alt} width={500} height={375} />
-          </div>
+          <Image src={image} alt={alt} width={500} height={375} />
         </div>
-        <div className="text" dangerouslySetInnerHTML={{ __html: title }}></div>
       </div>
+      <div className="text" dangerouslySetInnerHTML={{ __html: title }}></div>
     </div>
   );
 };

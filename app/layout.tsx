@@ -51,7 +51,6 @@ export default function RootLayout({
                       <Image src="/images/blur.png" alt="Glow" fill />
                     </div>
                   </div>
-
                   <Social />
                 </CurrentSectionProvider>
               </MenuProvider>
