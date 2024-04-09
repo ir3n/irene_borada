@@ -36,10 +36,10 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
     <div className="lg:flex h-screen w-full">
       <div
         ref={showRef}
-        className="relative lg:w-3/5 h-[40vh] sm:h-[50vh] lg:h-auto"
+        className="relative lg:w-3/5 h-[40vh] sm:h-[50vh] lg:h-screen"
       >
         <div ref={animateRef} className="overflow-hidden w-full h-full">
-          <div className="relative w-full h-full lg:min-h-screen">
+          <div className="relative w-full h-full">
             {link ? (
               <Link href={link} target="_blank" data-cursor-text={cursorText}>
                 <Image
