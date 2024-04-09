@@ -46,6 +46,7 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
                   src={image}
                   alt={title}
                   fill
+                  aria-label={title}
                   style={{
                     objectFit: "cover",
                     objectPosition: "center",
@@ -70,7 +71,7 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
         </div>
 
         {link ? (
-          <Link href={link} target="_blank">
+          <Link href={link} target="_blank" aria-label={title}>
             <div className="lg:hidden bg-accent text-white text-sm leading-[1] w-20 h-20 rounded-full absolute bottom-4 left-4 md:left-auto md:right-32 text-center flex items-center">
               {cursorText}
             </div>

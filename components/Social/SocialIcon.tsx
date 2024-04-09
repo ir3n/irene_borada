@@ -20,7 +20,7 @@ function SocialIcon({ name, icon, url }: SocialIcon) {
       onMouseOver={() => setHover(true)}
       onMouseOut={() => setHover(false)}
     >
-      <Link href={url} target="_blank">
+      <Link href={url} target="_blank" aria-label={name}>
         <div
           className={`${
             hover ? "opacity-100 scale-100" : "opacity-0 scale-50"

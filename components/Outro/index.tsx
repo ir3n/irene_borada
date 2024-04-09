@@ -24,6 +24,7 @@ const Outro = () => {
           <Link
             href="mailto:iren.borada@gmail.com"
             data-cursor-text="contact me"
+            aria-label="contact me"
           >
             <div className="intro-title md:mt-10">
               <SlideFromBelow>Thanks for</SlideFromBelow>
