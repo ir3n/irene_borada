@@ -7,6 +7,8 @@ import { ThemeProvider } from "next-themes";
 import MenuProvider from "../providers/menu-provider";
 import CurrentSectionProvider from "@/providers/currentSection-provider";
 
+import Image from "next/image";
+
 import { sans, serif } from "./fonts";
 
 import "../styles/globals.css";
@@ -44,6 +46,12 @@ export default function RootLayout({
                 <CurrentSectionProvider>
                   <Header />
                   {children}
+                  <div className="fixed bottom-0 right-0 w-full h-full z-[-1]">
+                    <div className="relative w-full h-full">
+                      <Image src="/images/blur.png" alt="Glow" fill />
+                    </div>
+                  </div>
+
                   <Social />
                 </CurrentSectionProvider>
               </MenuProvider>

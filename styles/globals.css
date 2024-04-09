@@ -19,21 +19,6 @@ html {
   @apply bg-light text-dark;
 }
 
-/* Glare */
-body:after {
-  display: block;
-  content: "";
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  background-image: url("/images/blur.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
 /* Scrollbar */
 *::-webkit-scrollbar {
   width: 8px;
