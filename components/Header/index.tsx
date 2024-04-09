@@ -42,14 +42,14 @@ const Header = () => {
         <Logo />
       </div>
       <div
-        className={`cursor-pointer fixed right-[80px] lg:right-[11rem] xl:right-52 top-[20px] lg:top-[50px] z-30 transition duration-500 ${
-          hide && !open && "translate-y-[-195%]"
+        className={`cursor-pointer fixed right-24 lg:right-44 xl:right-52 top-[25px] lg:top-[50px] z-30 transition duration-500 ${
+          hide && !open && "translate-y-[-200%]"
         }`}
       >
         <ThemeToggle />
       </div>
       <div
-        className="fixed right-4 lg:right-10 xl:right-12 top-[10px] lg:top-[16px] w-8 lg:w-24 z-20"
+        className="fixed right-4 lg:right-10 xl:right-12 top-[14px] lg:top-[16px] w-9 lg:w-24 z-20"
         data-cursor="-hidden"
       >
         <Menu />

@@ -12,6 +12,7 @@ interface MenuItemData {
 const MenuItem = ({ title, url }: MenuItemData) => {
   const { open, setOpen } = useContext(MenuContext);
   const { currentSection } = useContext(CurrentSectionContext);
+  const { theme } = useTheme();
 
   const [hover, setHover] = useState(false);
   const [active, setActive] = useState(false);
@@ -38,7 +39,9 @@ const MenuItem = ({ title, url }: MenuItemData) => {
         tabIndex={active ? -1 : undefined}
       >
         <div
-          className={`transition duration-500 text-dark relative lg:pl-10 xl:pl-12 lg:pr-16 xl:pr-20`}
+          className={`${
+            theme === "light" ? "text-white" : "text-dark"
+          } transition duration-500 relative lg:pl-10 xl:pl-12 lg:pr-16 xl:pr-20 `}
         >
           <span
             className={`hidden lg:inline-block absolute left-0 text-[90%] top-2 ${

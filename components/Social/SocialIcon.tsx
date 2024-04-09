@@ -28,7 +28,7 @@ function SocialIcon({ name, icon, url }: SocialIcon) {
         >
           <RotatingText title={name} />
         </div>
-        <div className="w-10 lg:w-14 h-10 lg:h-14 flex items-center justify-center p-2.5 lg:absolute lg:top-1/2 lg:left-1/2 lg:translate-x-[-50%] lg:translate-y-[-50%]">
+        <div className="w-12 lg:w-14 h-12 lg:h-14 flex items-center justify-center p-2.5 lg:absolute lg:top-1/2 lg:left-1/2 lg:translate-x-[-50%] lg:translate-y-[-50%]">
           <Image src={icon} width={28} height={28} alt={name} />
         </div>
       </Link>
