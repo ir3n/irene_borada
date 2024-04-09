@@ -13,8 +13,12 @@ import "../styles/globals.css";
 import SmoothScrolling from "@/components/SmoothScrolling";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.ireneborada.com"),
   title: "Irene Borada | Front-end Developer",
   description: "Trying to conquer the JavaScript world.",
+  openGraph: {
+    images: "/opengraph-image.jpg",
+  },
 };
 
 export default function RootLayout({
