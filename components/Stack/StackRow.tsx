@@ -18,7 +18,7 @@ interface Row {
 const StackRow = ({ logos, dir = Direction.toRight }: Row) => {
   return (
     <Swiper
-      slidesPerView={"auto"}
+      slidesPerView={3}
       dir={dir}
       autoplay={{
         delay: 0,
@@ -34,14 +34,17 @@ const StackRow = ({ logos, dir = Direction.toRight }: Row) => {
         768: {
           speed: 4000,
           spaceBetween: 50,
+          slidesPerView: 4,
         },
         1024: {
           speed: 4500,
           spaceBetween: 100,
+          slidesPerView: 5,
         },
         1450: {
           spaceBetween: 150,
           speed: 6000,
+          slidesPerView: 6,
         },
       }}
       className="logos-swiper"
