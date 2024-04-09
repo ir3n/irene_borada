@@ -52,7 +52,7 @@ const HorizontalScroll = ({
           <>
             <div className="lg:absolute lg:left-0 lg:right-0 lg:top-10 xl:top-20">
               <Container>
-                <div className="mb-10">
+                <div className="mb-10 pt-10 lg:pt-0">
                   <LargeTitle title={title} />
                 </div>
               </Container>
