@@ -46,10 +46,13 @@ export default function RootLayout({
                 <CurrentSectionProvider>
                   <Header />
                   {children}
-                  <div className="fixed bottom-0 right-0 w-full h-full z-[-1]">
-                    <div className="relative w-full h-full">
-                      <Image src="/images/blur.png" alt="Glow" fill />
-                    </div>
+                  <div className="fixed bottom-0 right-0 z-[-1]">
+                    <Image
+                      src="/images/blur.png"
+                      alt="Glow"
+                      width={1916}
+                      height={1082}
+                    />
                   </div>
                   <Social />
                 </CurrentSectionProvider>
