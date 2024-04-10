@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import Header from "@/components/Header";
 import Social from "@/components/Social";
 import MouseFollowerComponent from "@/components/MouseFollower";
@@ -60,7 +59,6 @@ export default function RootLayout({
             </ThemeProvider>
           </MouseFollowerComponent>
         </SmoothScrolling>
-        <SpeedInsights />
       </body>
     </html>
   );
