@@ -53,6 +53,7 @@ export default function RootLayout({
                       height={865}
                       sizes="(max-width: 768px) 100vw, 60vw"
                       loading="eager"
+                      style={{ maxWidth: "100%", height: "auto" }}
                     />
                   </div>
                   <Social />
