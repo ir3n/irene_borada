@@ -39,7 +39,7 @@ const Study = ({ date, title, text, image, even }: StudyItem) => {
       } ${show ? "translate-x-0" : translateX}`}
     >
       <div className="relative h-full py-10">
-        <div className="opacity-5 absolute top-0 right-0 w-1/2">
+        <div className="opacity-10 absolute top-0 right-0 w-1/2">
           <Image
             src={image}
             alt={title}

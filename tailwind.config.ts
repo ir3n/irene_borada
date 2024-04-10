@@ -14,8 +14,8 @@ const config: Config = {
       xl: "1600px",
     },
     colors: {
-      dark: "#141521",
-      accent: "#6366f1",
+      dark: "#0f172a",
+      accent: "#818cf8",
       secondary: "#ff0a78",
       white: "#FFFFFF",
       black: "#000000",

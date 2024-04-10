@@ -48,10 +48,10 @@ export default function RootLayout({
                   {children}
                   <div className="fixed bottom-0 right-0 z-[-1]">
                     <Image
-                      src="/images/blur.png"
-                      alt="Glow"
-                      width={1916}
-                      height={1082}
+                      src="/images/glare.png"
+                      alt="Glare"
+                      width={1320}
+                      height={865}
                     />
                   </div>
                   <Social />
