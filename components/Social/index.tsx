@@ -1,7 +1,7 @@
 "use client";
 
-import { useContext, useState, useEffect } from "react";
-import { CurrentSectionContext } from "@/providers/currentSection-provider";
+import { useState, useEffect } from "react";
+import { useScroll } from "@/hooks/useScroll";
 
 import SocialIcon from "./SocialIcon";
 
@@ -10,7 +10,7 @@ import socialIcons from "@/data/social.json";
 const Social = () => {
   const [hidden, setHidden] = useState(false);
 
-  const { top, bottom } = useContext(CurrentSectionContext);
+  const { top, bottom } = useScroll();
 
   useEffect(() => {
     setHidden(!(top || bottom));

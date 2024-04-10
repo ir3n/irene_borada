@@ -1,70 +1,39 @@
-"use client";
-
-import { useEffect } from "react";
-
-import ProgressBar from "react-scroll-progress-bar";
-
-import CustomSection from "@/components/CustomSection";
 import Intro from "@/components/Intro";
 import TitleWithText from "@/components/TitleWithText";
 import Stack from "@/components/Stack";
 import Studies from "@/components/Studies";
-import { Work } from "@/components/Work";
+import Work from "@/components/Work";
 import FreeTime from "@/components/FreeTime";
 import Outro from "@/components/Outro";
-
-import { accentColor } from "@/constants";
 
 import aboutData from "@/data/about.json";
 
 export default function Home() {
-  useEffect(() => {
-    const handleHashChange = () => {
-      const { hash } = window.location;
-      if (hash) {
-        const targetElement = document.querySelector(hash);
-        if (targetElement) {
-          targetElement.scrollIntoView();
-        }
-      }
-    };
-
-    handleHashChange(); // Scroll to section on initial load
-
-    // Listen for hash changes and scroll to the section
-    window.addEventListener("hashchange", handleHashChange);
-
-    return () => {
-      window.removeEventListener("hashchange", handleHashChange);
-    };
-  }, []);
-
   return (
     <>
-      <ProgressBar bgcolor={accentColor} />
       <main>
         <h1 className="hidden">Irene Borada - Front-end Developer</h1>
-        <CustomSection id="intro">
+        <section id="intro">
           <Intro />
-        </CustomSection>
-        <CustomSection id="about">
+        </section>
+        <section id="about">
           <TitleWithText title={aboutData?.title} text={aboutData?.text} />
-        </CustomSection>
-        <CustomSection id="studies">
+        </section>
+        <section id="studies">
           <Studies />
-        </CustomSection>
-        <CustomSection id="stack">
+        </section>
+        <section id="stack">
           <Stack />
-        </CustomSection>
-        <CustomSection id="work">
+        </section>
+        <section id="work">
           <Work />
-        </CustomSection>
-        <CustomSection id="free-time">
+        </section>
+        <section id="free-time">
           <FreeTime />
-        </CustomSection>
-        <CustomSection id="outro">
+        </section>
+        <section id="outro">
           <Outro />
-        </CustomSection>
+        </section>
       </main>
     </>
   );

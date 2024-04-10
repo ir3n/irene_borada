@@ -1,10 +1,8 @@
-"use client";
-
 import { useContext, useState, useEffect } from "react";
-import { MenuContext } from "@/providers/menu-provider";
 import { Sun, Moon } from "lucide-react";
-import { accentColor, darkColor } from "@/constants";
 import { useTheme } from "next-themes";
+import { MenuContext } from "@/providers/menu-provider";
+import { accentColor, darkColor } from "@/constants";
 
 const ThemeToggle = () => {
   const [mounted, setMounted] = useState(false);

@@ -1,9 +1,7 @@
-"use client";
-
 import { useContext } from "react";
-import { MenuContext } from "@/providers/menu-provider";
-
 import { useScramble } from "use-scramble";
+
+import { MenuContext } from "@/providers/menu-provider";
 
 import { useWindowWidth } from "@/hooks/useWindowWidth";
 

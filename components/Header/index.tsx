@@ -6,15 +6,14 @@ import Logo from "./Logo";
 import Menu from "../Menu";
 import ThemeToggle from "./ThemeToggle";
 
-import { CurrentSectionContext } from "@/providers/currentSection-provider";
-
 import { useWindowWidth } from "@/hooks/useWindowWidth";
 import { MenuContext } from "@/providers/menu-provider";
+import { useScroll } from "@/hooks/useScroll";
 
 const Header = () => {
   const [hide, setHide] = useState(false);
 
-  const { top, bottom } = useContext(CurrentSectionContext);
+  const { top, bottom } = useScroll();
 
   const isMobile = useWindowWidth() < 768;
 

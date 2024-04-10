@@ -1,8 +1,10 @@
+"use client";
+
 import { useState, useContext, useEffect } from "react";
 import Link from "next/link";
 import { MenuContext } from "@/providers/menu-provider";
-import { CurrentSectionContext } from "@/providers/currentSection-provider";
 import { useTheme } from "next-themes";
+import { useScroll } from "@/hooks/useScroll";
 
 interface MenuItemData {
   title: string;
@@ -11,7 +13,7 @@ interface MenuItemData {
 
 const MenuItem = ({ title, url }: MenuItemData) => {
   const { open, setOpen } = useContext(MenuContext);
-  const { currentSection } = useContext(CurrentSectionContext);
+  const { currentSection } = useScroll();
   const { theme } = useTheme();
 
   const [hover, setHover] = useState(false);

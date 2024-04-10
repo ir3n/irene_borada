@@ -1,3 +1,5 @@
+"use client";
+
 import { useIsVisible } from "@/hooks/useIsVisible";
 import { useRef } from "react";
 

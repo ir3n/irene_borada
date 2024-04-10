@@ -1,5 +1,3 @@
-"use client";
-
 import Burger from "./Burger";
 import MenuList from "./MenuList";
 

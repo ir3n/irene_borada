@@ -4,7 +4,7 @@ import WorkItem from "./WorkItem";
 
 import workData from "@/data/work.json";
 
-export const Work = () => {
+const Work = () => {
   const { title, text, items: workItems } = workData;
 
   return (
@@ -26,3 +26,5 @@ export const Work = () => {
     </div>
   );
 };
+
+export default Work;

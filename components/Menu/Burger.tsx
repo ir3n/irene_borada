@@ -1,13 +1,14 @@
+"use client";
+
 import { useContext, useState, useEffect } from "react";
 import { MenuContext } from "@/providers/menu-provider";
 
 import { useWindowWidth } from "@/hooks/useWindowWidth";
-
-import { CurrentSectionContext } from "@/providers/currentSection-provider";
+import { useScroll } from "@/hooks/useScroll";
 
 const Burger = () => {
   const { open, setOpen } = useContext(MenuContext);
-  const { top, bottom } = useContext(CurrentSectionContext);
+  const { top, bottom } = useScroll();
 
   const [hover, setHover] = useState(false);
 
