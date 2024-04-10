@@ -51,6 +51,8 @@ export default function RootLayout({
                       alt="Glare"
                       width={1320}
                       height={865}
+                      sizes="(max-width: 768px) 100vw, 60vw"
+                      loading="eager"
                     />
                   </div>
                   <Social />
