@@ -5,7 +5,10 @@ import LargeTitle from "../LargeTitle";
 import Container from "../Container";
 import { useWindowWidth } from "@/hooks/useWindowWidth";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode } from "swiper/modules";
+
 import "swiper/css";
+import "swiper/css/free-mode";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,7 +61,12 @@ const HorizontalScroll = ({
               </Container>
             </div>
             {makeSwiper ? (
-              <Swiper slidesPerView={"auto"} className="mobile-swiper ">
+              <Swiper
+                slidesPerView={"auto"}
+                freeMode={true}
+                modules={[FreeMode]}
+                className="mobile-swiper"
+              >
                 {Children.map(children, (child, i) => (
                   <SwiperSlide key={`mobile-swiper-${titleKey}-${i}`}>
                     {child}

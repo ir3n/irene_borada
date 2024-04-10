@@ -136,8 +136,7 @@ svg {
 }
 
 /* swiper */
-.logos-swiper .swiper-wrapper,
-.free-time-slider .swiper-wrapper {
+.logos-swiper .swiper-wrapper {
   transition-timing-function: linear;
 }
 .mobile-swiper .swiper-slide {
