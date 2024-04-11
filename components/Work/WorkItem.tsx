@@ -40,36 +40,37 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
         ref={showRef}
         className="relative lg:w-3/5 h-[40vh] sm:h-[50vh] lg:h-screen"
       >
-        <div ref={animateRef} className="overflow-hidden w-full h-full">
-          <div className="relative w-full h-full">
-            {link ? (
-              <Link href={link} target="_blank" data-cursor-text={cursorText}>
-                <Image
-                  src={image}
-                  alt={title}
-                  fill
-                  aria-label={title}
-                  style={{
-                    objectFit: "cover",
-                    objectPosition: "center",
-                    maxWidth: "unset",
-                  }}
-                />
-              </Link>
-            ) : (
+        <div
+          ref={animateRef}
+          className="overflow-hidden w-full h-screen relative"
+        >
+          {link ? (
+            <Link href={link} target="_blank" data-cursor-text={cursorText}>
               <Image
-                data-cursor-text={cursorText}
                 src={image}
                 alt={title}
                 fill
+                aria-label={title}
                 style={{
                   objectFit: "cover",
                   objectPosition: "center",
                   maxWidth: "unset",
                 }}
               />
-            )}
-          </div>
+            </Link>
+          ) : (
+            <Image
+              data-cursor-text={cursorText}
+              src={image}
+              alt={title}
+              fill
+              style={{
+                objectFit: "cover",
+                objectPosition: "center",
+                maxWidth: "unset",
+              }}
+            />
+          )}
         </div>
 
         {link ? (
