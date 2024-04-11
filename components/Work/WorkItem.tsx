@@ -41,7 +41,6 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
                   alt={title}
                   width={1480}
                   height={1440}
-                  loading="eager"
                   style={{
                     width: "100%",
                     height: "100%",
@@ -55,7 +54,6 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
                 alt={title}
                 width={1480}
                 height={1440}
-                loading="eager"
                 style={{
                   width: "100%",
                   height: "100%",
