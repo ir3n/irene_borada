@@ -11,7 +11,7 @@ const FreeTime = () => {
       {data?.items?.map((item, i) => (
         <FreeTimeItem
           key={`free-time-item-${i}`}
-          reverse={i % 2 === 0}
+          reverse={i % 2 !== 0}
           title={item?.title}
           image={item?.image}
           alt={item?.alt}
