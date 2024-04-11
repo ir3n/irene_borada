@@ -63,6 +63,16 @@ svg {
 .section {
   @apply py-14 lg:py-20;
 }
+/* Horizontal scrolling */
+.horizontal-container {
+  @apply flex min-h-screen;
+}
+.horizontal-container.with-title {
+  @apply block lg:flex min-h-[unset] lg:min-h-screen;
+}
+.panel {
+  flex: 1;
+}
 
 /* Typography */
 .intro-title {
