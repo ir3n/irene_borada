@@ -61,7 +61,6 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
                 data-cursor-text={cursorText}
                 src={image}
                 alt={title}
-                loading="eager"
                 fill
                 style={{
                   objectFit: "cover",
