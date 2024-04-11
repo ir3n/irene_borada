@@ -45,7 +45,7 @@ export default function RootLayout({
             >
               <MenuProvider>
                 <Header />
-                {children}
+                <div className="max-w-[160rem] mx-auto">{children}</div>
                 <div className="fixed bottom-0 right-0 z-[-1]">
                   <Image
                     src="/images/glare.png"

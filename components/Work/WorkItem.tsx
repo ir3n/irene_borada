@@ -1,10 +1,9 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useIsVisible } from "@/hooks/useIsVisible";
-import gsap from "gsap";
 
 interface Project {
   title: string;
@@ -16,60 +15,47 @@ interface Project {
 
 const WorkItem = ({ title, intro, text, image, link }: Project) => {
   const showRef = useRef<HTMLDivElement>(null);
-  const animateRef = useRef(null);
 
   const cursorText = link ? "visit website" : "current website";
 
   const show = useIsVisible(showRef);
 
-  useEffect(() => {
-    const tl = gsap.timeline();
-    const elementToAnimate = animateRef?.current;
-
-    show &&
-      tl.fromTo(
-        elementToAnimate,
-        { width: "0" },
-        { width: "100%", duration: 2, delay: 0.5 }
-      );
-  }, [show]);
-
   return (
     <div className="lg:flex h-screen w-full">
-      <div
-        ref={showRef}
-        className="relative lg:w-3/5 h-[40vh] sm:h-[50vh] lg:h-screen"
-      >
-        <div ref={animateRef} className="overflow-hidden w-full h-full">
-          <div className="relative w-full h-full">
-            {link ? (
-              <Link href={link} target="_blank" data-cursor-text={cursorText}>
-                <Image
-                  src={image}
-                  alt={title}
-                  fill
-                  aria-label={title}
-                  style={{
-                    objectFit: "cover",
-                    objectPosition: "center",
-                    maxWidth: "unset",
-                  }}
-                />
-              </Link>
-            ) : (
+      <div ref={showRef} className="lg:w-3/5 h-[40vh] sm:h-[50vh] lg:h-screen">
+        <div
+          className={`relative w-full h-full transition duration-1000 delay-200 ${
+            show ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          {link ? (
+            <Link href={link} target="_blank" data-cursor-text={cursorText}>
               <Image
-                data-cursor-text={cursorText}
                 src={image}
                 alt={title}
-                fill
+                width={1480}
+                height={1440}
+                aria-label={title}
                 style={{
+                  width: "100%",
+                  height: "100%",
                   objectFit: "cover",
-                  objectPosition: "center",
-                  maxWidth: "unset",
                 }}
               />
-            )}
-          </div>
+            </Link>
+          ) : (
+            <Image
+              data-cursor-text={cursorText}
+              src={image}
+              alt={title}
+              fill
+              style={{
+                objectFit: "cover",
+                objectPosition: "center",
+                maxWidth: "unset",
+              }}
+            />
+          )}
         </div>
 
         {link ? (
