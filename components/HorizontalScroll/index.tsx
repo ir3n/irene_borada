@@ -51,7 +51,11 @@ const HorizontalScroll = ({
     <div ref={component}>
       <div
         ref={slider}
-        className={`horizontal-container relative ${title && "with-title"}`}
+        className={`overflow-hidden relative ${
+          title
+            ? "block lg:flex min-h-[unset] lg:min-h-screen"
+            : "flex min-h-screen"
+        }`}
       >
         {title ? (
           <>
@@ -78,7 +82,7 @@ const HorizontalScroll = ({
             ) : (
               Children.map(children, (child) => (
                 <div
-                  className={`panel ${
+                  className={`panel flex-1 ${
                     title &&
                     "h-screen flex items-center translate-y-[15%] xl:translate-y-[10%] lg:pl-52 xl:pl-64"
                   }`}
@@ -90,7 +94,7 @@ const HorizontalScroll = ({
           </>
         ) : (
           Children.map(children, (child) => (
-            <div className={"panel"}>{child}</div>
+            <div className={"panel flex-1"}>{child}</div>
           ))
         )}
       </div>
