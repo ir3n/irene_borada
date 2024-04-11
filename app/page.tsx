@@ -19,16 +19,15 @@ export default function Home() {
         <section id="about">
           <TitleWithText title={aboutData?.title} text={aboutData?.text} />
         </section>
-        <section id="work">
-          <Work />
+        <section id="studies">
+          <Studies />
         </section>
         <section id="stack">
           <Stack />
         </section>
-        <section id="studies">
-          <Studies />
+        <section id="work">
+          <Work />
         </section>
-
         <section id="free-time">
           <FreeTime />
         </section>
