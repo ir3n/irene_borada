@@ -45,14 +45,15 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
             </Link>
           ) : (
             <Image
-              data-cursor-text={cursorText}
               src={image}
               alt={title}
-              fill
+              width={1480}
+              height={1440}
+              aria-label={title}
               style={{
+                width: "100%",
+                height: "100%",
                 objectFit: "cover",
-                objectPosition: "center",
-                maxWidth: "unset",
               }}
             />
           )}
