@@ -13,9 +13,9 @@ export default function Home() {
     <>
       <main>
         <h1 className="hidden">Irene Borada - Front-end Developer</h1>
-        <section id="intro">
+        {/* <section id="intro">
           <Intro />
-        </section>
+        </section> */}
         <section id="about">
           <TitleWithText title={aboutData?.title} text={aboutData?.text} />
         </section>
