@@ -31,8 +31,7 @@ const HorizontalScroll = ({ children }: { children: React.ReactNode }) => {
     <div ref={component}>
       <div
         ref={slider}
-        className={`min-h-screen relative flex
-        }`}
+        className={`min-h-screen relative flex overflow-hidden`}
       >
         {Children.map(children, (child) => (
           <div className={"panel flex-1"}>{child}</div>
