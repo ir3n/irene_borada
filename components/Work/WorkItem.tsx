@@ -21,7 +21,7 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
   const show = useIsVisible(showRef);
 
   return (
-    <div className="lg:flex h-screen w-screen">
+    <div className="lg:flex min-h-screen w-screen">
       <div ref={showRef} className="lg:w-3/5 h-[40vh] sm:h-[50vh] lg:h-screen">
         <div className="relative w-full h-full">
           <div
@@ -41,7 +41,6 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
                   alt={title}
                   width={1480}
                   height={1440}
-                  loading="eager"
                   style={{
                     width: "100%",
                     height: "100%",
@@ -55,7 +54,6 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
                 alt={title}
                 width={1480}
                 height={1440}
-                loading="eager"
                 style={{
                   width: "100%",
                   height: "100%",
