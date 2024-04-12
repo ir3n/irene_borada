@@ -1,6 +1,6 @@
 "use client";
 
-import { useLayoutEffect, useRef, Children, useEffect } from "react";
+import { useLayoutEffect, useRef, Children } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
@@ -10,18 +10,9 @@ const HorizontalScroll = ({ children }: { children: React.ReactNode }) => {
   const component = useRef<HTMLDivElement>(null);
   const slider = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-    }
-  }, []);
-
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       let panels = gsap.utils.toArray(".panel");
-
-      if (slider.current) {
-        slider.current.style.width = `${panels.length * 100}vw`;
-      }
 
       gsap.to(panels, {
         xPercent: -100 * (panels.length - 1),
@@ -39,8 +30,7 @@ const HorizontalScroll = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div ref={component}>
-      {/* add width as children width wh */}
-      <div ref={slider} className={`flex`}>
+      <div ref={slider} className={`flex h-screen`}>
         {Children.map(children, (child) => (
           <div className={"panel w-screen h-screen"}>{child}</div>
         ))}
