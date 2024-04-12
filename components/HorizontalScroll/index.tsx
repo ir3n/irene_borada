@@ -21,6 +21,7 @@ const HorizontalScroll = ({ children }: { children: React.ReactNode }) => {
           trigger: slider.current,
           pin: true,
           scrub: 1,
+          start: "top top",
           end: () => "+=" + slider?.current?.offsetWidth,
         },
       });
