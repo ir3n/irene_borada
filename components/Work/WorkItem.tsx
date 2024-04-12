@@ -21,7 +21,7 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
   const show = useIsVisible(showRef);
 
   return (
-    <div className="lg:flex h-screen w-full">
+    <div className="lg:flex h-screen w-screen">
       <div ref={showRef} className="lg:w-3/5 h-[40vh] sm:h-[50vh] lg:h-screen">
         <div className="relative w-full h-full">
           <div
