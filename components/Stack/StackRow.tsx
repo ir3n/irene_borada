@@ -30,7 +30,7 @@ const StackRow = ({ logos, changeDir, i }: Row) => {
     spaceBetween: 150,
     pauseOnHover: true,
     pauseOnFocus: true,
-    touchThreshold: 0,
+    touchThreshold: 1,
     responsive: [
       {
         breakpoint: 1450,
