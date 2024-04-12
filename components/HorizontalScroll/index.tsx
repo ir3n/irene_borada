@@ -19,7 +19,7 @@ const HorizontalScroll = ({ children }: { children: React.ReactNode }) => {
         ease: "none",
         scrollTrigger: {
           trigger: slider.current,
-          pin: true,
+          pin: component.current,
           scrub: 1,
           end: () => "+=" + slider?.current?.offsetWidth,
         },
