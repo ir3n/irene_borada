@@ -23,12 +23,9 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
   return (
     <div className="full-h-section w-screen">
       <div className="lg:flex">
-        <div
-          ref={showRef}
-          className="lg:w-3/5 h-[40vh] sm:h-[50vh] lg:h-screen"
-        >
+        <div ref={showRef} className="lg:w-3/5">
           <div className="relative">
-            <div className="relative overflow-hidden">
+            <div className="relative">
               {link ? (
                 <Link
                   href={link}
@@ -36,30 +33,10 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
                   data-cursor-text={cursorText}
                   aria-label={cursorText}
                 >
-                  <Image
-                    src={image}
-                    alt={title}
-                    width={1480}
-                    height={1440}
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                    }}
-                  />
+                  <Image src={image} alt={title} width={1480} height={1440} />
                 </Link>
               ) : (
-                <Image
-                  src={image}
-                  alt={title}
-                  width={1480}
-                  height={1440}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                  }}
-                />
+                <Image src={image} alt={title} width={1480} height={1440} />
               )}
             </div>
 
