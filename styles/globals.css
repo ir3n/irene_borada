@@ -129,6 +129,3 @@ svg {
 .logos-swiper .swiper-wrapper {
   transition-timing-function: linear;
 }
-.mobile-swiper .swiper-slide {
-  @apply w-fit p-4 md:pl-28 md:pr-4;
-}

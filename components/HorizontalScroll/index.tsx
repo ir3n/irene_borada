@@ -3,34 +3,14 @@
 import { useLayoutEffect, useRef, Children } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import LargeTitle from "../LargeTitle";
-import Container from "../Container";
-import { useWindowWidth } from "@/hooks/useWindowWidth";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode } from "swiper/modules";
-
-import "swiper/css";
-import "swiper/css/free-mode";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const HorizontalScroll = ({
-  title,
-  children,
-}: {
-  title?: string;
-  children: React.ReactNode;
-}) => {
+const HorizontalScroll = ({ children }: { children: React.ReactNode }) => {
   const component = useRef<HTMLDivElement>(null);
   const slider = useRef<HTMLDivElement>(null);
 
-  const makeSwiper = useWindowWidth() < 1025 && title;
-
-  const titleKey = title ? title.split(" ").join("-").toLowerCase() : "";
-
   useLayoutEffect(() => {
-    if (makeSwiper) return;
-
     let ctx = gsap.context(() => {
       let panels = gsap.utils.toArray(".panel");
 
@@ -45,56 +25,18 @@ const HorizontalScroll = ({
       });
     }, component);
     return () => ctx.revert();
-  }, [makeSwiper]);
+  }, []);
 
   return (
     <div ref={component}>
       <div
         ref={slider}
-        className={`min-h-screen relative ${
-          makeSwiper ? "block lg:flex min-h-[unset] lg:min-h-screen" : "flex"
+        className={`min-h-screen relative flex
         }`}
       >
-        {title ? (
-          <>
-            <div className="lg:absolute lg:left-0 lg:right-0 lg:top-10 xl:top-20">
-              <Container>
-                <div className="mb-10 pt-10 lg:pt-0">
-                  <LargeTitle title={title} />
-                </div>
-              </Container>
-            </div>
-            {makeSwiper ? (
-              <Swiper
-                slidesPerView={"auto"}
-                freeMode={true}
-                modules={[FreeMode]}
-                className="mobile-swiper"
-              >
-                {Children.map(children, (child, i) => (
-                  <SwiperSlide key={`mobile-swiper-${titleKey}-${i}`}>
-                    {child}
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            ) : (
-              Children.map(children, (child) => (
-                <div
-                  className={`panel flex-1 ${
-                    title &&
-                    "h-screen flex items-center translate-y-[15%] xl:translate-y-[10%] lg:pl-52 xl:pl-64"
-                  }`}
-                >
-                  {child}
-                </div>
-              ))
-            )}
-          </>
-        ) : (
-          Children.map(children, (child) => (
-            <div className={"panel flex-1"}>{child}</div>
-          ))
-        )}
+        {Children.map(children, (child) => (
+          <div className={"panel flex-1"}>{child}</div>
+        ))}
       </div>
     </div>
   );

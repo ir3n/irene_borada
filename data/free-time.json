@@ -7,7 +7,7 @@
       "alt": "Good girl"
     },
     {
-      "title": "Walking in <em>nature</em> refills my batteries.",
+      "title": "Walking in <em>nature</em> refill my batteries.",
       "image": "/images/free-time/nature.png",
       "alt": "Nature"
     },
@@ -22,7 +22,12 @@
       "alt": "Studio"
     },
     {
-      "title": "I like watching <em>anime</em>.",
+      "title": "I like relaxing with a good <em>book</em>.",
+      "image": "/images/free-time/book.png",
+      "alt": "Ikigai"
+    },
+    {
+      "title": "I enjoy watching <em>anime</em>.",
       "image": "/images/free-time/anime.png",
       "alt": "Gojo Satoru"
     }

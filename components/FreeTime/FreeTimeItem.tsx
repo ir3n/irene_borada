@@ -1,39 +1,33 @@
-"use client";
-
 import { useRef } from "react";
 import Image from "next/image";
 import { useIsVisible } from "@/hooks/useIsVisible";
 
 interface FreeTimeType {
-  reverse?: boolean;
   title: string;
   image: string;
   alt: string;
+  reverse?: boolean;
 }
 
-const FreeTimeItem = ({ reverse, title, image, alt }: FreeTimeType) => {
+const FreeTimeItem = ({ title, image, alt, reverse }: FreeTimeType) => {
   const itemRef = useRef(null);
 
   const show = useIsVisible(itemRef);
 
   return (
     <div
-      className={`${
-        reverse ? "flex-col-reverse" : "flex-col"
-      } flex gap-5 w-[18rem] md:w-[26rem] xl:w-[30rem]`}
+      className={`flex gap-3 md:gap-5 w-11/12 md:w-full max-w-[535px] md:m-auto ${
+        reverse ? "ml-auto flex-col md:flex-col-reverse" : "flex-col"
+      }`}
     >
       <div
+        data-cursor-text={alt.toLowerCase()}
         ref={itemRef}
-        className="overflow-hidden rounded-[20px] border-opacity-50 lg:rounded-[30px]"
+        className={`block  transition duration-1000 delay-100 hover:lg:scale-105 rounded-[20px] lg:rounded-[30px] overflow-hidden ${
+          show ? "opacity-100 md:translate-y-0" : "opacity-0 translate-y-5"
+        }`}
       >
-        <div
-          data-cursor-text={alt.toLowerCase()}
-          className={`block transition duration-1000 delay-100 ${
-            show ? "scale-100 rotate-0" : "scale-110 rotate-3"
-          }`}
-        >
-          <Image src={image} alt={alt} width={500} height={375} />
-        </div>
+        <Image src={image} alt={alt} width={535} height={375} />
       </div>
       <div className="text" dangerouslySetInnerHTML={{ __html: title }}></div>
     </div>
