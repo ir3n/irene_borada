@@ -13,9 +13,7 @@ export default function Home() {
     <>
       <main>
         <h1 className="hidden">Irene Borada - Front-end Developer</h1>
-        <section id="intro">
-          <Intro />
-        </section>
+
         <section id="about">
           <TitleWithText title={aboutData?.title} text={aboutData?.text} />
         </section>
@@ -27,6 +25,9 @@ export default function Home() {
         </section>
         <section id="work">
           <Work />
+        </section>
+        <section id="intro">
+          <Intro />
         </section>
         <section id="free-time">
           <FreeTime />
