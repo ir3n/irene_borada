@@ -12,7 +12,7 @@ const Work = () => {
       <TitleWithText title={title} text={text} />
       <HorizontalScroll>
         {workItems?.map((project, i) => (
-          <div key={`project-${i}`} className="w-screen">
+          <div key={`project-${i}`} className="w-screen h-screen">
             <WorkItem
               title={project?.title}
               intro={project?.intro}
