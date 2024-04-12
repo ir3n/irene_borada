@@ -16,6 +16,7 @@ const HorizontalScroll = ({ children }: { children: React.ReactNode }) => {
 
       gsap.to(panels, {
         xPercent: -100 * (panels.length - 1),
+        ease: "none",
         scrollTrigger: {
           trigger: slider.current,
           pin: true,
