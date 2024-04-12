@@ -25,17 +25,13 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
       <div ref={showRef} className="lg:w-3/5 h-[40vh] sm:h-[50vh] lg:h-screen">
         <div className="relative w-full h-full">
           <div
+            data-cursor-text={cursorText}
             className={`relative w-full h-full transition duration-1000 delay-200 ${
               show ? "opacity-100" : "opacity-0"
             }`}
           >
             {link ? (
-              <Link
-                href={link}
-                target="_blank"
-                data-cursor-text={cursorText}
-                aria-label={cursorText}
-              >
+              <Link href={link} target="_blank" aria-label={cursorText}>
                 <Image
                   src={image}
                   alt={title}

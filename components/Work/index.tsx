@@ -8,9 +8,9 @@ const Work = () => {
   const { title, text, items: workItems } = workData;
 
   return (
-    <div className="pb-14 lg:pb-20">
+    <>
       <TitleWithText title={title} text={text} />
-      {/* <HorizontalScroll>
+      <HorizontalScroll>
         {workItems?.map((project, i) => (
           <WorkItem
             key={`project-${i}`}
@@ -21,8 +21,8 @@ const Work = () => {
             link={project?.link || null}
           />
         ))}
-      </HorizontalScroll> */}
-    </div>
+      </HorizontalScroll>
+    </>
   );
 };
 
