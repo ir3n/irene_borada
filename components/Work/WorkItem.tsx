@@ -22,7 +22,7 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
 
   return (
     <div className="lg:flex h-screen w-screen">
-      <div ref={showRef} className="lg:w-3/5 h-[40vh] sm:h-[50vh] lg:h-screen">
+      {/* <div ref={showRef} className="lg:w-3/5 h-[40vh] sm:h-[50vh] lg:h-screen">
         <div className="relative w-full h-full">
           <div
             className={`relative w-full h-full transition duration-1000 delay-200 ${
@@ -76,18 +76,18 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
           )}
         </div>
       </div>
-      <div className="lg:w-2/5 lg:pl-10 xl:pl-32 lg:pr-52 xl:pr-60 flex items-center">
-        <div className="px-4 md:px-24 py-8 lg:p-0">
-          <h3 className="small-title pb-2">{title}</h3>
-          <p className="text pb-4">{intro}</p>
-          <hr />
-          <div
-            dangerouslySetInnerHTML={{ __html: text }}
-            className="text pt-4"
-          ></div>
-        </div>
+      <div className="lg:w-2/5 lg:pl-10 xl:pl-32 lg:pr-52 xl:pr-60 flex items-center"> */}
+      <div className="px-4 md:px-24 py-8 lg:p-0">
+        <h3 className="small-title pb-2">{title}</h3>
+        <p className="text pb-4">{intro}</p>
+        <hr />
+        <div
+          dangerouslySetInnerHTML={{ __html: text }}
+          className="text pt-4"
+        ></div>
       </div>
     </div>
+    // </div>
   );
 };
 
