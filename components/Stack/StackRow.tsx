@@ -1,11 +1,10 @@
 "use client";
 
 import StackItem from "./StackItem";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/autoplay";
-import { Autoplay } from "swiper/modules";
-import { Direction } from ".";
+import Slider from "react-slick";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export interface StackLogo {
   name: string;
@@ -15,53 +14,61 @@ export interface StackLogo {
 
 interface Row {
   logos: StackLogo[];
-  dir: Direction;
+  changeDir: boolean;
+  i: number;
 }
 
-const StackRow = ({ logos, dir = Direction.toRight }: Row) => {
-  return (
-    <Swiper
-      slidesPerView={3}
-      dir={dir}
-      autoplay={{
-        delay: 0,
-        disableOnInteraction: false,
-      }}
-      spaceBetween={20}
-      speed={3500}
-      loop={true}
-      modules={[Autoplay]}
-      allowTouchMove={true}
-      touchStartPreventDefault={false}
-      breakpoints={{
-        768: {
-          speed: 4000,
-          spaceBetween: 50,
-          slidesPerView: 4,
-        },
-        1024: {
+const StackRow = ({ logos, changeDir, i }: Row) => {
+  var settings = {
+    infinite: true,
+    slidesToShow: 6,
+    autoplay: true,
+    speed: 5000,
+    autoplaySpeed: 0,
+    cssEase: "linear",
+    rtl: changeDir,
+    spaceBetween: 150,
+    pauseOnHover: true,
+    pauseOnFocus: true,
+    touchThreshold: 0,
+    responsive: [
+      {
+        breakpoint: 1450,
+        settings: {
           speed: 4500,
           spaceBetween: 100,
-          slidesPerView: 5,
+          slidesToShow: 5,
         },
-        1450: {
-          speed: 6000,
-          spaceBetween: 150,
-          slidesPerView: 6,
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          speed: 4000,
+          spaceBetween: 50,
+          slidesToShow: 4,
         },
-      }}
-      className="logos-swiper"
-    >
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          speed: 3500,
+          spaceBetween: 20,
+          slidesToShow: 3,
+        },
+      },
+    ],
+  };
+  return (
+    <Slider {...settings} key={`stack-row-${i}`}>
       {logos.map((item, i) => (
-        <SwiperSlide key={`stack-item-${i}`}>
-          <StackItem
-            name={item?.name}
-            image={item?.image}
-            lightImage={item?.lightImage}
-          />
-        </SwiperSlide>
+        <StackItem
+          key={`stack-item-${i}`}
+          name={item?.name}
+          image={item?.image}
+          lightImage={item?.lightImage}
+        />
       ))}
-    </Swiper>
+    </Slider>
   );
 };
 

@@ -1,10 +1,6 @@
 import StackRow from "./StackRow";
 import stackData from "@/data/stack.json";
 
-export enum Direction {
-  toLeft = "rtl",
-  toRight = "ltr",
-}
 const Stack = () => {
   const stackRows = stackData;
 
@@ -17,7 +13,8 @@ const Stack = () => {
         <StackRow
           key={`stack-row-${i}`}
           logos={row?.items}
-          dir={i % 2 === 0 ? Direction.toRight : Direction.toLeft}
+          changeDir={i % 2 === 0 ? true : false}
+          i={i}
         />
       ))}
     </div>
