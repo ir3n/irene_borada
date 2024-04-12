@@ -22,17 +22,13 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
 
   return (
     <div className="full-h-section w-screen">
-      <div className="lg:flex h-screen w-screen">
+      <div className="lg:flex">
         <div
           ref={showRef}
           className="lg:w-3/5 h-[40vh] sm:h-[50vh] lg:h-screen"
         >
-          <div className="relative w-full h-full overflow-hidden">
-            <div
-              className={`relative w-full h-full transition duration-1000 delay-200 ${
-                show ? "opacity-100" : "opacity-0"
-              }`}
-            >
+          <div className="relative">
+            <div className="relative overflow-hidden">
               {link ? (
                 <Link
                   href={link}
