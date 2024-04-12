@@ -22,9 +22,9 @@ export default function Home() {
         <section id="studies">
           <Studies />
         </section>
-        {/* <section>
+        <section>
           <Stack />
-        </section> */}
+        </section>
         <section id="work">
           <Work />
         </section>

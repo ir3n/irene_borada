@@ -3,6 +3,7 @@
 import StackItem from "./StackItem";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
 import { Direction } from ".";
 
@@ -44,8 +45,8 @@ const StackRow = ({ logos, dir = Direction.toRight }: Row) => {
           slidesPerView: 5,
         },
         1450: {
-          spaceBetween: 150,
           speed: 6000,
+          spaceBetween: 150,
           slidesPerView: 6,
         },
       }}
