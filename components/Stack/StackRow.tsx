@@ -23,9 +23,15 @@ interface Row {
   i: number;
 }
 
+interface SlideProps {
+  splide: {
+    refresh: () => void;
+  };
+}
+
 const StackRow = ({ logos, changeDir, i }: Row) => {
   const [light, setLight] = useState(false);
-  const sliderRef = useRef(null);
+  const sliderRef = useRef<SlideProps>(null);
 
   const { theme } = useTheme();
 
