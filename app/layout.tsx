@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     "Self-taught Front-end Developer driven by a strong passion for JavaScript and committed to writing clear, reusable code for elegant, responsive interfaces prioritizing the user's experience.",
   openGraph: {
     images: "/opengraph-image.png",
+    description: "Trying to conquer the JavaScript world.",
   },
 };
 
