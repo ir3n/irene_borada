@@ -41,6 +41,7 @@ const MenuItem = ({ title, url }: MenuItemData) => {
         tabIndex={active ? -1 : undefined}
       >
         <div
+          suppressHydrationWarning
           className={`${
             theme === "light" ? "text-white" : "text-dark"
           } transition duration-500 relative lg:pl-10 xl:pl-12 lg:pr-16 xl:pr-20 `}

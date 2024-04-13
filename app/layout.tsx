@@ -35,7 +35,7 @@ export default function RootLayout({
       className={`${sans.variable} ${serif.variable}`}
       suppressHydrationWarning
     >
-      <body className="font-sans">
+      <body className="font-sans" suppressHydrationWarning>
         <TopProgressBar />
         <SmoothScrolling>
           <MouseFollowerComponent>

@@ -1,9 +1,13 @@
 "use client";
 
+import { useState, useEffect, useRef } from "react";
+
 import StackItem from "./StackItem";
 
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+
+import { useTheme } from "next-themes";
 
 import "@splidejs/splide/dist/css/splide.min.css";
 
@@ -20,6 +24,16 @@ interface Row {
 }
 
 const StackRow = ({ logos, changeDir, i }: Row) => {
+  const [light, setLight] = useState(false);
+  const sliderRef = useRef(null);
+
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    setLight(theme === "light");
+    if (sliderRef.current) sliderRef.current?.splide.refresh();
+  }, [theme]);
+
   return (
     <Splide
       options={{
@@ -35,16 +49,16 @@ const StackRow = ({ logos, changeDir, i }: Row) => {
           speed: changeDir ? -1 : 1,
         },
       }}
-      extensions={{ AutoScroll }}
       aria-label="Technologies logos"
       key={`stack-row-${i}`}
+      extensions={{ AutoScroll }}
+      ref={sliderRef}
     >
       {logos.map((item, i) => (
         <SplideSlide key={`stack-item-${i}`} role="slider">
           <StackItem
             name={item?.name}
-            image={item?.image}
-            lightImage={item?.lightImage}
+            image={light && item?.lightImage ? item?.lightImage : item?.image}
           />
         </SplideSlide>
       ))}
