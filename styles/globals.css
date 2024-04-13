@@ -124,3 +124,7 @@ svg {
 *[data-cursor-text] {
   cursor: none !important;
 }
+
+.splide__slide {
+  @apply w-44 md:w-56 lg:w-80 px-2 md:px-10 lg:px-20;
+}
