@@ -40,7 +40,7 @@ const StackRow = ({ logos, changeDir, i }: Row) => {
       key={`stack-row-${i}`}
     >
       {logos.map((item, i) => (
-        <SplideSlide key={`stack-item-${i}`}>
+        <SplideSlide key={`stack-item-${i}`} role="slider">
           <StackItem
             name={item?.name}
             image={item?.image}
