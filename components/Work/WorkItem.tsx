@@ -61,12 +61,12 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
 
           {link ? (
             <Link href={link} target="_blank" aria-label={title}>
-              <div className="lg:hidden bg-accent text-white text-sm leading-[1] w-20 h-20 rounded-full absolute bottom-4 left-4 md:left-auto md:right-32 text-center flex items-center">
+              <div className="lg:hidden bg-dark text-white text-sm leading-[1] w-20 h-20 rounded-full absolute bottom-4 left-4 md:left-auto md:right-32 text-center flex items-center">
                 {cursorText}
               </div>
             </Link>
           ) : (
-            <div className="lg:hidden bg-accent text-white text-sm leading-[1] w-20 h-20 rounded-full absolute bottom-4 left-4 md:left-auto md:right-32 text-center flex items-center">
+            <div className="lg:hidden bg-dark text-white text-sm leading-[1] w-20 h-20 rounded-full absolute bottom-4 left-4 md:left-auto md:right-32 text-center flex items-center">
               {cursorText}
             </div>
           )}
