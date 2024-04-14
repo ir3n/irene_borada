@@ -53,7 +53,7 @@ export default function RootLayout({
                     alt="Glare"
                     width={1320}
                     height={865}
-                    sizes="(max-width: 768px) 100vw, 60vw"
+                    sizes="(max-width: 768px) 375px, 1320px"
                     loading="eager"
                     style={{ maxWidth: "100%", height: "auto" }}
                   />
