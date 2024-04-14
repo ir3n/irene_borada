@@ -12,6 +12,17 @@ export const useScroll = () => {
   const [bottom, setBottom] = useState(false);
   const [currentSection, setCurrentSection] = useState("intro");
 
+  const throttle = (fun: (...args: any[]) => void, delay: number) => {
+    let flag = true;
+    return function () {
+      if (flag) {
+        fun();
+        flag = false;
+        setTimeout(() => (flag = true), delay);
+      }
+    };
+  };
+
   useEffect(() => {
     let previousScrollYPosition = window.scrollY;
 
@@ -63,12 +74,11 @@ export const useScroll = () => {
 
     setVisibleSection();
 
-    const onScroll = () =>
-      window.requestAnimationFrame(() => {
-        updateScrollDirection();
-        detectTopAndBottom();
-        setVisibleSection();
-      });
+    const onScroll = throttle(() => {
+      updateScrollDirection();
+      detectTopAndBottom();
+      setVisibleSection();
+    }, 100);
 
     window.addEventListener("scroll", onScroll);
 
