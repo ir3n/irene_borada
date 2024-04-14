@@ -4,6 +4,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useIsVisible } from "@/hooks/useIsVisible";
+import { useTheme } from "next-themes";
 
 interface Project {
   title: string;
@@ -19,6 +20,8 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
   const cursorText = link ? "visit website" : "current website";
 
   const show = useIsVisible(showRef);
+
+  const { theme } = useTheme();
 
   return (
     <div className="lg:flex h-screen w-screen">
@@ -61,12 +64,22 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
 
           {link ? (
             <Link href={link} target="_blank" aria-label={title}>
-              <div className="lg:hidden bg-dark text-white text-sm leading-[1] w-20 h-20 rounded-full absolute bottom-4 left-4 md:left-auto md:right-32 text-center flex items-center">
+              <div
+                className={`${
+                  theme === "light"
+                    ? "bg-light text-dark"
+                    : "bg-dark text-white"
+                } lg:hidden text-sm leading-[1] w-20 h-20 rounded-full absolute bottom-4 left-4 md:left-auto md:right-32 text-center flex items-center`}
+              >
                 {cursorText}
               </div>
             </Link>
           ) : (
-            <div className="lg:hidden bg-dark text-white text-sm leading-[1] w-20 h-20 rounded-full absolute bottom-4 left-4 md:left-auto md:right-32 text-center flex items-center">
+            <div
+              className={`${
+                theme === "light" ? "bg-light text-dark" : "bg-dark text-white"
+              } lg:hidden text-sm leading-[1] w-20 h-20 rounded-full absolute bottom-4 left-4 md:left-auto md:right-32 text-center flex items-center`}
+            >
               {cursorText}
             </div>
           )}
