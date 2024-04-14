@@ -11,8 +11,8 @@ interface StudyItem {
 }
 
 enum TranslateX {
-  forOdd = "translate-x-[-50px] min-[1300px]:translate-x-0",
-  forEven = "translate-x-[50px] min-[1300px]:translate-x-0",
+  forOdd = "translate-x-[-50px] lg:translate-x-0",
+  forEven = "translate-x-[50px] lg:translate-x-0",
 }
 
 const Study = ({ date, title, text, image, even }: StudyItem) => {
@@ -28,12 +28,10 @@ const Study = ({ date, title, text, image, even }: StudyItem) => {
   return (
     <div
       ref={itemRef}
-      className={`border-2 border-accent border-opacity-50 rounded-[20px] lg:rounded-[30px] overflow-hidden px-5 py-3 md:p-5 lg:p-8 xl:p-12 md:w-[90%] min-[1300px]:w-full transition-[opacity,transform] duration-[2000ms] delay-100 mb-5 min-[1300px]:mb-0 ${
-        !even && "md:ml-auto"
+      className={`border-2 border-accent border-opacity-50 rounded-[20px] lg:rounded-[30px] overflow-hidden px-5 py-3 md:p-5 lg:p-8 xl:p-12 w-full md:w-[90%] lg:w-full transition-[opacity,transform] duration-[2000ms] delay-100 ${
+        !even && "ml-auto"
       } ${
-        show
-          ? "opacity-100 translate-y-0 "
-          : "opacity-0 min-[1300px]:translate-y-1/4"
+        show ? "opacity-100 translate-y-0 " : "opacity-0 lg:translate-y-20"
       } ${show ? "translate-x-0" : translateX}`}
     >
       <div className="relative h-full py-10">

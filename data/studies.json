@@ -8,16 +8,10 @@
       "image": "/images/studies/udemy.svg"
     },
     {
-      "date": "2017 - Today",
+      "date": "2018 - Today",
       "title": "Courses on various platforms",
       "text": "Some platforms that I suggest are:<br /><ul><li><a href='https://www.udemy.com/' target='_blank'>udemy.com</a></li><li><a href='https://scrimba.com/' target='_blank'>scrimba.com</a></li><li><a href='https://www.freecodecamp.org/' target='_blank'>freecodecamp.org</a></li><li><span>Youtube channels, such as: <a href='https://www.youtube.com/@TraversyMedia' target='_blank'>Traversy Media</a>, <a href='https://www.youtube.com/@programmingwithmosh' target='_blank'>Programming with Mosh</a>, <a href='https://www.youtube.com/@WesBos' target='_blank'>Wes Bos</a><span></li></ul>",
       "image": "/images/studies/course.svg"
-    },
-    {
-      "date": "2017 - Today",
-      "title": "Books & Newsletters",
-      "text": "Some examples are: </br><ul><li><a target='_blank' href='https://www.oreilly.com/library/view/head-first-javascript/9781449340124/'>Head First JavaScript Programming - O'Reilly</a></li><li><a target='_blank' href='https://www.amazon.com/Everything-Computer-Science-Coding-Notebook/dp/0761196765'>Everything you need to ace computer science and coding in one big fat notebook - Workman Publishing</a></li><li><a target='_blank' href='https://medium.com/'>Medium</a></li><li><a target='_blank' href='https://www.joshwcomeau.com/'>Josh Comeau</a></li><li><a target='_blank' href='https://www.edirodriguez.com/'>Becoming a Better Front-End Developer - Edi Rodriguez</a></li></ul><br/>",
-      "image": "/images/studies/book.svg"
     },
     {
       "date": "2018 - Today",
@@ -25,6 +19,13 @@
       "text": "<ul><li>Next.js Conf</li><li>DevIt 2019 - Thessaloniki, Greece</li><li>Voxxed Days 2018 - Thessaloniki, Greece</li></ul><br/>...and more.",
       "image": "/images/studies/conference.svg"
     },
+    {
+      "date": "2018 - Today",
+      "title": "Books & Newsletters",
+      "text": "Some examples are: </br><ul><li><a target='_blank' href='https://www.oreilly.com/library/view/head-first-javascript/9781449340124/'>Head First JavaScript Programming - O'Reilly</a></li><li><a target='_blank' href='https://www.amazon.com/Everything-Computer-Science-Coding-Notebook/dp/0761196765'>Everything you need to ace computer science and coding in one big fat notebook - Workman Publishing</a></li><li><a target='_blank' href='https://medium.com/'>Medium</a></li><li><a target='_blank' href='https://www.joshwcomeau.com/'>Josh Comeau</a></li><li><a target='_blank' href='https://www.edirodriguez.com/'>Becoming a Better Front-End Developer - Edi Rodriguez</a></li></ul><br/>",
+      "image": "/images/studies/book.svg"
+    },
+
     {
       "date": "2015 - 2016",
       "title": "Graphic Design",
