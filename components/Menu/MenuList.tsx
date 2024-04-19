@@ -7,7 +7,7 @@ import SlideFromBelow from "../SlideFromBelow";
 import menuData from "@/data/menu.json";
 
 const MenuList = () => {
-  const { open } = useContext(MenuContext);
+  const { open, setOpen } = useContext(MenuContext);
 
   return (
     <>
@@ -17,11 +17,12 @@ const MenuList = () => {
         }`}
       ></div>
       <nav
+        onBlur={() => setOpen(false)}
         className={`fixed top-0 right-0 w-full md:w-1/2 lg:w-2/5 h-screen z-20 flex items-center justify-center duration-500 ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <ul className="flex flex-col gap-7 md:gap-10 xl:gap-12 items-center">
+        <ul className="flex flex-col gap-6 md:gap-9 xl:gap-11 items-center">
           {menuData?.map((item, i) => {
             return (
               <li key={`menu-item-${i}`}>

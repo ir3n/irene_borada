@@ -34,7 +34,12 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
             }`}
           >
             {link ? (
-              <Link href={link} target="_blank" aria-label={cursorText}>
+              <Link
+                href={link}
+                target="_blank"
+                aria-label={cursorText}
+                className="lg:block"
+              >
                 <Image
                   src={image}
                   alt={title}
@@ -63,7 +68,7 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
           </div>
 
           {link ? (
-            <Link href={link} target="_blank" aria-label={title}>
+            <Link href={link} target="_blank" aria-label={title} tabIndex={-1}>
               <div
                 className={`${
                   theme === "light"

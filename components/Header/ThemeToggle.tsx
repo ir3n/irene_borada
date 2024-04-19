@@ -21,15 +21,14 @@ const ThemeToggle = () => {
   }
 
   return (
-    <div
+    <button
+      type="button"
+      aria-label={`Set to ${theme === "light" ? "dark" : "light"} mode`}
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
       className="hover:lg:scale-[1.3] transition duration-500"
     >
       {theme === "light" ? <Moon color={color} /> : <Sun color={color} />}
-      <div className="hidden">{`Set to ${
-        theme === "light" ? "dark" : "light"
-      } mode`}</div>
-    </div>
+    </button>
   );
 };
 

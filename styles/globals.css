@@ -40,6 +40,19 @@ svg {
   max-width: 100%;
   height: auto;
 }
+
+a:focus-visible,
+button:focus-visible {
+  outline: none;
+  border: 2px solid;
+}
+
+button {
+  text-align: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 .larger-font {
   font-size: 200%;
   line-height: 1.1;

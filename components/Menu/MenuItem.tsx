@@ -28,42 +28,40 @@ const MenuItem = ({ title, url }: MenuItemData) => {
   };
 
   return (
-    <div
+    <Link
+      href={url}
       onMouseOver={() => setHover(true)}
       onMouseOut={() => setHover(false)}
-      className="text-[3rem] lg:text-[3rem] xl:text-[5rem] leading-none"
+      onClick={handleLinkClick}
+      onFocus={() => setOpen(true)}
+      className={`${active ? "pointer-events-none" : "block"}`}
+      aria-disabled={active}
+      tabIndex={active ? -1 : undefined}
     >
-      <Link
-        href={url}
-        onClick={handleLinkClick}
-        className={active ? "pointer-events-none" : ""}
-        aria-disabled={active}
-        tabIndex={active ? -1 : undefined}
+      <div
+        className={`text-[3rem] lg:text-[3rem] xl:text-[5rem] leading-none transition duration-500 relative lg:pl-10 xl:pl-12 lg:pr-16 xl:pr-20 overflow-hidden ${
+          theme === "light" ? "text-white" : "text-dark"
+        }`}
       >
-        <div
-          suppressHydrationWarning
-          className={`${
-            theme === "light" ? "text-white" : "text-dark"
-          } transition duration-500 relative lg:pl-10 xl:pl-12 lg:pr-16 xl:pr-20 `}
+        <span
+          className={`hidden lg:inline-block absolute left-0 text-[90%] top-2 ${
+            hover && !active ? "opacity-100" : "opacity-0"
+          } transition duration-500`}
+          aria-hidden="true"
         >
-          <span
-            className={`hidden lg:inline-block absolute left-0 text-[90%] top-2 ${
-              hover && !active ? "opacity-100" : "opacity-0"
-            } transition duration-500`}
-          >
-            {"<"}
-          </span>
-          {active ? `#${title}` : title}
-          <span
-            className={`hidden lg:inline-block absolute right-0 text-[90%] top-2  ${
-              hover && !active ? "opacity-100" : "opacity-0"
-            } transition duration-500`}
-          >
-            {"/>"}
-          </span>
-        </div>
-      </Link>
-    </div>
+          {"<"}
+        </span>
+        <span className="block">{active ? `#${title}` : title}</span>
+        <span
+          className={`hidden lg:inline-block absolute right-0 text-[90%] top-2  ${
+            hover && !active ? "opacity-100" : "opacity-0"
+          } transition duration-500`}
+          aria-hidden="true"
+        >
+          {"/>"}
+        </span>
+      </div>
+    </Link>
   );
 };
 

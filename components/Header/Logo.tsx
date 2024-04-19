@@ -21,13 +21,19 @@ const Logo = () => {
 
   const mobile = useWindowWidth() < 768;
 
-  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     typeof window !== "undefined" && window?.scrollTo(0, 0);
   };
 
   return (
-    <div onClick={handleClick} onMouseOver={replay}>
+    <button
+      onClick={handleClick}
+      onMouseOver={replay}
+      type="button"
+      aria-label="Irene Borada Logo"
+    >
       <div
+        aria-hidden="true"
         className={`${
           mobile && open ? "text-white" : "text-inherit"
         } relative text-[1.3rem] lg:text-xl leading-none lg:leading-none pl-3 pr-4 lg:pr-5 pb-[0.1rem] w-[7.1rem] lg:w-[6.75rem]`}
@@ -43,7 +49,7 @@ const Logo = () => {
         </div>
         <div className="absolute font-light right-0 bottom-0">{"/>"}</div>
       </div>
-    </div>
+    </button>
   );
 };
 export default Logo;

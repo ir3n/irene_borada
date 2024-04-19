@@ -22,8 +22,9 @@ const Burger = () => {
   }, [isMobile, bottom, top]);
 
   return (
-    <div
-      id="burger"
+    <button
+      type="button"
+      aria-label={open ? "close menu" : "open menu"}
       onClick={() => {
         setOpen(!open);
       }}
@@ -31,7 +32,6 @@ const Burger = () => {
       onMouseLeave={() => !isMobile && setHover(false)}
       className="z-30 relative cursor-pointer flex items-center justify-center w-9 lg:w-24 h-11 lg:h-24"
     >
-      <span className="hidden">{open ? "close menu" : "menu"}</span>
       <div
         className={`absolute block ${
           open ? "bg-dark" : "bg-accent"
@@ -53,7 +53,7 @@ const Burger = () => {
             : "translate-y-[0.46rem] lg:translate-y-[0.75rem] bg-accent"
         } ${hover && "bg-white"}`}
       ></div>
-    </div>
+    </button>
   );
 };
 

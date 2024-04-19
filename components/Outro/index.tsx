@@ -25,6 +25,7 @@ const Outro = () => {
             href="mailto:iren.borada@gmail.com"
             data-cursor-text="contact me"
             aria-label="contact me"
+            className="block pointer-events-none lg:pointer-events-auto"
           >
             <div className="intro-title md:mt-10">
               <SlideFromBelow>Thanks for</SlideFromBelow>
@@ -37,7 +38,8 @@ const Outro = () => {
               <SlideFromBelow order={2}>with me!</SlideFromBelow>
             </div>
           </Link>
-          <div
+          <button
+            type="button"
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
             onClick={goBackToTop}
@@ -52,7 +54,7 @@ const Outro = () => {
             >
               <ArrowUp color={accentColor} size={60} />
             </span>
-          </div>
+          </button>
         </Container>
         <div className="note text-center md:text-right absolute left-0 md:left-auto right-0 md:right-4 lg:right-[50px] bottom-4 lg:bottom-[50px] z-10">
           designed & developed by Irene Borada
