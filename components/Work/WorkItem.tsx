@@ -17,7 +17,7 @@ interface Project {
 const WorkItem = ({ title, intro, text, image, link }: Project) => {
   const showRef = useRef<HTMLDivElement>(null);
 
-  const cursorText = link ? "visit website" : "current website";
+  const cursorText = link ? "check it out" : "current website";
 
   const show = useIsVisible(showRef);
 
