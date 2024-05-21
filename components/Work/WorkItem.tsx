@@ -29,7 +29,7 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
         <div className="relative w-full h-full">
           <div
             data-cursor-text={cursorText}
-            className={`relative w-full h-full transition duration-1000 delay-200 ${
+            className={`relative w-full h-full transition duration-1000 delay-200 overflow-hidden ${
               show ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -38,7 +38,7 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
                 href={link}
                 target="_blank"
                 aria-label={cursorText}
-                className="lg:block"
+                className="lg:block h-full"
               >
                 <Image
                   src={image}
@@ -46,6 +46,7 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
                   width={1480}
                   height={1440}
                   style={{
+                    display: "block",
                     width: "100%",
                     height: "100%",
                     objectFit: "cover",
@@ -59,6 +60,7 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
                 width={1480}
                 height={1440}
                 style={{
+                  display: "block",
                   width: "100%",
                   height: "100%",
                   objectFit: "cover",
