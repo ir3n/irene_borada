@@ -3,24 +3,24 @@
   "text": "<p>I have worked at my first company, <em>Rocket Path PC</em>, for almost 5 years.</p><p>Despite my background in React, I initially learned Drupal and PHP on the job. I contributed to several <em>E-commerce websites</em> and independently managed the development of numerous <em>presentation websites</em> along with SCSS and jQuery.</p><p>Taking charge of the HTML <em>landing pages</em> delivery, I solidified my styling skills and optimized the process saving significant time.</p><p>For the past 2.5 years  I've been a part of the React team, where we developed <em>decoupled E-commerce websites</em> with Next.js and Chakra UI.</p><p>Since my schedule these years was packed, there was little room for <em>personal projects</em>. However I am currently studying TypeScript, TailwindCSS and more, creating projects some of which are detailed below:</p>",
   "items": [
     {
-      "title": "Thanassis Mavrakis ",
+      "title": "Thanassis Mavrakis",
       "intro": "Portfolio for a designer",
-      "text": "Launched: 2024<br/>#next14 #typescript #tailwindcss #gsap #mouse-follower #magnetic-elements #keen-slider #reeller",
+      "text": "Launched: 2024<br/>#nextjs #typescript #tailwindcss #gsap #mouse-follower #magnetic-elements #keen-slider #reeller",
       "image": "/images/work/thanassis-new.svg",
       "link": "https://thanassis-mavrakis.com/"
     },
     {
       "title": "Irene Borada",
       "intro": "The current portfolio website",
-      "text": "Launched: 2024<br/>#next14 #typescript #tailwindcss #react-lenis #gsap #mouse-follower #next-themes #react-scroll-progress-bar #lucide-react #swiper",
+      "text": "Launched: 2024<br/>#nextjs #typescript #tailwindcss #react-lenis #gsap #mouse-follower #next-themes #react-scroll-progress-bar #lucide-react #swiper",
       "image": "/images/work/current.svg"
     },
     {
       "title": "Thanassis Mavrakis ",
       "intro": "Portfolio for a designer",
-      "text": "Launched: 2022<br/>#next12 #react #javascript #scss #swiper<br/><br/>This website was redesigned and made from scratch with the latest Next.js stack.",
+      "text": "Launched: 2022<br/>#nextjs #react #javascript #scss #swiper<br/><br/>This website was redesigned and made from scratch with the latest Next.js stack.",
       "image": "/images/work/thanassis.svg",
-      "link": "https://github.com/ir3n/thanassis_mavrakis_old"
+      "link": "https://thanassis-mavrakis-old.vercel.app/"
     }
   ]
 }
