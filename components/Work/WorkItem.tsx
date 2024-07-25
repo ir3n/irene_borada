@@ -17,8 +17,6 @@ interface Project {
 const WorkItem = ({ title, intro, text, image, link }: Project) => {
   const showRef = useRef<HTMLDivElement>(null);
 
-  const cursorText = link ? "check it out" : "current website";
-
   const show = useIsVisible(showRef);
 
   const { theme } = useTheme();
@@ -28,7 +26,6 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
       <div ref={showRef} className="lg:w-3/5 h-[40vh] sm:h-[50vh] lg:h-screen">
         <div className="relative w-full h-full">
           <div
-            data-cursor-text={cursorText}
             className={`relative w-full h-full transition duration-1000 delay-200 overflow-hidden ${
               show ? "opacity-100" : "opacity-0"
             }`}
@@ -37,8 +34,9 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
               <Link
                 href={link}
                 target="_blank"
-                aria-label={cursorText}
+                aria-label="check it out"
                 className="lg:block h-full"
+                data-cursor-text="check it out"
               >
                 <Image
                   src={image}
@@ -59,6 +57,7 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
                 alt={title}
                 width={1480}
                 height={1440}
+                data-cursor-text="current website"
                 style={{
                   display: "block",
                   width: "100%",
@@ -78,7 +77,7 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
                     : "bg-dark text-white"
                 } lg:hidden text-sm leading-[1] w-20 h-20 rounded-full absolute bottom-4 left-4 md:left-auto md:right-32 text-center flex items-center`}
               >
-                {cursorText}
+                {"check it out"}
               </div>
             </Link>
           ) : (
@@ -87,7 +86,7 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
                 theme === "light" ? "bg-light text-dark" : "bg-dark text-white"
               } lg:hidden text-sm leading-[1] w-20 h-20 rounded-full absolute bottom-4 left-4 md:left-auto md:right-32 text-center flex items-center`}
             >
-              {cursorText}
+              {"current website"}
             </div>
           )}
         </div>
