@@ -28,7 +28,7 @@ const Study = ({ date, title, text, image, even }: StudyItem) => {
   return (
     <div
       ref={itemRef}
-      className={`border-2 border-accent border-opacity-50 rounded-[20px] lg:rounded-[30px] overflow-hidden px-5 py-3 md:p-5 lg:p-8 xl:p-12 w-full md:w-[90%] lg:w-full transition-[opacity,transform] duration-[2000ms] delay-100 ${
+      className={`border-2 border-accent border-opacity-50 rounded-[10px] lg:rounded-[20px] overflow-hidden px-5 py-3 md:p-5 lg:p-8 xl:p-12 w-full md:w-[90%] lg:w-full transition-[opacity,transform] duration-[2000ms] delay-100 ${
         !even && "ml-auto"
       } ${
         show ? "opacity-100 translate-y-0 " : "opacity-0 lg:translate-y-20"

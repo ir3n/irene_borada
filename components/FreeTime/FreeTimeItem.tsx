@@ -23,7 +23,7 @@ const FreeTimeItem = ({ title, image, alt, reverse }: FreeTimeType) => {
       <div
         data-cursor-text={alt.toLowerCase()}
         ref={itemRef}
-        className={`block  transition duration-1000 delay-100 hover:lg:scale-105 rounded-[20px] lg:rounded-[30px] overflow-hidden ${
+        className={`block  transition duration-1000 delay-100 hover:lg:scale-105 rounded-[10px] lg:rounded-[20px] overflow-hidden ${
           show ? "opacity-100 md:translate-y-0" : "opacity-0 translate-y-5"
         }`}
       >

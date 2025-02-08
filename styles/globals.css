@@ -123,9 +123,9 @@ button {
   @apply opacity-50 scale-0;
 }
 .mf-cursor-media {
-  width: 350px;
-  height: 350px;
-  margin: (-350px * 0.5) 0 0 (-350px * 0.5);
+  width: 300px;
+  height: 300px;
+  margin: (-300px * 0.5) 0 0 (-300px * 0.5);
 }
 .mf-cursor-media img {
   transform: none;
