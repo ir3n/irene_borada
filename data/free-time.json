@@ -2,24 +2,19 @@
   "title": "Free Time",
   "items": [
     {
-      "title": "Walks & playtime with <em>Rukia</em>.",
-      "image": "/images/free-time/rukia.png",
-      "alt": "Good girl"
-    },
-    {
       "title": "Walking in <em>nature</em> refills my batteries.",
       "image": "/images/free-time/nature.png",
       "alt": "Nature"
     },
     {
-      "title": "I practice <em>Karate</em>.",
-      "image": "/images/free-time/karate.png",
-      "alt": "Karate"
-    },
-    {
       "title": "Listening to <em>metal</em> energizes me.<br/>Sometimes I also sing.",
       "image": "/images/free-time/metal.png",
       "alt": "Studio"
+    },
+    {
+      "title": "I practice <em>Karate</em>.",
+      "image": "/images/free-time/karate.png",
+      "alt": "Karate"
     },
     {
       "title": "I like relaxing with a good <em>book</em>.",
@@ -30,6 +25,11 @@
       "title": "I enjoy watching <em>anime</em>.",
       "image": "/images/free-time/anime.png",
       "alt": "Gojo Satoru"
+    },
+    {
+      "title": "I adore <em>dogs</em>.",
+      "image": "/images/free-time/rukia.png",
+      "alt": "Good girl"
     }
   ]
 }
