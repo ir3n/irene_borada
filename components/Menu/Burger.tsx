@@ -24,7 +24,7 @@ const Burger = () => {
   return (
     <button
       type="button"
-      aria-label={open ? "close menu" : "open menu"}
+      aria-label={open ? "Close menu" : "Open menu"}
       onClick={() => {
         setOpen(!open);
       }}

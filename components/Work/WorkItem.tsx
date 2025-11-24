@@ -34,7 +34,7 @@ const WorkItem = ({ title, intro, text, image, link }: Project) => {
               <Link
                 href={link}
                 target="_blank"
-                aria-label="check it out"
+                aria-label="Check it out"
                 className="lg:block h-full"
                 data-cursor-text="check it out"
               >

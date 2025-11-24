@@ -22,7 +22,6 @@ const RotatingFlower = () => {
     <div
       ref={rotatingRef}
       className="max-w-11 lg:max-w-24 xl:max-w-max inline-block"
-      aria-label="A rotating flower"
     >
       <div id="rotating-flower">
         <svg
