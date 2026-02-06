@@ -1,5 +1,3 @@
-"use client";
-
 import { GradientTitle } from "../GradientTitle";
 import SlideFromBelow from "../SlideFromBelow";
 import Study from "./Study";
