@@ -1,5 +1,5 @@
 {
-  "title": "Free Time",
+  "title": "FREE TIME",
   "items": [
     {
       "title": "Walking in <em>nature</em> refills my batteries.",
@@ -12,9 +12,9 @@
       "alt": "Studio"
     },
     {
-      "title": "I practice <em>Karate</em>.",
-      "image": "/images/free-time/karate.png",
-      "alt": "Karate"
+      "title": "I play <em>Pickleball</em>.",
+      "image": "/images/free-time/pickleball.png",
+      "alt": "Pickleball"
     },
     {
       "title": "I like relaxing with a good <em>book</em>.",

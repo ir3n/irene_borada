@@ -36,6 +36,11 @@
         "lightImage": "/images/stack/chakra-light.svg"
       },
       {
+        "name": "Material UI",
+        "image": "/images/stack/mui.svg",
+        "lightImage": "/images/stack/mui-light.svg"
+      },
+      {
         "name": "Git",
         "image": "/images/stack/git.svg",
         "lightImage": "/images/stack/git-light.svg"

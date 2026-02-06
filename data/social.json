@@ -1,22 +1,18 @@
 [
   {
-    "name": "Linkedin",
-    "icon": "images/social/linkedin.svg",
+    "name": "linkedin",
     "url": "https://www.linkedin.com/in/irene-borada"
   },
   {
-    "name": "Email",
-    "icon": "images/social/email.svg",
+    "name": "email",
     "url": "mailto:iren.borada@gmail.com"
   },
   {
-    "name": "Github",
-    "icon": "images/social/github.svg",
+    "name": "github",
     "url": "https://github.com/ir3n"
   },
   {
-    "name": "Shutterstock",
-    "icon": "images/social/shutterstock.svg",
+    "name": "shutterstock",
     "url": "https://www.shutterstock.com/g/Ir3n"
   }
 ]

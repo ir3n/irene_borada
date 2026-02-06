@@ -1,6 +1,6 @@
 {
-  "title": "Work",
-  "text": "<p>I worked for nearly five years at <em>Rocket Path</em>, a digital agency in Greece.<br/>I initially learned Drupal and PHP on the job. I contributed to various E-commerce projects and independently developed multiple presentation websites and HTML landing pages, along with SCSS and JavaScript. In my last 2.5 years, I joined the React team, building decoupled E-commerce websites using Next.js and Chakra UI.</p><p>In summer 2024, I moved to the Netherlands and am excited to be part of the engineering team at <em>Coolset</em>, a sustainability-focused company that provides a platform for carbon management and compliance reporting. The frontend is primarily built with React and TypeScript.</p><p>With a packed schedule over the years, <em>personal projects</em> were limited, but between these roles, I worked on a few, some of which are showcased below.</p>",
+  "title": "WORK",
+  "text": "<p>I worked for nearly five years at <em>Rocket Path</em>, a digital agency in Greece.<br/>I initially learned Drupal and PHP on the job. I contributed to various E-commerce projects and independently developed multiple presentation websites and HTML landing pages, along with SCSS and JavaScript. In my last 2 years, I joined the React team, building decoupled E-commerce websites using Next.js and Chakra UI.</p><p>In summer 2024, I moved to the Netherlands and joined the <em>Coolset</em> team, a company providing a sustainability and supply chain platform that helps teams manage carbon emissions and meet ESG compliance requirements. The frontend is primarily built with React and TypeScript.</p><p>With a packed schedule over the years, <em>personal projects</em> were limited, but between these roles, I worked on a few, some of which are showcased below.</p>",
   "items": [
     {
       "title": "Thanassis Mavrakis",
@@ -12,7 +12,7 @@
     {
       "title": "Irene Borada",
       "intro": "The current portfolio website",
-      "text": "Launched: 2024<br/>#nextjs #typescript #tailwindcss #react-lenis #gsap #mouse-follower #next-themes #react-scroll-progress-bar #lucide-react #swiper",
+      "text": "Launched: 2024<br/>#nextjs #typescript #tailwindcss #react-lenis #gsap #mouse-follower #next-themes #react-scroll-progress-bar #heroicons #swiper",
       "image": "/images/work/current.svg"
     },
     {
