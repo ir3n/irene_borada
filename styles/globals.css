@@ -111,6 +111,19 @@ button {
   -webkit-text-stroke: 0.1875rem transparent;
 }
 
+.animate-sparkle-1 {
+  -webkit-animation: sparkle 5s infinite ease-in-out;
+  animation: sparkle 5s infinite ease-in-out;
+}
+.animate-sparkle-2 {
+  -webkit-animation: sparkle 5s 0.2s infinite ease-in-out;
+  animation: sparkle 5s 0.2s infinite ease-in-out;
+}
+.animate-sparkle-3 {
+  -webkit-animation: sparkle 5s 0.5s infinite ease-in-out;
+  animation: sparkle 5s 0.5s infinite ease-in-out;
+}
+
 /* cursor */
 .mf-cursor:before {
   background-color: transparent;
@@ -138,4 +151,26 @@ button {
 
 .splide__slide {
   @apply w-44 md:w-56 lg:w-80 px-2 md:px-10 lg:px-20;
+}
+
+@-webkit-keyframes sparkle {
+  0%,
+  90%,
+  100% {
+    transform: scale(1);
+  }
+  95% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes sparkle {
+  0%,
+  90%,
+  100% {
+    transform: scale(1);
+  }
+  95% {
+    transform: scale(1.2);
+  }
 }

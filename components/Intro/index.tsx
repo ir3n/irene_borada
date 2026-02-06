@@ -3,6 +3,7 @@ import Container from "../Container";
 import SlideFromBelow from "../SlideFromBelow";
 import { GradientTitle } from "../GradientTitle";
 import { GradientSparklesIcon } from "@/components/Icons/GradientSparklesIcon";
+import GradientSparkles from "../Icons/GradientSparkles";
 
 const Intro = () => {
   return (
@@ -27,11 +28,7 @@ const Intro = () => {
           <div className="intro-title mt-8 lg:mt-10 xl:mt-16">
             <SlideFromBelow order={1}>
               great user
-              <GradientSparklesIcon
-                className={
-                  "inline size-10 sm:size-16 md:size-28 lg:size-40 xl:size-48"
-                }
-              />
+              <GradientSparkles className="inline max-w-10 sm:max-w-16 md:max-w-32 lg:max-w-44" />
             </SlideFromBelow>
             <SlideFromBelow order={2}>experiences</SlideFromBelow>
           </div>

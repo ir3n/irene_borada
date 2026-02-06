@@ -6,6 +6,7 @@ import { ArrowUpIcon } from "@heroicons/react/24/outline";
 import SlideFromBelow from "../SlideFromBelow";
 import Container from "../Container";
 import { GradientSparklesIcon } from "../Icons/GradientSparklesIcon";
+import GradientSparkles from "../Icons/GradientSparkles";
 
 const Outro = () => {
   const [hover, setHover] = useState(false);
@@ -29,11 +30,7 @@ const Outro = () => {
               <SlideFromBelow order={1}>something</SlideFromBelow>
               <SlideFromBelow order={2}>
                 together!
-                <GradientSparklesIcon
-                  className={
-                    "inline size-10 sm:size-16 md:size-28 lg:size-40 xl:size-48"
-                  }
-                />
+                <GradientSparkles className="inline max-w-10 sm:max-w-16 md:max-w-32 lg:max-w-44" />
               </SlideFromBelow>
             </div>
           </Link>
