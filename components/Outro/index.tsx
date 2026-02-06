@@ -2,13 +2,10 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowUp } from "lucide-react";
-
-import { accentColor } from "@/constants";
-
+import { ArrowUpIcon } from "@heroicons/react/24/outline";
 import SlideFromBelow from "../SlideFromBelow";
-import RotatingFlower from "../RotatingFlower";
 import Container from "../Container";
+import { GradientSparklesIcon } from "../Icons/GradientSparklesIcon";
 
 const Outro = () => {
   const [hover, setHover] = useState(false);
@@ -28,14 +25,16 @@ const Outro = () => {
             className="block pointer-events-none lg:pointer-events-auto"
           >
             <div className="intro-title md:mt-10">
-              <SlideFromBelow>Thanks for</SlideFromBelow>
-              <SlideFromBelow order={1}>
-                meeting
-                <span className="ml-3 lg:ml-5 inline-block translate-y-1">
-                  <RotatingFlower />
-                </span>
+              <SlideFromBelow>Let's build</SlideFromBelow>
+              <SlideFromBelow order={1}>something</SlideFromBelow>
+              <SlideFromBelow order={2}>
+                together!
+                <GradientSparklesIcon
+                  className={
+                    "inline size-10 sm:size-16 md:size-28 lg:size-40 xl:size-48"
+                  }
+                />
               </SlideFromBelow>
-              <SlideFromBelow order={2}>with me!</SlideFromBelow>
             </div>
           </Link>
           <button
@@ -46,13 +45,13 @@ const Outro = () => {
             className="mt-5 md:mt-10 text flex items-center leading-[1.1] gap-x-1.5 cursor-pointer w-fit"
             data-cursor="-hidden"
           >
-            go back to the <em>top</em>
+            go back to the top
             <span
-              className={`max-w-[40px] md:max-w-full mb-2  ${
+              className={`max-w-9 md:max-w-full mb-2 md:mb-3 ${
                 hover ? "lg:translate-y-[-0.5rem]" : "lg:translate-y-1"
               } transition duration-500`}
             >
-              <ArrowUp color={accentColor} size={60} />
+              <ArrowUpIcon color="var(--color-accent)" className="size-14" />
             </span>
           </button>
         </Container>

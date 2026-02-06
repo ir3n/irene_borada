@@ -3,7 +3,6 @@
 import { useState, useContext, useEffect } from "react";
 import Link from "next/link";
 import { MenuContext } from "@/providers/menu-provider";
-import { useTheme } from "next-themes";
 import { useScroll } from "@/hooks/useScroll";
 
 interface MenuItemData {
@@ -14,7 +13,6 @@ interface MenuItemData {
 const MenuItem = ({ title, url }: MenuItemData) => {
   const { open, setOpen } = useContext(MenuContext);
   const { currentSection } = useScroll();
-  const { theme } = useTheme();
 
   const [hover, setHover] = useState(false);
   const [active, setActive] = useState(false);
@@ -39,9 +37,7 @@ const MenuItem = ({ title, url }: MenuItemData) => {
       tabIndex={active ? -1 : undefined}
     >
       <div
-        className={`text-[3rem] lg:text-[3rem] xl:text-[5rem] leading-none transition duration-500 relative lg:pl-10 xl:pl-12 lg:pr-16 xl:pr-20 overflow-hidden ${
-          theme === "light" ? "text-white" : "text-dark"
-        }`}
+        className={`text-[3rem] lg:text-[3rem] xl:text-[5rem] leading-none transition duration-500 relative lg:pl-10 xl:pl-12 lg:pr-16 xl:pr-20 overflow-hidden text-white dark:text-dark`}
       >
         <span
           className={`hidden lg:inline-block absolute left-0 text-[90%] top-2 ${

@@ -6,11 +6,10 @@ This is my [Next.js](https://nextjs.org/) portfolio website with [`TypeScript`](
 - next-themes for toggling between themes
 - mouse-follower for the cursor
 - gsap for horizontal scrolling and some of the animations
-- lucide-react for most of the icons
+- Heroicons & Iconify for the icons
 - @splidejs/react-splide & @splidejs/splide-extension-auto-scroll for the marquee of stack logos
 - react-scroll-progress-bar
 - use-scramble for the logo animation
-
 
 ## Deploy on Vercel
 

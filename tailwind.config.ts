@@ -14,23 +14,33 @@ const config: Config = {
       xl: "1600px",
     },
     colors: {
-      dark: "#0f172a",
-      accent: "#818cf8",
-      secondary: "#ff0a78",
+      dark: "#02143F",
+      accent: "#8626F9",
+      secondary: "#EA0874",
       white: "#FFFFFF",
       black: "#000000",
       light: "#eff1f5",
     },
     fontFamily: {
       sans: ["var(--sans)"],
-      serif: ["var(--serif)"],
     },
     extend: {},
-    darkMode: "class",
   },
-  plugins: [],
+  plugins: [
+    function ({ addBase, theme }) {
+      addBase({
+        ":root": {
+          "--color-dark": theme("colors.dark"),
+          "--color-accent": theme("colors.accent"),
+          "--color-secondary": theme("colors.secondary"),
+          "--color-white": theme("colors.white"),
+          "--color-black": theme("colors.black"),
+          "--color-light": theme("colors.light"),
+        },
+      });
+    },
+  ],
   darkMode: "class",
-  // mode: "jit",
 };
 
 export default config;

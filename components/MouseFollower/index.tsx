@@ -23,7 +23,6 @@ const MouseFollowerComponent = ({
     const cursor = new MouseFollower({
       skewing: 4,
       speed: 0.8,
-      // skewingMedia: 0,
     });
 
     return () => {

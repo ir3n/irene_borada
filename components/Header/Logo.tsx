@@ -34,16 +34,14 @@ const Logo = () => {
     >
       <div
         aria-hidden="true"
-        className={`${
-          mobile && open ? "text-white" : "text-inherit"
-        } relative text-[1.3rem] lg:text-xl leading-none lg:leading-none pl-3 pr-4 lg:pr-5 pb-[0.1rem] w-[7.1rem] lg:w-[6.75rem]`}
+        className={` relative text-[1.3rem] lg:text-xl leading-none lg:leading-none pl-3 pr-4 lg:pr-5 pb-[0.1rem] w-[7.1rem] lg:w-[6.75rem]`}
       >
         <div className="absolute font-light left-0">{"<"}</div>
-        <div className={`font-light `}>Irene</div>
+        <div className={`font-light`}>Irene</div>
         <div
           className={`${
             mobile && open ? "text-dark" : "text-accent"
-          } font-bold`}
+          } font-bold transition-colors duration-500`}
         >
           <div ref={ref}>Borada</div>
         </div>

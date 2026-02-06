@@ -2,10 +2,8 @@
 
 import ProgressBar from "react-scroll-progress-bar";
 
-import { accentColor } from "@/constants";
-
 const TopProgressBar = () => {
-  return <ProgressBar bgcolor={accentColor} />;
+  return <ProgressBar bgcolor="var(--color-accent)" />;
 };
 
 export default TopProgressBar;

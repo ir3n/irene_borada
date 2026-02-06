@@ -1,6 +1,5 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
-import { accentColor } from "@/constants";
 
 function RotatingText({ title }: { title: string }) {
   const rotatingRef = useRef(null);
@@ -12,7 +11,7 @@ function RotatingText({ title }: { title: string }) {
     tl.fromTo(
       elementToAnimate,
       { rotation: "0", ease: "none", repeat: -1 },
-      { rotation: "360", ease: "none", duration: 6, repeat: -1 }
+      { rotation: "360", ease: "none", duration: 6, repeat: -1 },
     );
   }, []);
 
@@ -38,7 +37,7 @@ function RotatingText({ title }: { title: string }) {
         <textPath
           xlinkHref="#circle"
           className="text-[1rem] tracking-[1rem] uppercase"
-          fill={accentColor}
+          fill={"var(--color-secondary)"}
         >
           {title}
           {title}

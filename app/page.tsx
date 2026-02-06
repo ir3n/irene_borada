@@ -6,7 +6,7 @@ import Work from "@/components/Work";
 import FreeTime from "@/components/FreeTime";
 import Outro from "@/components/Outro";
 
-import aboutData from "@/data/about.json";
+import aboutData from "@/data/my-story.json";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
         <section id="intro">
           <Intro />
         </section>
-        <section id="about">
+        <section id="my-story">
           <TitleWithText title={aboutData?.title} text={aboutData?.text} />
         </section>
         <section id="studies">

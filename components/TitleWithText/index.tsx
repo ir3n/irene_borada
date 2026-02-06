@@ -1,5 +1,6 @@
 import Container from "../Container";
-import LargeTitle from "../LargeTitle";
+import { GradientTitle } from "../GradientTitle";
+import SlideFromBelow from "../SlideFromBelow";
 
 interface Props {
   title: string;
@@ -10,8 +11,13 @@ const TitleWithText = ({ title, text }: Props) => {
   return (
     <div className="section">
       <Container>
-        <LargeTitle title={title} />
-        <div className="text" dangerouslySetInnerHTML={{ __html: text }}></div>
+        <SlideFromBelow>
+          <GradientTitle>{title}</GradientTitle>
+        </SlideFromBelow>
+        <div
+          className="text mt-2 lg:mt-6"
+          dangerouslySetInnerHTML={{ __html: text }}
+        ></div>
       </Container>
     </div>
   );
