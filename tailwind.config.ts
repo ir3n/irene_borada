@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: [
@@ -27,7 +28,7 @@ const config: Config = {
     extend: {},
   },
   plugins: [
-    function ({ addBase, theme }) {
+    plugin(({ addBase, theme }) => {
       addBase({
         ":root": {
           "--color-dark": theme("colors.dark"),
@@ -38,7 +39,7 @@ const config: Config = {
           "--color-light": theme("colors.light"),
         },
       });
-    },
+    }),
   ],
   darkMode: "class",
 };

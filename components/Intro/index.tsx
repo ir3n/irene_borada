@@ -2,7 +2,6 @@ import HorizontalScroll from "../HorizontalScroll";
 import Container from "../Container";
 import SlideFromBelow from "../SlideFromBelow";
 import { GradientTitle } from "../GradientTitle";
-import { GradientSparklesIcon } from "@/components/Icons/GradientSparklesIcon";
 import GradientSparkles from "../Icons/GradientSparkles";
 
 const Intro = () => {

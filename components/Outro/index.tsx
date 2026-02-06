@@ -5,7 +5,6 @@ import Link from "next/link";
 import { ArrowUpIcon } from "@heroicons/react/24/outline";
 import SlideFromBelow from "../SlideFromBelow";
 import Container from "../Container";
-import { GradientSparklesIcon } from "../Icons/GradientSparklesIcon";
 import GradientSparkles from "../Icons/GradientSparkles";
 
 const Outro = () => {
@@ -26,7 +25,7 @@ const Outro = () => {
             className="block pointer-events-none lg:pointer-events-auto"
           >
             <div className="intro-title md:mt-10">
-              <SlideFromBelow>Let's build</SlideFromBelow>
+              <SlideFromBelow>Let&apos;s build</SlideFromBelow>
               <SlideFromBelow order={1}>something</SlideFromBelow>
               <SlideFromBelow order={2}>
                 together!
