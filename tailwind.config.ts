@@ -20,7 +20,7 @@ const config: Config = {
       secondary: "#EA0874",
       white: "#FFFFFF",
       black: "#000000",
-      light: "#eff1f5",
+      light: "#f5f3f9",
     },
     fontFamily: {
       sans: ["var(--sans)"],
