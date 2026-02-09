@@ -2,7 +2,7 @@ This is my [Next.js](https://nextjs.org/) portfolio website with [`TypeScript`](
 
 ## Dependencies
 
-- @studio-freight/react-lenis for smooth scrolling
+- lenis/react for smooth scrolling
 - next-themes for toggling between themes
 - mouse-follower for the cursor
 - gsap for horizontal scrolling and some of the animations
