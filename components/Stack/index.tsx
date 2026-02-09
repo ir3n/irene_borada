@@ -5,10 +5,7 @@ const Stack = () => {
   const stackRows = stackData;
 
   return (
-    <div
-      className="cursor-grab lg:my-20 max-h-[400px] overflow-hidden"
-      data-cursor-text="drag"
-    >
+    <div className="cursor-grab lg:my-20 max-h-[400px]" data-cursor-text="drag">
       {stackRows.map((row, i) => (
         <StackRow
           key={`stack-row-${i}`}
