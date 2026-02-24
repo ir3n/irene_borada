@@ -3,8 +3,8 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import MouseFollower from "mouse-follower";
-import "mouse-follower/dist/mouse-follower.min.css";
 import { useWindowWidth } from "@/hooks/useWindowWidth";
+import "mouse-follower/dist/mouse-follower.min.css";
 
 const MouseFollowerComponent = ({
   children,

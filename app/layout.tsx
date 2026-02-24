@@ -4,6 +4,7 @@ import TopProgressBar from "@/components/TopProgressBar";
 import Header from "@/components/Header";
 import Social from "@/components/Social";
 import MouseFollowerComponent from "@/components/MouseFollower";
+import ThemeProviderWrapper from "@/components/ThemeProviderWrapper";
 import SmoothScrolling from "@/components/SmoothScrolling";
 
 import MenuProvider from "../providers/menu-provider";
@@ -11,7 +12,6 @@ import MenuProvider from "../providers/menu-provider";
 import { sans } from "./fonts";
 
 import "../styles/globals.css";
-import ThemeProviderWrapper from "@/components/ThemeProviderWrapper";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.ireneborada.com"),

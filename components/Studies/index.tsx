@@ -23,7 +23,7 @@ const Studies = () => {
           {itemsLeft?.map((study, i) => {
             return (
               <Study
-                key={`study-${i}`}
+                key={`study-left-${i}`}
                 date={study?.date}
                 title={study?.title}
                 text={study?.text}
@@ -37,7 +37,7 @@ const Studies = () => {
           {itemsRight?.map((study, i) => {
             return (
               <Study
-                key={`study-${i}`}
+                key={`study-right-${i}`}
                 date={study?.date}
                 title={study?.title}
                 text={study?.text}

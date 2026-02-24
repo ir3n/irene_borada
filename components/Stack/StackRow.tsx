@@ -1,14 +1,10 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-
-import StackItem from "./StackItem";
-
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
-
 import { useTheme } from "next-themes";
-
+import StackItem from "./StackItem";
 import "@splidejs/splide/dist/css/splide.min.css";
 
 export interface StackLogo {

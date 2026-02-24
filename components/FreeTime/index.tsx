@@ -1,11 +1,10 @@
 "use client";
 
-import FreeTimeItem from "./FreeTimeItem";
 import { useWindowWidth } from "@/hooks/useWindowWidth";
-
-import freeTimeData from "@/data/free-time.json";
+import FreeTimeItem from "./FreeTimeItem";
 import { GradientTitle } from "../GradientTitle";
 import SlideFromBelow from "../SlideFromBelow";
+import freeTimeData from "@/data/free-time.json";
 
 const FreeTime = () => {
   const data = freeTimeData;
