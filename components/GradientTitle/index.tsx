@@ -1,5 +1,3 @@
-"use client";
-
 type GradientTitleProps = {
   children: React.ReactNode;
   className?: string;

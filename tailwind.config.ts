@@ -25,7 +25,22 @@ const config: Config = {
     fontFamily: {
       sans: ["var(--sans)"],
     },
-    extend: {},
+
+    extend: {
+      keyframes: {
+        sparkle: {
+          "0%, 90%, 100%": {
+            transform: "scale(1)",
+          },
+          "95%": {
+            transform: "scale(1.2)",
+          },
+        },
+      },
+      animation: {
+        sparkle: "sparkle 5s ease-in-out infinite",
+      },
+    },
   },
   plugins: [
     plugin(({ addBase, theme }) => {
