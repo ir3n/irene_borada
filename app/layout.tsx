@@ -15,9 +15,9 @@ import "../styles/globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.ireneborada.com"),
-  title: "Irene Borada | Front-end Developer",
+  title: "Irene Borada | Frontend Engineer",
   description:
-    "Self-taught Front-end Developer driven by a strong passion for JavaScript and committed to writing clear, reusable code for elegant, responsive interfaces prioritizing the user's experience.",
+    "Self-taught Frontend Engineer specializing in React, building high-quality user experiences with clean, maintainable code.",
   openGraph: {
     images: "/opengraph-image.png",
   },

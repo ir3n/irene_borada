@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <main>
-        <h1 className="hidden">Irene Borada - Front-end Developer</h1>
+        <h1 className="hidden">Irene Borada - Frontend Engineer</h1>
         <section id="intro">
           <Intro />
         </section>
