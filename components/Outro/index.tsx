@@ -51,8 +51,9 @@ const Outro = () => {
             </span>
           </button>
         </Container>
-        <div className="note text-center md:text-right absolute left-0 md:left-auto right-0 md:right-4 lg:right-[50px] bottom-4 lg:bottom-[50px] z-10">
-          designed & developed by Irene Borada
+        <div className="note text-center md:text-right absolute left-0 md:left-auto right-0 md:right-4 lg:right-[50px] bottom-2 lg:bottom-[30px] z-10">
+          Chamber of Commerce number: 42205455
+          <br /> designed & developed by Irene Borada
           <br /> ©{new Date().getFullYear()}
         </div>
       </div>
